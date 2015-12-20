@@ -1,0 +1,12 @@
+lms_rozier_convers.core
+lms_rozier_convers.core.Messagerie
+lms_rozier_convers.core.card
+lms_rozier_convers.core.exceptions
+lms_rozier_convers.core.geometry
+lms_rozier_convers.core.items
+lms_rozier_convers.core.library
+lms_rozier_convers.core.member
+lms_rozier_convers.core.penalty
+lms_rozier_convers.core.tests
+lms_rozier_convers.core.tidying
+lms_rozier_convers.main

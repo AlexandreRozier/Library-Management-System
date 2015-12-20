@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>lms_rozier_convers</OriginalElement>
+  <nodes>
+    <node x="577.0" y="863.0">lms_rozier_convers.core.Messagerie.Messagerie</node>
+    <node x="502.0" y="789.0">lms_rozier_convers.core.library.LibraryUpdater</node>
+    <node x="154.0" y="863.0">lms_rozier_convers.core.FactoryMaker</node>
+    <node x="135.0" y="937.0">lms_rozier_convers.core.library.Bookcase</node>
+    <node x="400.0" y="138.0">lms_rozier_convers.core.tidying.BestRoomFitStrategy</node>
+    <node x="0.0" y="789.0">lms_rozier_convers.core.penalty.PenaltyCalculator</node>
+    <node x="0.0" y="355.0">lms_rozier_convers.core.AbstractFactory</node>
+    <node x="0.0" y="863.0">lms_rozier_convers.core.member.MemberStatus</node>
+    <node x="0.0" y="715.0">lms_rozier_convers.core.tests.PenaltyCalculatorTest</node>
+    <node x="345.0" y="1011.0">lms_rozier_convers.core.library.Room</node>
+    <node x="0.0" y="641.0">lms_rozier_convers.core.exceptions.ObjectNotFoundException</node>
+    <node x="232.0" y="1011.0">lms_rozier_convers.core.library.Library</node>
+    <node x="97.0" y="281.0">lms_rozier_convers.core.card.StandardMCard</node>
+    <node x="398.0" y="281.0">lms_rozier_convers.core.card.FrequentMCard</node>
+    <node x="217.0" y="641.0">lms_rozier_convers.core.tests.BestRoomFitStrategyTest</node>
+    <node x="0.0" y="0.0">lms_rozier_convers.core.tidying.TidyingStrategyInterface</node>
+    <node x="383.0" y="715.0">lms_rozier_convers.core.tests.LibraryUpdaterTest</node>
+    <node x="558.0" y="1011.0">lms_rozier_convers.core.library.Shelf</node>
+    <node x="116.0" y="1011.0">lms_rozier_convers.core.penalty.Penalty</node>
+    <node x="0.0" y="212.0">lms_rozier_convers.core.card.Card</node>
+    <node x="291.0" y="424.0">lms_rozier_convers.core.items.ItemFactory</node>
+    <node x="441.0" y="863.0">lms_rozier_convers.core.StorageBox</node>
+    <node x="632.0" y="937.0">lms_rozier_convers.core.member.Member</node>
+    <node x="0.0" y="1011.0">lms_rozier_convers.core.geometry.Cuboid</node>
+    <node x="419.0" y="498.0">lms_rozier_convers.core.tests.BestBookcaseFitStrategyTest</node>
+    <node x="0.0" y="937.0">lms_rozier_convers.core.tests.LibraryTest</node>
+    <node x="192.0" y="715.0">lms_rozier_convers.core.tests.MemberObserverTest</node>
+    <node x="426.0" y="641.0">lms_rozier_convers.core.tests.BestShelfFitStrategyTest</node>
+    <node x="582.0" y="138.0">lms_rozier_convers.core.tidying.BestShelfFitStrategy</node>
+    <node x="454.0" y="1011.0">lms_rozier_convers.main.main</node>
+    <node x="252.0" y="281.0">lms_rozier_convers.core.card.GoldenMCard</node>
+    <node x="0.0" y="498.0">lms_rozier_convers.core.items.LibraryItem</node>
+    <node x="958.0" y="138.0">lms_rozier_convers.core.tidying.AnyFitStrategy</node>
+    <node x="560.0" y="715.0">lms_rozier_convers.core.tests.AnyFitStrategyTest</node>
+    <node x="386.0" y="937.0">lms_rozier_convers.core.library.Location</node>
+    <node x="303.0" y="863.0">lms_rozier_convers.core.tests.CuboidTest</node>
+    <node x="170.0" y="789.0">lms_rozier_convers.core.member.MemberObserver</node>
+    <node x="758.0" y="138.0">lms_rozier_convers.core.tidying.BestBookcaseFitStrategy</node>
+    <node x="155.0" y="424.0">lms_rozier_convers.core.card.CardFactory</node>
+    <node x="509.0" y="937.0">lms_rozier_convers.core.Duration</node>
+    <node x="262.0" y="937.0">lms_rozier_convers.core.tests.CardTest</node>
+    <node x="201.0" y="69.0">lms_rozier_convers.core.tidying.AbstractTidyingStrategy</node>
+    <node x="339.0" y="789.0">lms_rozier_convers.core.tests.CardFactoryTest</node>
+    <node x="315.0" y="567.0">lms_rozier_convers.core.items.Book</node>
+    <node x="132.0" y="567.0">lms_rozier_convers.core.items.DVD</node>
+    <node x="227.0" y="567.0">lms_rozier_convers.core.items.CD</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="lms_rozier_convers.core.tidying.BestBookcaseFitStrategy" target="lms_rozier_convers.core.tidying.AbstractTidyingStrategy">
+      <point x="0.0" y="0.0" />
+      <point x="838.0" y="83.5" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="lms_rozier_convers.core.items.Book" target="lms_rozier_convers.core.items.LibraryItem">
+      <point x="0.0" y="0.0" />
+      <point x="344.5" y="512.5" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="lms_rozier_convers.core.items.DVD" target="lms_rozier_convers.core.items.LibraryItem">
+      <point x="0.0" y="0.0" />
+      <point x="159.5" y="512.5" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="lms_rozier_convers.core.card.StandardMCard" target="lms_rozier_convers.core.card.Card">
+      <point x="0.0" y="0.0" />
+      <point x="154.5" y="226.5" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="lms_rozier_convers.core.tidying.BestRoomFitStrategy" target="lms_rozier_convers.core.tidying.AbstractTidyingStrategy">
+      <point x="0.0" y="0.0" />
+      <point x="471.0" y="83.5" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="lms_rozier_convers.core.card.CardFactory" target="lms_rozier_convers.core.AbstractFactory">
+      <point x="0.0" y="0.0" />
+      <point x="203.0" y="369.5" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="lms_rozier_convers.core.card.GoldenMCard" target="lms_rozier_convers.core.card.Card">
+      <point x="0.0" y="0.0" />
+      <point x="305.0" y="226.5" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="lms_rozier_convers.core.tidying.AbstractTidyingStrategy" target="lms_rozier_convers.core.tidying.TidyingStrategyInterface">
+      <point x="0.0" y="0.0" />
+      <point x="280.5" y="14.5" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="lms_rozier_convers.core.tidying.BestShelfFitStrategy" target="lms_rozier_convers.core.tidying.AbstractTidyingStrategy">
+      <point x="0.0" y="0.0" />
+      <point x="650.0" y="83.5" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="lms_rozier_convers.core.items.ItemFactory" target="lms_rozier_convers.core.AbstractFactory">
+      <point x="0.0" y="0.0" />
+      <point x="338.5" y="369.5" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="lms_rozier_convers.core.tidying.AnyFitStrategy" target="lms_rozier_convers.core.tidying.AbstractTidyingStrategy">
+      <point x="0.0" y="0.0" />
+      <point x="1012.5" y="83.5" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="lms_rozier_convers.core.card.FrequentMCard" target="lms_rozier_convers.core.card.Card">
+      <point x="0.0" y="0.0" />
+      <point x="455.5" y="226.5" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="lms_rozier_convers.core.items.CD" target="lms_rozier_convers.core.items.LibraryItem">
+      <point x="0.0" y="0.0" />
+      <point x="251.0" y="512.5" />
+      <point x="0.0" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="683.5" y="392.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
