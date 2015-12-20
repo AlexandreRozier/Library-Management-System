@@ -16,14 +16,17 @@ public class ItemFactory extends AbstractFactory {
         if(itemType.equalsIgnoreCase("CD")){
 
             CD cd = new CD(title, publisher, year, numberVolume, borrowable, location, shape);
+            cd.setType("CD");
             return cd;
         }
         else if(itemType.equalsIgnoreCase("DVD")){
             DVD dvd = new DVD(title, publisher, year, numberVolume, borrowable, location, shape);
+            dvd.setType("DVD");
             return dvd;
         }
         else if(itemType.equalsIgnoreCase("Book")){
             Book book = new Book(title, publisher, year, numberVolume, borrowable, location, shape);
+            book.setType("Book");
             return book;
         }
         else System.out.println("Ce type n'est pas reconnu.");

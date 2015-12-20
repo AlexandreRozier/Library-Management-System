@@ -16,6 +16,7 @@ public abstract class LibraryItem {
     private static int idCounter;
     private int id;
     private String title;
+    private String type; // Book, CD, ...
 
     private String publisher;
     private ArrayList<String> authors = new ArrayList<>();
@@ -148,6 +149,21 @@ public abstract class LibraryItem {
         this.reservationList = reservationList;
     }
 
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public ArrayList<String> getAuthors() {
+        return authors;
+    }
+
+    public void setAuthors(ArrayList<String> authors) {
+        this.authors = authors;
+    }
 
     @Override
     public String toString() {
