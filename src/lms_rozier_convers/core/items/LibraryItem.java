@@ -62,6 +62,7 @@ public abstract class LibraryItem {
         this.borrowable = borrowable;
         this.location = location;
         this.shape = shape;
+        location.getRoom().getLibrary().getItemsLinkedToTheLibrary().add(this);
     }
 
     public LibraryItem() {
@@ -75,6 +76,7 @@ public abstract class LibraryItem {
 
     public void setLocation(Location location) {
         this.location = location;
+        location.getRoom().getLibrary().getItemsLinkedToTheLibrary().add(this);
     }
 
     public int getId() {

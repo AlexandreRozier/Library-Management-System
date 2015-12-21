@@ -25,6 +25,8 @@ public class Library {
     private int numberOfMonthsToBeFrequent = 3; // The number M
     private int numberOfMonthsToBeStandard = 4; // The number M'
     private int numberOfMaxSimultaneousBorrows = 5;
+    private List<LibraryItem> itemsLinkedToTheLibrary = new ArrayList<>(); // Items linked, borrowed or not, lost or not
+    //TODO : vérifier qu'un item est toujours rajouté à cette liste quand on en ajoute un
 
     /**
      * CONSTRUCTOR
@@ -243,5 +245,13 @@ public class Library {
 
     public void setNumberOfMonthsToBeFrequent(int numberOfMonthsToBeFrequent) {
         this.numberOfMonthsToBeFrequent = numberOfMonthsToBeFrequent;
+    }
+
+    public List<LibraryItem> getItemsLinkedToTheLibrary() {
+        return itemsLinkedToTheLibrary;
+    }
+
+    public void setItemsLinkedToTheLibrary(List<LibraryItem> itemsLinkedToTheLibrary) {
+        this.itemsLinkedToTheLibrary = itemsLinkedToTheLibrary;
     }
 }

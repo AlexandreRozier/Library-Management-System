@@ -5,6 +5,7 @@ import lms_rozier_convers.core.library.Bookcase;
 import lms_rozier_convers.core.library.Library;
 import lms_rozier_convers.core.library.Room;
 import lms_rozier_convers.core.library.Shelf;
+import lms_rozier_convers.core.member.Member;
 
 import java.util.ArrayList;
 
@@ -55,5 +56,46 @@ public abstract class Actions {
             iter++;
         }
         return descr;
+    }
+
+
+    public static String borrow_item(String member_name, String item_title){
+        Library currentLibrary = UserInterface.getCurrentLibrary();
+        Member member = null;
+        LibraryItem item = null;
+
+        //Get the member (object) from its name
+        for (Member m : currentLibrary.getMembers()){
+            if (m.getName() == member_name){
+                member = m;
+            }
+        }
+        //Get the item (object) from its name
+        for (LibraryItem i : currentLibrary.getItemsLinkedToTheLibrary()){
+            if (i.getTitle() == item_title){
+                item = i;
+            }
+        }
+        if (member == null || item == null){
+            return "The member or the item does not exist in this library";
+        }
+
+        else{
+            member.getMemberCard().borrow(item);
+            if (member.getBorrowedItems().containsKey(item)){
+                return item.getTitle() + " has been borrowed by "+member.getName();
+            }
+            else if (item.getReservationList().contains(member)){
+                return item.getTitle() + " was not available, it has been added to the reservation list.";
+            }
+            else{
+                return member.getName() + "cannot borrow the item "+ item.getTitle();
+            }
+        }
+
+
+
+
+
     }
 }

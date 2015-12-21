@@ -9,10 +9,10 @@ import java.util.Scanner;
 /**
  * Created by hx on 20/12/2015.
  */
-public class UserInterface {
+public abstract class UserInterface {
 
-    private List<Library> librairies = new ArrayList<>(); // The managed librairies
-    private Library currentLibrary; // The library on which will be done the actions
+    private static List<Library> librairies = new ArrayList<>(); // The managed librairies
+    private static Library currentLibrary; // The library on which will be done the actions
 
 
     /**
@@ -35,6 +35,14 @@ public class UserInterface {
         launch();
     }
 
+    public static List<Library> getLibrairies() {
+        return librairies;
+    }
+
+    public static Library getCurrentLibrary() {
+        return currentLibrary;
+    }
+
     private void launch() {
         boolean open = true;
         while(open){
@@ -43,6 +51,7 @@ public class UserInterface {
             //Parsing : we assume that the user will separate command and variables with a space (like in a Linux Console)
             String[] commandAndParameters ;
             commandAndParameters = str.split(" ",5);
+            //TODO : faire des exceptions quand il n'y a pas le bon nombre de liste d'arguments
 
             switch (commandAndParameters[0]){
                 case("use_library"):
@@ -84,7 +93,7 @@ public class UserInterface {
 
                     break;
                 case("borrow_item"):
-
+                    Actions.borrow_item(commandAndParameters[1],commandAndParameters[2]);
                     break;
                 case("check_borrowed"):
 
@@ -95,12 +104,11 @@ public class UserInterface {
                 default:
                     System.out.println("Invalid command. Please be attentive to use low case.");
 
-
-
-
             }
         }
-        // TODO ARNAUD : implémenter ici le parsing, le switch, etc :3
+
+
+
         //KEUR
     }
 }
