@@ -90,14 +90,19 @@ public abstract class UserInterface {
 
                     break;
                 case("add_member"):
-
+                    if(!commandAndParameters[1].isEmpty() && !commandAndParameters[2].isEmpty() && commandAndParameters[3].isEmpty() && commandAndParameters[4].isEmpty()){
+                        Actions.add_member(commandAndParameters[1],commandAndParameters[2],commandAndParameters[3],commandAndParameters[4]);
+                    }
+                    else{
+                        System.out.println("You must type 2 parameters when using this command : the name of the member and the name of the item.");
+                    }
                     break;
                 case("borrow_item"):
                     if (!commandAndParameters[1].isEmpty() && !commandAndParameters[2].isEmpty() && commandAndParameters[3].isEmpty()){
                         Actions.borrow_item(commandAndParameters[1],commandAndParameters[2]);
                     }
                     else{
-                        System.out.println("You must type when using this function : the name of the member and the name of the item.");
+                        System.out.println("You must type 2 parameters when using this command : the name of the member and the name of the item.");
                     }
 
                     break;

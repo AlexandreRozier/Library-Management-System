@@ -41,6 +41,7 @@ public class Member extends Observable{
     private HashMap<LibraryItem,Calendar> borrowedItems = new HashMap<>(); //Hashmap with library items as keys, and their borrow Date as value.
     private HashMap<LibraryItem,Calendar[]> borrowedItemsHistory = new HashMap<>(); //Hashmap with library items as keys, and their [borrow Date,return Date] as values.
     private Card memberCard;
+    private String email;
 
 
 
@@ -179,5 +180,13 @@ public class Member extends Observable{
     public void setPenaltyList(ArrayList<Penalty> penaltyList) {
         setChanged();
         this.penaltyList = penaltyList;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
