@@ -11,7 +11,6 @@ import lms_rozier_convers.core.library.Shelf;
 import lms_rozier_convers.core.member.Member;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by hx on 20/12/2015.
@@ -32,7 +31,7 @@ public abstract class Actions {
         Member member = null;
         Library currentLibrary = UserInterface.getCurrentLibrary();
         for (Member m : currentLibrary.getMembers()) {
-            if (m.getName() == member_name) {
+            if (m.getName().equals(member_name)) {
                 member = m;
             }
         }
@@ -49,11 +48,28 @@ public abstract class Actions {
         LibraryItem item = null;
         Library currentLibrary = UserInterface.getCurrentLibrary();
         for (LibraryItem i : currentLibrary.getItemsLinkedToTheLibrary()) {
-            if (i.getTitle() == item_title) {
+            if (i.getTitle().equals(item_title)) {
                 item = i;
             }
         }
         return item;
+    }
+
+
+    /**
+     * Method which return a string saying if the item is borrowable or not. Will be useful in next descriptions methods.
+     * @param item
+     * @return
+     */
+    public static String itemborrwable(LibraryItem item){
+        String state;
+        if(item.isBorrowable()){
+            state = "This item is borrowable.";
+        }
+        else{
+            state = "Thise item is not borrowable.";
+        }
+        return state;
     }
 
     /**
@@ -149,7 +165,30 @@ public abstract class Actions {
             for (Bookcase bookcase : room.getBookcases()){
                 for (Shelf shelf : bookcase.getShelves()){
                     for (LibraryItem item : shelf.getItemsContained()){
-                        if (item.getTitle()==title_name){
+                        if (item.getTitle().equalsIgnoreCase(title_name)){
+                            items_to_print.add(item);
+                        }
+                    }
+                }
+            }
+        }
+        String descr=null;
+        for (LibraryItem item : items_to_print){
+            descr += "Author(s) : "+item.getAuthors() +", Year : "+item.getYear() + ", Type : "+item.getType() + ". "+ itemborrwable(item) + "\n";
+        }
+        return descr;
+    }
+
+
+
+    public static String find_items(String author_name){
+        Library library = UserInterface.getCurrentLibrary();
+        ArrayList<LibraryItem> items_to_print = new ArrayList<>();
+        for (Room room : library.getRooms()){
+            for (Bookcase bookcase : room.getBookcases()){
+                for (Shelf shelf : bookcase.getShelves()){
+                    for (LibraryItem item : shelf.getItemsContained()){
+                        if (item.getAuthors().contains(author_name)){
                             items_to_print.add(item);
                         }
                     }
@@ -158,20 +197,11 @@ public abstract class Actions {
         }
 
         String descr=null;
-
         for (LibraryItem item : items_to_print){
-            String state=null;
-            if(item.isBorrowable()){
-                state = "This item is borrowable.";
-            }
-            else{
-                state = "This item isn't borrowable.";
-            }
-            descr += "Author(s) : "+item.getAuthors() +", Year : "+item.getYear() + ", Type : "+item.getType() + ". "+state + "\n";
+            descr += "Title : "+item.getTitle() +", Year : "+item.getYear() + ", Type : "+item.getType() + ". "+ itemborrwable(item) + "\n";
         }
-
         return descr;
-
-
     }
+
+
 }

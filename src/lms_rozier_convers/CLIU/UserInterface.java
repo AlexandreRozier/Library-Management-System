@@ -84,6 +84,12 @@ public abstract class UserInterface {
 
                     break;
                 case("find_items"):
+                    if (!commandAndParameters[1].isEmpty() && commandAndParameters[2].isEmpty()){
+                        Actions.find_items(commandAndParameters[1]);
+                    }
+                    else{
+                        System.out.println("You must type only one parameter when using this command : the name of author(s) of items searched.");
+                    }
 
                     break;
                 case("search_title"):
