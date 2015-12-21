@@ -30,8 +30,8 @@ public abstract class UserInterface {
      * @param selectedLibrary
      */
     public UserInterface(Library selectedLibrary) {
-        this.currentLibrary = selectedLibrary;
-        this.librairies.add(selectedLibrary);
+        currentLibrary = selectedLibrary;
+        librairies.add(selectedLibrary);
         launch();
     }
 
@@ -87,16 +87,24 @@ public abstract class UserInterface {
 
                     break;
                 case("search_title"):
+                    if (!commandAndParameters[1].isEmpty() && commandAndParameters[2].isEmpty()){
+                        Actions.search_title(commandAndParameters[1]);
+                    }
+                    else{
+                        System.out.println("You must type only one parameter when using this command : the title of items searched.");
+                    }
 
                     break;
+
                 case("add_member"):
                     if(!commandAndParameters[1].isEmpty() && !commandAndParameters[2].isEmpty() && commandAndParameters[3].isEmpty() && commandAndParameters[4].isEmpty()){
                         Actions.add_member(commandAndParameters[1],commandAndParameters[2],commandAndParameters[3],commandAndParameters[4]);
                     }
                     else{
-                        System.out.println("You must type 2 parameters when using this command : the name of the member and the name of the item.");
+                        System.out.println("You must type 4 parameters when using this command : the name of the member, his credit card number, his eamail and his type of membership.");
                     }
                     break;
+
                 case("borrow_item"):
                     if (!commandAndParameters[1].isEmpty() && !commandAndParameters[2].isEmpty() && commandAndParameters[3].isEmpty()){
                         Actions.borrow_item(commandAndParameters[1],commandAndParameters[2]);
@@ -106,12 +114,15 @@ public abstract class UserInterface {
                     }
 
                     break;
+
                 case("check_borrowed"):
 
                     break;
-                case("exit"):
+
+                case("exit")://stop the running of the console.
                     open=false;
                     break;
+
                 default:
                     System.out.println("Invalid command. Please be attentive to use low case.");
 

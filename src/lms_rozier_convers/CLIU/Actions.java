@@ -11,6 +11,7 @@ import lms_rozier_convers.core.library.Shelf;
 import lms_rozier_convers.core.member.Member;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by hx on 20/12/2015.
@@ -22,6 +23,7 @@ public abstract class Actions {
 
     /**
      * Method which returns a Member object from a given name
+     * If the member does not exist, returns a null object.
      *
      * @param member_name
      * @return member
@@ -39,7 +41,7 @@ public abstract class Actions {
 
     /**
      * Method which returns a LibraryItem object from a given name
-     *
+     * If the item does not exist, returns a null object.
      * @param item_title
      * @return
      */
@@ -53,7 +55,6 @@ public abstract class Actions {
         }
         return item;
     }
-
 
     /**
      * Lists the items of the given library, and return a String containing the description
@@ -115,7 +116,14 @@ public abstract class Actions {
         }
     }
 
-    //Add a member
+    /**
+     * Add a member to the current library
+     * @param member_name
+     * @param numCreditCard
+     * @param email
+     * @param memberType
+     * @return
+     */
     public static String add_member(String member_name, String numCreditCard, String email, String memberType) {
         if(email.contains("@")) {
             Library currentLibrary = UserInterface.getCurrentLibrary();
@@ -132,5 +140,38 @@ public abstract class Actions {
         else{
             return "Please type a correct email";
         }
+    }
+
+    public static String search_title(String title_name){
+        Library library = UserInterface.getCurrentLibrary();
+        ArrayList<LibraryItem> items_to_print = new ArrayList<>();
+        for (Room room : library.getRooms()){
+            for (Bookcase bookcase : room.getBookcases()){
+                for (Shelf shelf : bookcase.getShelves()){
+                    for (LibraryItem item : shelf.getItemsContained()){
+                        if (item.getTitle()==title_name){
+                            items_to_print.add(item);
+                        }
+                    }
+                }
+            }
+        }
+
+        String descr=null;
+
+        for (LibraryItem item : items_to_print){
+            String state=null;
+            if(item.isBorrowable()){
+                state = "This item is borrowable.";
+            }
+            else{
+                state = "This item isn't borrowable.";
+            }
+            descr += "Author(s) : "+item.getAuthors() +", Year : "+item.getYear() + ", Type : "+item.getType() + ". "+state + "\n";
+        }
+
+        return descr;
+
+
     }
 }
