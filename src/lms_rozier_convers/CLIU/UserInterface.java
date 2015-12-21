@@ -93,7 +93,13 @@ public abstract class UserInterface {
 
                     break;
                 case("borrow_item"):
-                    Actions.borrow_item(commandAndParameters[1],commandAndParameters[2]);
+                    if (!commandAndParameters[1].isEmpty() && !commandAndParameters[2].isEmpty() && commandAndParameters[3].isEmpty()){
+                        Actions.borrow_item(commandAndParameters[1],commandAndParameters[2]);
+                    }
+                    else{
+                        System.out.println("You must type when using this function : the name of the member and the name of the item.");
+                    }
+
                     break;
                 case("check_borrowed"):
 
