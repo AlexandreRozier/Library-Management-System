@@ -45,6 +45,9 @@ public class UserInterface {
             commandAndParameters = str.split(" ",5);
 
             switch (commandAndParameters[0]){
+                case("use_library"):
+
+                    break;
                 case("create_library"):
 
                     break;
