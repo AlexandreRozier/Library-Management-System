@@ -40,6 +40,7 @@ public class main {
         //Set up the Bookcases
         List<Bookcase> bookCases1 = new ArrayList<>();
         List<Bookcase> bookCases2 = new ArrayList<>();
+
         Bookcase bookcase1 = new Bookcase("bookCase1");
         Bookcase bookcase2 = new Bookcase("bookCase2");
         Bookcase bookcase3 = new Bookcase("bookCase3");

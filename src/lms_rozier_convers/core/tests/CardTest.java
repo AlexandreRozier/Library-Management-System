@@ -57,8 +57,10 @@ public class CardTest {
 
         //Creates an item
         ItemFactory itemFactory = new ItemFactory();
-        Location location1 = new Location(room1,bookcase1,shelf1);
-        DVD dvd = (DVD) itemFactory.createItem("DVD","HarryPotter","JKRowling",2001,1,true,location1,new Cuboid(3,3,3));
+        ArrayList<String> authors = new ArrayList<>();
+        authors.add("JKRowling");
+        DVD dvd = (DVD) itemFactory.createItem("DVD","HarryPotter",authors,"Unknown Publisher",2001,1,true,new Cuboid(3,3,3));
+        shelf1.addItem(dvd);
 
         // Sorts the item
         library.getTidyingStrategy().tidy(dvd);

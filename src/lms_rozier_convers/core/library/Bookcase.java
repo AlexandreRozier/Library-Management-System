@@ -40,6 +40,11 @@ public class Bookcase {
         return shelves;
     }
 
+    public void addShelf(Shelf shelf) {
+        shelves.add(shelf);
+        shelf.setBookcase(this);
+    }
+
     public void setShelves(List<Shelf> shelves) {
         this.shelves = shelves;
         for (Shelf shelf : shelves) {

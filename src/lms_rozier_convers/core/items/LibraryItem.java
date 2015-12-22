@@ -42,6 +42,30 @@ public abstract class LibraryItem {
     }
 
     /**
+     * MAIN CONSTRUCTOR : Used in the Factory
+     * @param title
+     * @param type
+     * @param publisher
+     * @param authors
+     * @param year
+     * @param numberVolume
+     * @param borrowable
+     * @param shape
+     */
+    public LibraryItem(String title, String type, String publisher, ArrayList<String> authors, int year, int numberVolume, boolean borrowable, Cuboid shape) {
+        this.id = idCounter;
+        idCounter++;
+        this.title = title;
+        this.type = type;
+        this.publisher = publisher;
+        this.authors = authors;
+        this.year = year;
+        this.numberVolume = numberVolume;
+        this.borrowable = borrowable;
+        this.shape = shape;
+    }
+
+    /**
      * CONSTRUCTOR
      * Creates a library item with an unique ID
      * @param title
@@ -64,6 +88,29 @@ public abstract class LibraryItem {
         this.shape = shape;
         location.getRoom().getLibrary().getItemsLinkedToTheLibrary().add(this);
     }
+
+    /**
+     * CONSTRUCTOR
+     * Used to create a libraryItem without location
+     * @param title
+     * @param publisher
+     * @param year
+     * @param numberVolume
+     * @param borrowable
+     * @param shape
+     */
+    public LibraryItem(String title, String publisher, int year, int numberVolume, boolean borrowable, Cuboid shape) {
+        this.id = idCounter;
+        idCounter++;
+        this.title = title;
+        this.publisher = publisher;
+        this.year = year;
+        this.numberVolume = numberVolume;
+        this.borrowable = borrowable;
+        this.shape = shape;
+
+    }
+
 
     public LibraryItem() {
         this.id = idCounter;

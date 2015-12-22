@@ -20,6 +20,46 @@ public abstract class Actions {
     //TODO : display of the given library
 
 
+
+    /**
+     * Lists the items of the given library, and return a String containing the description
+     *
+     * @param libraryName
+     * @return String
+     */
+    public static String list_items(String libraryName) {
+
+        ArrayList<LibraryItem> itemList = new ArrayList<>();
+        Library library = UserInterface.getLibraryByName(libraryName);
+
+        for (Room room : library.getRooms()) {
+            for (Bookcase bookcase : room.getBookcases()) {
+                for (Shelf shelf : bookcase.getShelves()) {
+                    for (LibraryItem libraryItem : shelf.getItemsContained()) {
+                        itemList.add(libraryItem);
+                    }
+                }
+            }
+        }
+        String descr = "";
+        int iter = 0;
+        for (LibraryItem libraryItem : itemList) {
+
+            String authorsList = "";
+            for (String author : libraryItem.getAuthors()) {
+                authorsList += author + ", ";
+            }
+            descr += "Item n°" + iter +
+                    ":\n type :" + libraryItem.getType() +
+                    "\n author(s) : " + authorsList + "\n" +
+                    libraryItem.getLocation() +
+                    "\n";
+
+            iter++;
+        }
+        return descr;
+    }
+
     /**
      * Method which returns a Member object from a given name
      * If the member does not exist, returns a null object.
@@ -61,7 +101,7 @@ public abstract class Actions {
      * @param item
      * @return
      */
-    public static String itemborrwable(LibraryItem item){
+    public static String itemborrowable(LibraryItem item){
         String state;
         if(item.isBorrowable()){
             state = "This item is borrowable.";
@@ -72,41 +112,7 @@ public abstract class Actions {
         return state;
     }
 
-    /**
-     * Lists the items of the given library, and return a String containing the description
-     *
-     * @param library
-     * @return String
-     */
-    public static String list_items(Library library) {
 
-        ArrayList<LibraryItem> itemList = new ArrayList<>();
-
-        for (Room room : library.getRooms()) {
-            for (Bookcase bookcase : room.getBookcases()) {
-                for (Shelf shelf : bookcase.getShelves()) {
-                    for (LibraryItem libraryItem : shelf.getItemsContained()) {
-                        itemList.add(libraryItem);
-                    }
-                }
-            }
-        }
-        String descr = null;
-        String authorsList = null;
-        int iter = 0;
-        for (LibraryItem libraryItem : itemList) {
-            for (String author : libraryItem.getAuthors()) {
-                authorsList += author + ", ";
-            }
-            descr += "Item n°" + iter +
-                    ", type :" + libraryItem.getType() +
-                    ", author(s) : " + authorsList +
-                    "\n";
-
-            iter++;
-        }
-        return descr;
-    }
 
     /**
      * If it is possible, let the member borrow the specified item. Display a message describing the result.
@@ -174,7 +180,7 @@ public abstract class Actions {
         }
         String descr=null;
         for (LibraryItem item : items_to_print){
-            descr += "Author(s) : "+item.getAuthors() +", Year : "+item.getYear() + ", Type : "+item.getType() + ". "+ itemborrwable(item) + "\n";
+            descr += "Author(s) : "+item.getAuthors() +", Year : "+item.getYear() + ", Type : "+item.getType() + ". "+ itemborrowable(item) + "\n";
         }
         return descr;
     }
@@ -198,10 +204,14 @@ public abstract class Actions {
 
         String descr=null;
         for (LibraryItem item : items_to_print){
-            descr += "Title : "+item.getTitle() +", Year : "+item.getYear() + ", Type : "+item.getType() + ". "+ itemborrwable(item) + "\n";
+            descr += "Title : "+item.getTitle() +", Year : "+item.getYear() + ", Type : "+item.getType() + ". "+ itemborrowable(item) + "\n";
         }
         return descr;
     }
 
-
+//TODO dire qu'on lutilise déjà si on l'utilise déja
+    //Todo dire si pas trouvé
+    public static void use_library(String libraryName) {
+        Library library = UserInterface.getLibraryByName(libraryName);
+    }
 }

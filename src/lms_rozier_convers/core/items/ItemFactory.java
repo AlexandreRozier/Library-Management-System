@@ -4,6 +4,9 @@ import lms_rozier_convers.core.AbstractFactory;
 import lms_rozier_convers.core.geometry.Cuboid;
 import lms_rozier_convers.core.library.Location;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 16/11/2015.
  * A Factory dedicated to provide the desired item type.
@@ -12,27 +15,26 @@ import lms_rozier_convers.core.library.Location;
 public class ItemFactory extends AbstractFactory {
 
 
-    public static LibraryItem createItem(String itemType, String title, String publisher, int year, int numberVolume, boolean borrowable, Location location, Cuboid shape){
+    public  LibraryItem createItem(String itemType, String title, ArrayList<String> authors, String publisher, int year, int numberVolume, boolean borrowable, Cuboid shape){
         if(itemType.equalsIgnoreCase("CD")){
 
-            CD cd = new CD(title, publisher, year, numberVolume, borrowable, location, shape);
-            cd.setType("CD");
+            CD cd = new CD(title,itemType,publisher,authors,year,numberVolume,borrowable,shape);
             return cd;
         }
         else if(itemType.equalsIgnoreCase("DVD")){
-            DVD dvd = new DVD(title, publisher, year, numberVolume, borrowable, location, shape);
-            dvd.setType("DVD");
+            DVD dvd = new DVD(title,itemType,publisher,authors,year,numberVolume,borrowable,shape);
             return dvd;
-        }
-        else if(itemType.equalsIgnoreCase("Book")){
-            Book book = new Book(title, publisher, year, numberVolume, borrowable, location, shape);
-            book.setType("Book");
-            return book;
         }
         else System.out.println("Ce type n'est pas reconnu.");
         return null;
+    }
 
-
+    public LibraryItem createItem(String itemType, String title, ArrayList<String> authors, String publisher, int year, int numberVolume, boolean borrowable, Cuboid shape,String ISBN){
+        if(itemType.equalsIgnoreCase("Book")){
+            return new Book(title,itemType,publisher,authors,year,numberVolume,borrowable,shape,ISBN);
+        }
+        else System.out.println("Ce type n'est pas reconnu.");
+        return null;
     }
 
 

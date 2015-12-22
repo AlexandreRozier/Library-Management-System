@@ -41,6 +41,11 @@ public class Room {
 
     }
 
+    public void addBookcase(Bookcase bookcase) {
+        bookcases.add(bookcase);
+        bookcase.setRoom(this);
+    }
+
     public void setBookcases(List<Bookcase> bookcases) {
         this.bookcases = bookcases;
         for (Bookcase bookcase : bookcases) {

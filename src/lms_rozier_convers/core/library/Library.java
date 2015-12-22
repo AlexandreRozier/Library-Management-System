@@ -180,6 +180,59 @@ public class Library {
         return false;
     }
 
+    /**
+     * Allows to find a Bookcase according to its name
+     * @param name
+     * @return
+     */
+    public Bookcase findBookcaseByName(String name) {
+        for (Room room : rooms) {
+            for (Bookcase bookcase : room.getBookcases()) {
+                if (bookcase.getName().equals(name)) {
+                    return bookcase;
+                }
+            }
+        }
+        return null;
+    }
+
+    /**
+     * Allows to find a Room according to its name
+     * @param name
+     * @return
+     */
+    public Room findRoomByName(String name) {
+        for (Room room : rooms) {
+            if (room.getName().equals(name)) {
+                return room;
+            }
+        }
+        return null;
+    }
+
+    /**
+     * Allows to find a Shelf according to its name
+     * @param name
+     * @return
+     */
+    public Shelf findShelfByName(String name) {
+        for (Room room : rooms) {
+            for (Bookcase bookcase : room.getBookcases()) {
+                for (Shelf shelf : bookcase.getShelves()) {
+                    if (shelf.getName().equals(name)) {
+                        return shelf;
+                    }
+                }
+            }
+        }
+        return null;
+    }
+
+    public void addRoom(Room room) {
+        rooms.add(room);
+        room.setLibrary(this);
+    }
+
     // After this line, getters and setters unmodified.
 
     public String getName() {
