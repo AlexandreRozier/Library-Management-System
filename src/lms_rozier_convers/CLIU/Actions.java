@@ -31,7 +31,9 @@ public abstract class Actions {
 
         ArrayList<LibraryItem> itemList = new ArrayList<>();
         Library library = UserInterface.getLibraryByName(libraryName);
-
+        if (library == null) {
+            return "The library wasn't found.";
+        }
         for (Room room : library.getRooms()) {
             for (Bookcase bookcase : room.getBookcases()) {
                 for (Shelf shelf : bookcase.getShelves()) {
@@ -70,6 +72,9 @@ public abstract class Actions {
     public static Member findMember(String member_name) {
         Member member = null;
         Library currentLibrary = UserInterface.getCurrentLibrary();
+        if (currentLibrary == null) {
+            return null;
+        }
         for (Member m : currentLibrary.getMembers()) {
             if (m.getName().equals(member_name)) {
                 member = m;
@@ -87,6 +92,9 @@ public abstract class Actions {
     public static LibraryItem findLibraryItem(String item_title) {
         LibraryItem item = null;
         Library currentLibrary = UserInterface.getCurrentLibrary();
+        if (currentLibrary == null) {
+            return null;
+        }
         for (LibraryItem i : currentLibrary.getItemsLinkedToTheLibrary()) {
             if (i.getTitle().equals(item_title)) {
                 item = i;
@@ -107,7 +115,7 @@ public abstract class Actions {
             state = "This item is borrowable.";
         }
         else{
-            state = "Thise item is not borrowable.";
+            state = "This item is not borrowable.";
         }
         return state;
     }
@@ -149,6 +157,9 @@ public abstract class Actions {
     public static String add_member(String member_name, String numCreditCard, String email, String memberType) {
         if(email.contains("@")) {
             Library currentLibrary = UserInterface.getCurrentLibrary();
+            if (currentLibrary == null) {
+                return null;
+            }
             Member member1 = new Member();
             member1.setName(member_name);
             member1.setCurrentLibrary(currentLibrary);
@@ -178,7 +189,7 @@ public abstract class Actions {
                 }
             }
         }
-        String descr=null;
+        String descr="";
         for (LibraryItem item : items_to_print){
             descr += "Author(s) : "+item.getAuthors() +", Year : "+item.getYear() + ", Type : "+item.getType() + ". "+ itemborrowable(item) + "\n";
         }
@@ -201,17 +212,27 @@ public abstract class Actions {
                 }
             }
         }
-
-        String descr=null;
+        String descr = "";
+        int i = 0;
         for (LibraryItem item : items_to_print){
-            descr += "Title : "+item.getTitle() +", Year : "+item.getYear() + ", Type : "+item.getType() + ". "+ itemborrowable(item) + "\n";
+            descr +="Item n°"+i+ " Title : "+item.getTitle() +", Year : "+item.getYear() + ", Type : "+item.getType() + ". "+ itemborrowable(item) + "\n";
+            i++;
         }
         return descr;
     }
 
-//TODO dire qu'on lutilise déjà si on l'utilise déja
-    //Todo dire si pas trouvé
+    /**
+     * Selects the library on which should be applied the next commands
+     * @param libraryName the desired library
+     */
     public static void use_library(String libraryName) {
-        Library library = UserInterface.getLibraryByName(libraryName);
+        for (Library library : UserInterface.getLibraries()) {
+            if (library.getName().equals(libraryName)) {
+                UserInterface.setCurrentLibrary(library);
+            }
+        }
+        if (UserInterface.getCurrentLibrary().getName().equals(libraryName)) {
+            System.out.println("This library ("+libraryName+")is already selected !");
+        } else System.out.println("Library not found");
     }
 }

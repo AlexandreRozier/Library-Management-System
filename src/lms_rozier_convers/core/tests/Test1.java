@@ -1,57 +1,92 @@
 package lms_rozier_convers.core.tests;
 
+import lms_rozier_convers.CLIU.Actions;
 import lms_rozier_convers.CLIU.UserInterface;
+import lms_rozier_convers.core.FactoryMaker;
 import lms_rozier_convers.core.card.Card;
 import lms_rozier_convers.core.card.CardFactory;
 import lms_rozier_convers.core.geometry.Cuboid;
 import lms_rozier_convers.core.items.Book;
+import lms_rozier_convers.core.items.CD;
+import lms_rozier_convers.core.items.DVD;
+import lms_rozier_convers.core.items.ItemFactory;
 import lms_rozier_convers.core.library.*;
 import lms_rozier_convers.core.member.Member;
 import lms_rozier_convers.core.tidying.AnyFitStrategy;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-import java.util.Timer;
+import java.awt.*;
+import java.util.*;
 
 import static org.junit.Assert.*;
 
 /**
  * Created by hx on 20/12/2015.
  */
-
 public class Test1 {
 
-    @Test
-    public void testList_items() throws Exception {
-        Library library = new Library(new AnyFitStrategy(),1,3,5,5,"Miterrand");
-        //+++++++++++++++++++++++++++
-        //Schedules an update of all the members of the library each day
-        Timer timer = new Timer();
-        timer.schedule(new LibraryUpdater(library), 24 * 3600 * 1000);
-        //+++++++++++++++++++++++++++
+    @SuppressWarnings("Duplicates")
+    public static void main(String[] args) {
 
+
+        Library library = new Library(new AnyFitStrategy(),1,3,5,5,"Miterrand");
+        UserInterface.setCurrentLibrary(library);
+        //+++++++++++++++++++++++++++
+        //Creates the Library
         int roomNumber = 3;
         int bookcaseNumber = 4;
         int shelfNumber = 8;
 
-
-
         for (int i = 0; i < roomNumber; i++) {
-            library.getRooms().add(new Room("room"+i));
+            library.addRoom(new Room("room"+i));
         }
 
         for (int i = 0; i < roomNumber*bookcaseNumber; i++) {
-            Room room = UserInterface.getCurrentLibrary().findRoomByName("room" + i % bookcaseNumber); // An easy way to set up the correct number of bookcases per room
-            room.getBookcases().add(new Bookcase("bookcase"+i));
+            Room room = UserInterface.getCurrentLibrary().findRoomByName("room" + i % roomNumber); // An easy way to set up the correct number of bookcases per room
+            room.addBookcase(new Bookcase("bookcase"+i));
+
         }
 
         for (int i = 0; i < roomNumber*bookcaseNumber*shelfNumber; i++) {
-            Bookcase bookcase = UserInterface.getCurrentLibrary().findBookcaseByName("bookcase" + i % shelfNumber);
-            bookcase.getShelves().add(new Shelf(new Cuboid(1, 1, 1),"shelf"+i));
-        }
+            Bookcase bookcase = UserInterface.getCurrentLibrary().findBookcaseByName("bookcase" + i % (bookcaseNumber*roomNumber));
+            Shelf shelf = new Shelf(new Cuboid(200, 200, 200),"shelf"+i);
+            bookcase.addShelf(shelf);
 
+            // Item creation
+
+            ItemFactory factory = (ItemFactory) FactoryMaker.createFactory("itemFactory");
+
+            // 3 books written by Albert Camus
+            if (i<=2) {
+                ArrayList<String> author1 = new ArrayList<>();
+                author1.add("Albert Camus");
+                shelf.addItem(factory.createItem("Book", "Title" + i, author1, "Publisher" + i, 1900 + i, i, true, new Cuboid(i, i, i), String.valueOf(i)));
+            }
+            // 7 other books
+            else if (i<=10){
+                ArrayList<String> author1 = new ArrayList<>();
+                author1.add("Author "+i);
+                shelf.addItem(factory.createItem("Book", "Title" + i, author1, "Publisher" + i, 1900 + i, i, true, new Cuboid(i, i, i), String.valueOf(i)));
+            }
+            // 2 CDs from the daft punk, not borrowable (i.e. consultation-only)
+            else if (i<=12){
+                ArrayList<String> author1 = new ArrayList<>();
+                author1.add("Daft Punk");
+                shelf.addItem(factory.createItem("CD", "Title" + i, author1, "Publisher" + i, 1900 + i, i, false, new Cuboid(i, i, i)));
+            }
+            // 3 other CDs, not borrowable
+            else if (i<=15){
+                ArrayList<String> author1 = new ArrayList<>();
+                author1.add("Composer "+i);
+                shelf.addItem(factory.createItem("CD", "Title" + i, author1, "Publisher" + i, 1900 + i, i, false, new Cuboid(i, i, i)));
+            }
+            // 5 DVDs, borrowable
+            else if (i <= 20) {
+                ArrayList<String> author1 = new ArrayList<>();
+                author1.add("Composer "+i);
+                shelf.addItem(factory.createItem("DVD", "Title" + i, author1, "Publisher" + i, 1900 + i, i, true, new Cuboid(i, i, i)));
+            }
+        }
 
         //+++++++++++++++++++++++++++
         // Creates the members
@@ -74,14 +109,6 @@ public class Test1 {
         member3.setMemberCard(frequentCard);
 
         //+++++++++++++++++++++++++++
-        // The inputs of the user will be catched there
-        Scanner sc = new Scanner(System.in);
-        String command = "";
-        System.out.println("Bienvenue dans le système de gestion de la librairie "+library.getName());
-        while (true)
-        {
-            command = sc.nextLine();
-            //TODO ajouter CLI pour le 25/12/2015
-        }
+        UserInterface.launch();
     }
 }

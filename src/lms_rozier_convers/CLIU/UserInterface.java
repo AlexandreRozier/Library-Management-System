@@ -40,12 +40,13 @@ public abstract class UserInterface {
     public static void launch() {
         boolean open = true;
         if (currentLibrary != null) {
-            System.out.println("Bienvenue dans le système de gestion de la librairie " + currentLibrary.getName());
+            System.out.println("Welcome to the User Interface of the  " + currentLibrary.getName()+" library.");
         }
         String[] commandAndParameters ;
         String str;
         while(open){
-            System.out.println("test");
+            //TODO implementer une fonction help qui liste les commandes
+            System.out.println("Please enter a command :");
             Scanner sc = new Scanner(System.in);
 
             str = sc.nextLine();
@@ -56,7 +57,7 @@ public abstract class UserInterface {
             switch (commandAndParameters[0]){
                 case("use_library"):
                     if (commandAndParameters.length >= 2) {
-                        String[] words = Arrays.copyOfRange(commandAndParameters, 1, commandAndParameters.length-1); // Creates a subarray with only the words of the research title
+                        String[] words = Arrays.copyOfRange(commandAndParameters, 1, commandAndParameters.length); // Creates a subarray with only the words of the research title
                         String libraryName = String.join(" ",words);
                         Actions.use_library(libraryName);
                     } else System.out.println("Invalid input. Ex : use_library Miterrand");
@@ -80,9 +81,9 @@ public abstract class UserInterface {
                     break;
                 case("list_items"):
                     if (commandAndParameters.length >= 2) {
-                        String[] words = Arrays.copyOfRange(commandAndParameters, 1, commandAndParameters.length-1); // Creates a subarray with only the words of the research title
+                        String[] words = Arrays.copyOfRange(commandAndParameters, 1, commandAndParameters.length); // Creates a subarray with only the words of the research title
                         String libraryName = String.join(" ",words);
-                        Actions.list_items(libraryName);
+                        System.out.println(Actions.list_items(libraryName));
                     } else System.out.println("Invalid input. Ex : list_item Miterrand");
                     break;
                 case("list_room"):
@@ -92,8 +93,11 @@ public abstract class UserInterface {
 
                     break;
                 case("find_items"):
+
                     if (commandAndParameters.length >= 2){
-                        Actions.find_items(commandAndParameters[1]);
+                        String[] words = Arrays.copyOfRange(commandAndParameters, 1, commandAndParameters.length); // Creates a subarray with only the words of the research title
+                        String author = String.join(" ",words);
+                        System.out.println(Actions.find_items(author));
                     }
                     else{
                         System.out.println("You must type only one parameter when using this command : the name of author(s) of items searched.");
@@ -101,12 +105,11 @@ public abstract class UserInterface {
 
                     break;
 
-                //TODO ya une couille pour les fonctions search : le nom du truc à chercher sera splité en token par split, et donc en fait le nom du truc a chercher sera
-                //egal à la somme des commandAndParameters concaténés. Il faut réunir les token d'indices supérieur à 0 pour avoir le nom du truc à chercher, idem pour toutes les fonctions de search
-                //TODO regarde ce que j'ai fait dans list_items du switch, ça marche normalement
                 case("search_title"):
                     if (commandAndParameters.length >= 2){
-                        Actions.search_title(commandAndParameters[1]);
+                        String[] words = Arrays.copyOfRange(commandAndParameters, 1, commandAndParameters.length); // Creates a subarray with only the words of the research title
+                        String title = String.join(" ",words);
+                        Actions.search_title(title);
                     }
                     else{
                         System.out.println("You must type only one parameter when using this command : the title of items searched.");
@@ -118,13 +121,15 @@ public abstract class UserInterface {
                     if (commandAndParameters.length >= 5) {
                         Actions.add_member(commandAndParameters[1], commandAndParameters[2], commandAndParameters[3], commandAndParameters[4]);
                     } else {
-                        System.out.println("You must type 4 parameters when using this command : the name of the member, his credit card number, his eamail and his type of membership.");
+                        System.out.println("You must type 4 parameters when using this command : the name of the member, his credit card number, his email and his type of membership.");
                     }
                     break;
 
                 case("borrow_item"):
                     if (commandAndParameters.length >= 3){
-                        Actions.borrow_item(commandAndParameters[1],commandAndParameters[2]);
+                        String[] words = Arrays.copyOfRange(commandAndParameters, 2, commandAndParameters.length); // Creates a subarray with only the words of the research title
+                        String itemName = String.join(" ",words);
+                        Actions.borrow_item(commandAndParameters[1],itemName);
                     }
                     else{
                         System.out.println("You must type 2 parameters when using this command : the name of the member and the name of the item.");
@@ -137,7 +142,7 @@ public abstract class UserInterface {
                     break;
 
                 case("exit")://stop the running of the console.
-                    open=false;
+                    open = false;
                     break;
 
                 default:
@@ -162,7 +167,7 @@ public abstract class UserInterface {
                 return library;
             }
         }
-        System.out.println("No library with this name was found.");
+        System.out.println("No library with this name was found :"+libraryName);
         return null;
     }
 

@@ -13,6 +13,7 @@ import lms_rozier_convers.core.items.ItemFactory;
 import lms_rozier_convers.core.library.*;
 import lms_rozier_convers.core.member.Member;
 import lms_rozier_convers.core.tidying.AnyFitStrategy;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.*;
@@ -24,13 +25,14 @@ import static org.junit.Assert.*;
  */
 public class ActionsTest {
 
+    private Library library;
     /**
-     * Tests the item_list function
+     * Creates a library that will be used for the test
      * @throws Exception
      */
-    @Test
-    public void testList_items() throws Exception {
-        Library library = new Library(new AnyFitStrategy(),1,3,5,5,"Miterrand");
+    @Before public void setUp()
+     {
+        library = new Library(new AnyFitStrategy(),1,3,5,5,"Miterrand");
         UserInterface.setCurrentLibrary(library);
         //+++++++++++++++++++++++++++
         //Creates the Library
@@ -87,6 +89,34 @@ public class ActionsTest {
         member3.setMemberCard(frequentCard);
 
         //+++++++++++++++++++++++++++
-        assertTrue(!Actions.list_items(library.getName()).equals(""));
+
+    }
+
+    /**
+     * Tests the list_items method of Actions
+     * @see Actions
+     * @throws Exception
+     */
+    @Test
+    public void testListItem() throws Exception{
+        assert (!Actions.list_items(library.getName()).equals(""));
+    }
+
+    /**
+     * Tests whether one can switch between two libraries registered in the UserInterface's libraries
+     * @throws Exception
+     */
+    @Test
+    public void testUseLibrary() throws Exception {
+        Library library2 = new Library(new AnyFitStrategy(),1,3,5,3,"Library2");
+        UserInterface.getLibraries().add(library2);
+        Actions.use_library(library2.getName());
+        assertTrue(UserInterface.getCurrentLibrary().getName().equals(library2.getName()));
+    }
+
+    @Test
+    public void testFindItems() throws Exception {
+        Actions.use_library("Miterrand");
+        String result = Actions.find_items("Albert Camus");
     }
 }
