@@ -2,6 +2,7 @@ package lms_rozier_convers.CLIU;
 
 import lms_rozier_convers.core.library.Library;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -138,6 +139,13 @@ public abstract class UserInterface {
                     break;
 
                 case("check_borrowed"):
+                    if (!commandAndParameters[1].isEmpty() && commandAndParameters[2].isEmpty()){
+                        Actions.check_borrowed(commandAndParameters[1]);
+                    }
+                    else{
+                        System.out.println("You must type only one parameter when using this command : the name of the member checked.");
+                    }
+
 
                     break;
 
