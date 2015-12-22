@@ -235,4 +235,7 @@ public abstract class Actions {
             System.out.println("This library ("+libraryName+")is already selected !");
         } else System.out.println("Library not found");
     }
+//TODO à implémenter
+    public static void check_borrowed(String commandAndParameter) {
+    }
 }
