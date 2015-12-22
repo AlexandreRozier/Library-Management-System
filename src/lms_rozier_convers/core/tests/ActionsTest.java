@@ -114,6 +114,10 @@ public class ActionsTest {
         assertTrue(UserInterface.getCurrentLibrary().getName().equals(library2.getName()));
     }
 
+    /**
+     * Tests if the find_items method works
+     * @throws Exception
+     */
     @Test
     public void testFindItems() throws Exception {
         Actions.use_library("Miterrand");

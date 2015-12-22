@@ -94,7 +94,6 @@ public abstract class UserInterface {
 
                     break;
                 case("find_items"):
-
                     if (commandAndParameters.length >= 2){
                         String[] words = Arrays.copyOfRange(commandAndParameters, 1, commandAndParameters.length); // Creates a subarray with only the words of the research title
                         String author = String.join(" ",words);
