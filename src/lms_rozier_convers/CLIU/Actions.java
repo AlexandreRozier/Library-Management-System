@@ -577,7 +577,12 @@ public abstract class Actions {
             return;
         }
         Scanner sc = new Scanner(System.in);
-        List<LibraryItem> itemsToStore = library.getStorageBox().getItems();
+        LibraryItem[] itemsToStore = new LibraryItem[library.getStorageBox().getItems().size()];
+
+        for (int i =0;i<library.getStorageBox().getItems().size();i++) {
+            itemsToStore[i] = library.getStorageBox().getItems().get(i);
+        }
+
         AbstractTidyingStrategy strategy = null;
         switch (strategy_name) {
 
@@ -586,6 +591,7 @@ public abstract class Actions {
                 library.setTidyingStrategy(strategy);
                 for (LibraryItem libraryItem : itemsToStore) {
                     library.getTidyingStrategy().tidy(libraryItem);
+                    library.getStorageBox().getItems().remove(libraryItem);
                 }
                 break;
 
@@ -600,6 +606,8 @@ public abstract class Actions {
 
                     try {
                         library.getTidyingStrategy().tidy(libraryItem,bookcase);
+                        library.getStorageBox().getItems().remove(libraryItem);
+
                     } catch (ObjectNotFoundException e) {
                         e.printStackTrace();
                     }
@@ -617,6 +625,9 @@ public abstract class Actions {
 
                     try {
                         library.getTidyingStrategy().tidy(libraryItem,room);
+                        library.getStorageBox().getItems().remove(libraryItem);
+
+
                     } catch (ObjectNotFoundException e) {
                         e.printStackTrace();
                     }
@@ -627,6 +638,8 @@ public abstract class Actions {
                 library.setTidyingStrategy(strategy);
                 for (LibraryItem libraryItem : itemsToStore) {
                     library.getTidyingStrategy().tidy(libraryItem);
+                    library.getStorageBox().getItems().remove(libraryItem);
+
                 }
 
                 break;
@@ -642,6 +655,34 @@ public abstract class Actions {
         System.out.println(itemsRemaining);
 
 
+    }
+
+    public static void unstore_items(String libraryName) {
+        Library library = null;
+        for (Library lib : UserInterface.getLibraries()) {
+            if (lib.getName().equals(libraryName)) {
+                library = lib;
+            }
+        }
+        if (library == null) {
+            System.out.println("Library not found, please try again.");
+            return;
+        }
+        for (Room room : library.getRooms()) {
+            for (Bookcase bookcase : room.getBookcases()) {
+                for (Shelf shelf : bookcase.getShelves()) {
+                    ArrayList<LibraryItem> itemsToUnstore = new ArrayList<>();
+                    for (LibraryItem libraryItem : shelf.getItemsContained()) {
+                        itemsToUnstore.add(libraryItem);
+                    }
+                    for (LibraryItem libraryItem : itemsToUnstore) {
+                        shelf.removeItem(libraryItem);
+                        library.getStorageBox().addItem(libraryItem);
+                    }
+                }
+            }
+        }
+        System.out.println("Each item has successfully been stored in the storage box");
     }
 }
 

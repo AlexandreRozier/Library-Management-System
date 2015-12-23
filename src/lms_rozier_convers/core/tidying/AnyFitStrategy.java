@@ -13,9 +13,7 @@ public class AnyFitStrategy extends AbstractTidyingStrategy {
 
     @Override
     public void tidy(LibraryItem item) {
-        if (item.getLocation().getStorageBox() != null) {
-            item.getLocation().getStorageBox().getItems().remove(item);
-        }
+
         for (Room room : this.getLibrary().getRooms() ) {
             for (Bookcase bookcase : room.getBookcases())
             {
@@ -25,7 +23,7 @@ public class AnyFitStrategy extends AbstractTidyingStrategy {
                     if (item.getShape().canFit(shelf.getEmptySpace()))
                     {
                         shelf.addItem(item);
-
+                        this.getLibrary().getStorageBox().getItems().remove(item);
                         return;
                     }
                 }

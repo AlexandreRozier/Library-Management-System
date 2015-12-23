@@ -27,7 +27,7 @@ public class Library {
     private int numberOfMaxSimultaneousBorrows = 5;
     private List<LibraryItem> itemsLinkedToTheLibrary = new ArrayList<>(); // Items linked, borrowed or not, lost or not
     //TODO : vérifier qu'un item est toujours rajouté à cette liste quand on en ajoute un
-
+    //TODO vérifier si c'est utile (je pense que oui)
     /**
      * CONSTRUCTOR
      * @param tidyingStrategy

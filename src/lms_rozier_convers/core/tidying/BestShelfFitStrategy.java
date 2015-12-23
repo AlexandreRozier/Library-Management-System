@@ -15,9 +15,7 @@ public class BestShelfFitStrategy extends AbstractTidyingStrategy{
 
     @Override
     public void tidy(LibraryItem item) {
-        if (item.getLocation().getStorageBox() != null) {
-            item.getLocation().getStorageBox().getItems().remove(item);
-        }
+
         double maxSpace = 0;
         Shelf selectedShelf = null;
         for (Room room : this.getLibrary().getRooms() ) {
@@ -30,12 +28,15 @@ public class BestShelfFitStrategy extends AbstractTidyingStrategy{
                     {
                         maxSpace = shelfSpace;
                         selectedShelf = shelf;
+
                     }
                 }
             }
         }
         if (selectedShelf != null) {
             selectedShelf.addItem(item);
+            this.getLibrary().getStorageBox().getItems().remove(item);
+
         }
         else {
             this.getLibrary().getStorageBox().addItem(item);

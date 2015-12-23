@@ -98,7 +98,10 @@ public abstract class UserInterface {
 
                     break;
                 case("unstore_items"):
-
+                    if (parameters.length == 1) {
+                        String libraryName = parameters[0];
+                        Actions.unstore_items(libraryName);
+                    }
                     break;
                 //TODO compatibiliser ce qui est en dessous avec les nouveaux arguments
                 case("list_items"):
@@ -195,7 +198,7 @@ public abstract class UserInterface {
                     break;
 
                 default:
-                    System.out.println("Invalid command. Please be attentive to use low case.");
+                    System.out.println("Invalid command. Please be attentive to use lower cases.");
 
             }
         }
