@@ -3,7 +3,9 @@ package lms_rozier_convers.CLIU;
 import lms_rozier_convers.core.FactoryMaker;
 import lms_rozier_convers.core.card.Card;
 import lms_rozier_convers.core.card.CardFactory;
+import lms_rozier_convers.core.exceptions.ObjectNotFoundException;
 import lms_rozier_convers.core.geometry.Cuboid;
+import lms_rozier_convers.core.items.ItemFactory;
 import lms_rozier_convers.core.items.LibraryItem;
 import lms_rozier_convers.core.library.Bookcase;
 import lms_rozier_convers.core.library.Library;
@@ -13,7 +15,9 @@ import lms_rozier_convers.core.member.Member;
 import lms_rozier_convers.core.tidying.*;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
+import java.util.StringJoiner;
 
 /**
  * Created by hx on 20/12/2015.
@@ -44,6 +48,9 @@ public abstract class Actions {
                     }
                 }
             }
+        }
+        for (LibraryItem libraryItem : library.getStorageBox().getItems()) {
+            itemList.add(libraryItem);
         }
         String descr = "";
         int iter = 0;
@@ -337,9 +344,11 @@ public abstract class Actions {
 
     //TODO dire si la library existe déjà
     //TODO vérifier que la library current est toujours dans libraries
+
     /**
      * This method creates a new library, but doesn't select it :
      * it is necessary to call "use_library" to use the new library (just like in SQL)
+     *
      * @param libraryName the name of the new library
      */
     public static void create_library(String libraryName) {
@@ -408,14 +417,15 @@ public abstract class Actions {
         System.out.println("Please enter the number of maximum borrows for a member :");
         numberOfMaximumBorrows = sc.nextInt();
 
-        Library library = new Library(strategy, numberToBeFrequent, numberOfMonthsToBeFrequent, numberOfMonthsToBeStandard, numberOfMaximumBorrows,libraryName);
+        Library library = new Library(strategy, numberToBeFrequent, numberOfMonthsToBeFrequent, numberOfMonthsToBeStandard, numberOfMaximumBorrows, libraryName);
         UserInterface.addLibrary(library);
-        System.out.println("Library "+libraryName+" successfully added.");
+        System.out.println("Library " + libraryName + " successfully added.");
 
     }
 
     /**
      * Lists the items contained in the given library
+     *
      * @return the list of items
      */
     public static String list_libraries() {
@@ -432,6 +442,7 @@ public abstract class Actions {
 
     /**
      * Adds a room with a given name (provided by user input) to the selected library
+     *
      * @param libraryName the name of the library
      */
     public static void add_room(String libraryName) {
@@ -460,15 +471,16 @@ public abstract class Actions {
                 }
             }
             library.addRoom(new Room(roomName));
-            System.out.println("The room "+roomName+" was added successfully to the library "+libraryName);
-        }else System.out.println("Library not found, please try again.");
+            System.out.println("The room " + roomName + " was added successfully to the library " + libraryName);
+        } else System.out.println("Library not found, please try again.");
     }
 
     /**
      * Adds a bookcase to the given room in the given library
+     *
      * @param libraryName the library's name
      * @param num_shelves the number of shelves in the bookcase
-     * @param room_name the name of the room containing the bookcase
+     * @param room_name   the name of the room containing the bookcase
      */
     public static void add_bookcase(String libraryName, int num_shelves, String room_name) {
         Library library = null;
@@ -495,13 +507,141 @@ public abstract class Actions {
                 System.out.println("Please enter the heigh of the bookcase");
                 double heigh = sc.nextInt();
                 Bookcase bookcase = new Bookcase(bookcaseName);
-                for(int i =0;i<num_shelves;i++) {
+                for (int i = 0; i < num_shelves; i++) {
                     bookcase.addShelf(new Shelf(new Cuboid(length, heigh / num_shelves, width / num_shelves), bookcaseName + "_" + i)); // Creation of the desired number of shelves
                 }
                 selectedRoom.addBookcase(bookcase);
                 System.out.println("Bookcase " + bookcaseName + " successfully added in the room " + room_name + ".");
             } else System.out.println("Room not found in the library " + libraryName + " , please try again.");
-        }else System.out.println("Library not found, please try again.");
+        } else System.out.println("Library not found, please try again.");
+    }
+
+    public static void add_item(String author, String title, String item_type, int date, String publisher, String library_name) {
+        Library library = null;
+        for (Library lib : UserInterface.getLibraries()) {
+            if (lib.getName().equals(library_name)) {
+                library = lib;
+            }
+        }
+        if (library != null) {
+            Scanner sc = new Scanner(System.in);
+            ItemFactory factory = (ItemFactory) FactoryMaker.createFactory("itemFactory");
+            ArrayList<String> authors = new ArrayList<>();
+            authors.add(author);
+            System.out.println("Please add the volume number :");
+            int volumeNumber = sc.nextInt();
+            System.out.println("Please tell if the item is borrowable (y/n)");
+            sc.nextLine();
+            String cmd = sc.nextLine();
+            boolean isBorrowable = true;
+            switch (cmd) {
+                case "y":
+                    isBorrowable = true;
+                    break;
+                case "n":
+                    isBorrowable = false;
+                    break;
+                default:
+                    System.out.println("Command not understood, the item will be set by default borrowable.");
+            }
+            System.out.println("Please enter the length of the item :");
+            double length = sc.nextDouble();
+            System.out.println("Please enter the width of the item :");
+            double width = sc.nextDouble();
+            System.out.println("Please enter the height of the item :");
+            double heigth = sc.nextDouble();
+            LibraryItem item;
+            if (item_type.equals("Book")) {
+                System.out.println("Please enter the ISBN number of the item :");
+                sc.nextLine();
+                String isbn = sc.nextLine();
+                item = factory.createItem(item_type, title, authors, publisher, date, volumeNumber, isBorrowable, new Cuboid(length, heigth, width), isbn);
+            } else {
+                item = factory.createItem(item_type, title, authors, publisher, date, volumeNumber, isBorrowable, new Cuboid(length, heigth, width));
+
+            }
+            library.getStorageBox().addItem(item);
+            System.out.println("Item added successfully to the library " + library_name);
+        } else System.out.println("Library not found, please try again.");
+    }
+
+    public static void store_items(String libraryName, String strategy_name) {
+        Library library = null;
+        for (Library lib : UserInterface.getLibraries()) {
+            if (lib.getName().equals(libraryName)) {
+                library = lib;
+            }
+        }
+        if (library == null) {
+            System.out.println("Library not found, please try again.");
+            return;
+        }
+        Scanner sc = new Scanner(System.in);
+        List<LibraryItem> itemsToStore = library.getStorageBox().getItems();
+        AbstractTidyingStrategy strategy = null;
+        switch (strategy_name) {
+
+            case "AnyFitStrategy":
+                strategy = new AnyFitStrategy();
+                library.setTidyingStrategy(strategy);
+                for (LibraryItem libraryItem : itemsToStore) {
+                    library.getTidyingStrategy().tidy(libraryItem);
+                }
+                break;
+
+            case "BestBookcaseFitStrategy":
+                strategy = new BestBookcaseFitStrategy();
+                library.setTidyingStrategy(strategy);
+                for (LibraryItem libraryItem : itemsToStore) {
+
+                    System.out.println("Please enter the name of the bookcase in which store "+libraryItem.getTitle());
+                    String bookcaseName = sc.nextLine();
+                    Bookcase bookcase = library.findBookcaseByName(bookcaseName);
+
+                    try {
+                        library.getTidyingStrategy().tidy(libraryItem,bookcase);
+                    } catch (ObjectNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                }
+                break;
+            case "BestRoomFitStrategy":
+                strategy = new BestRoomFitStrategy();
+                library.setTidyingStrategy(strategy);
+
+                for (LibraryItem libraryItem : itemsToStore) {
+
+                    System.out.println("Please enter the name of the room in which store "+libraryItem.getTitle());
+                    String roomName = sc.nextLine();
+                    Room room = library.findRoomByName(roomName);
+
+                    try {
+                        library.getTidyingStrategy().tidy(libraryItem,room);
+                    } catch (ObjectNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                }
+                break;
+            case "BestShelfFitStrategy":
+                strategy = new BestShelfFitStrategy();
+                library.setTidyingStrategy(strategy);
+                for (LibraryItem libraryItem : itemsToStore) {
+                    library.getTidyingStrategy().tidy(libraryItem);
+                }
+
+                break;
+            default:
+                System.out.println("Strategy not found. Please try again");
+                return;
+        }
+        System.out.println("Tidying done successfully ! The following items were not sorted : ");
+        String itemsRemaining = "";
+        for (LibraryItem libraryItem : library.getStorageBox().getItems()) {
+            itemsRemaining += libraryItem;
+        }
+        System.out.println(itemsRemaining);
+
+
     }
 }
 

@@ -18,6 +18,9 @@ public class BestBookcaseFitStrategy extends AbstractTidyingStrategy {
     @Override
     public void tidy(LibraryItem item, Bookcase bookcase) throws ObjectNotFoundException {
 
+        if (item.getLocation().getStorageBox() != null) {
+            item.getLocation().getStorageBox().getItems().remove(item);
+        }
         // Checks whether the bookcase is in the library
         if (!this.getLibrary().isContained(bookcase)) throw new ObjectNotFoundException();
 

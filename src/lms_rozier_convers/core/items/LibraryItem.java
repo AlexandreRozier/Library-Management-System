@@ -123,7 +123,10 @@ public abstract class LibraryItem {
 
     public void setLocation(Location location) {
         this.location = location;
-        location.getRoom().getLibrary().getItemsLinkedToTheLibrary().add(this);
+        if (location.getStorageBox() == null) {
+            location.getRoom().getLibrary().getItemsLinkedToTheLibrary().add(this);
+
+        }
     }
 
     public int getId() {

@@ -17,6 +17,10 @@ public class BestRoomFitStrategy extends AbstractTidyingStrategy{
     @Override
     public void tidy(LibraryItem item, Room room) throws ObjectNotFoundException {
 
+
+        if (item.getLocation().getStorageBox() != null) {
+            item.getLocation().getStorageBox().getItems().remove(item);
+        }
         //Checks whether the bookcase is in the library
         if (!this.getLibrary().isContained(room)) throw new ObjectNotFoundException();
 
