@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f1e4884-136e-467b-8d2c-794e7f1962e7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lms_rozier_convers/CLIU/Actions.java" afterPath="$PROJECT_DIR$/src/lms_rozier_convers/CLIU/Actions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lms_rozier_convers/CLIU/UserInterface.java" afterPath="$PROJECT_DIR$/src/lms_rozier_convers/CLIU/UserInterface.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lms_rozier_convers/core/items/LibraryItem.java" afterPath="$PROJECT_DIR$/src/lms_rozier_convers/core/items/LibraryItem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lms_rozier_convers/core/tidying/AnyFitStrategy.java" afterPath="$PROJECT_DIR$/src/lms_rozier_convers/core/tidying/AnyFitStrategy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lms_rozier_convers/core/tidying/BestBookcaseFitStrategy.java" afterPath="$PROJECT_DIR$/src/lms_rozier_convers/core/tidying/BestBookcaseFitStrategy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lms_rozier_convers/core/tidying/BestRoomFitStrategy.java" afterPath="$PROJECT_DIR$/src/lms_rozier_convers/core/tidying/BestRoomFitStrategy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lms_rozier_convers/core/tidying/BestShelfFitStrategy.java" afterPath="$PROJECT_DIR$/src/lms_rozier_convers/core/tidying/BestShelfFitStrategy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lms_rozier_convers/core/StorageBox.java" afterPath="$PROJECT_DIR$/src/lms_rozier_convers/core/StorageBox.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lms_rozier_convers/core/library/Library.java" afterPath="$PROJECT_DIR$/src/lms_rozier_convers/core/library/Library.java" />
     </list>
     <ignored path="SEPart2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,19 +30,22 @@
       <file leaf-file-name="Actions.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/CLIU/Actions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.1034484">
-              <caret line="569" column="46" selection-start-line="569" selection-start-column="46" selection-end-line="569" selection-end-column="46" />
+            <state vertical-scroll-proportion="-6.448276">
+              <caret line="107" column="44" selection-start-line="107" selection-start-column="44" selection-end-line="107" selection-end-column="44" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BestShelfFitStrategy.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/tidying/BestShelfFitStrategy.java">
+      <file leaf-file-name="Library.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/library/Library.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
-              <folding />
+            <state vertical-scroll-proportion="-6.448276">
+              <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
+              <folding>
+                <element signature="e#8852#8853#0" expanded="true" />
+                <element signature="e#8898#8899#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -57,17 +54,7 @@
         <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/tidying/AbstractTidyingStrategy.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BestRoomFitStrategy.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/tidying/BestRoomFitStrategy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+              <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -77,7 +64,27 @@
         <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/tidying/AnyFitStrategy.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
+              <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Shelf.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/library/Shelf.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="66" column="23" selection-start-line="66" selection-start-column="23" selection-end-line="66" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LibraryItem.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/items/LibraryItem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.41962776">
+              <caret line="126" column="54" selection-start-line="126" selection-start-column="54" selection-end-line="126" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -103,31 +110,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LibraryItem.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/items/LibraryItem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="StorageBox.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/StorageBox.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserInterface.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserInterface.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/CLIU/UserInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25855514">
-              <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="95" column="40" selection-start-line="95" selection-start-column="40" selection-end-line="95" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -148,14 +145,16 @@
       <list>
         <option value="$PROJECT_DIR$/src/lms_rozier_convers/TEST" />
         <option value="$PROJECT_DIR$/src/lms_rozier_convers/core/tests/ActionsTest.java" />
-        <option value="$PROJECT_DIR$/src/lms_rozier_convers/core/StorageBox.java" />
-        <option value="$PROJECT_DIR$/src/lms_rozier_convers/core/items/LibraryItem.java" />
         <option value="$PROJECT_DIR$/src/lms_rozier_convers/CLIU/UserInterface.java" />
         <option value="$PROJECT_DIR$/src/lms_rozier_convers/core/tidying/AnyFitStrategy.java" />
         <option value="$PROJECT_DIR$/src/lms_rozier_convers/core/tidying/BestBookcaseFitStrategy.java" />
         <option value="$PROJECT_DIR$/src/lms_rozier_convers/core/tidying/BestRoomFitStrategy.java" />
         <option value="$PROJECT_DIR$/src/lms_rozier_convers/core/tidying/BestShelfFitStrategy.java" />
         <option value="$PROJECT_DIR$/src/lms_rozier_convers/CLIU/Actions.java" />
+        <option value="$PROJECT_DIR$/src/lms_rozier_convers/core/StorageBox.java" />
+        <option value="$PROJECT_DIR$/src/lms_rozier_convers/core/library/Library.java" />
+        <option value="$PROJECT_DIR$/src/lms_rozier_convers/core/tidying/AbstractTidyingStrategy.java" />
+        <option value="$PROJECT_DIR$/src/lms_rozier_convers/core/items/LibraryItem.java" />
       </list>
     </option>
   </component>
@@ -344,7 +343,7 @@
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="list_it&#9;PSI&#9;JAVA://lms_rozier_convers.CLIU.Actions#list_items&#10;libr&#9;FILE&#9;file://C:/Users/hx/Dropbox/prog_shared/SEPart2/src/lms_rozier_convers/core/library/Library.java&#10;emptyspa&#9;PSI&#9;JAVA://lms_rozier_convers.core.library.Shelf#emptySpace" />
+    <property name="SearchEverywhereHistoryKey" value="itemLin&#9;PSI&#9;JAVA://lms_rozier_convers.core.library.Library#itemsLinkedToTheLibrary&#10;Any&#9;FILE&#9;file://C:/Users/hx/Dropbox/prog_shared/SEPart2/src/lms_rozier_convers/core/tidying/AnyFitStrategy.java&#10;Library&#9;FILE&#9;file://C:/Users/hx/Dropbox/prog_shared/SEPart2/src/lms_rozier_convers/core/library/Library.java&#10;list_it&#9;PSI&#9;JAVA://lms_rozier_convers.CLIU.Actions#list_items&#10;libr&#9;FILE&#9;file://C:/Users/hx/Dropbox/prog_shared/SEPart2/src/lms_rozier_convers/core/library/Library.java&#10;emptyspa&#9;PSI&#9;JAVA://lms_rozier_convers.core.library.Shelf#emptySpace" />
   </component>
   <component name="RunManager" selected="Application.Test1">
     <configuration default="false" name="Test1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -840,7 +839,7 @@
       <updated>1450873987022</updated>
       <workItem from="1450873992649" duration="34000" />
       <workItem from="1450875303468" duration="484000" />
-      <workItem from="1450884983068" duration="11858000" />
+      <workItem from="1450884983068" duration="12542000" />
     </task>
     <task id="LOCAL-00001" summary="Classe Actions coté Arnaud">
       <created>1450875456280</created>
@@ -854,7 +853,13 @@
       <option name="project" value="LOCAL" />
       <updated>1450889828500</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Ajout add_item, store_item à finir de débugger&#10;Plus gestion enlevage d'un item de la storageBox">
+      <created>1450897480173</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1450897480173</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -863,7 +868,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12376000" />
+    <option name="totallyTimeSpent" value="13060000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -876,7 +881,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -886,7 +891,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24946696" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -896,7 +901,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3997833" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997833" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -910,7 +915,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Classe Actions coté Arnaud" />
     <MESSAGE value="Ajout add_room, add_bookcase" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout add_room, add_bookcase" />
+    <MESSAGE value="Ajout add_item, store_item à finir de débugger&#10;Plus gestion enlevage d'un item de la storageBox" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout add_item, store_item à finir de débugger&#10;Plus gestion enlevage d'un item de la storageBox" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -921,8 +927,14 @@
           <properties />
           <option name="timeStamp" value="10" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/lms_rozier_convers/CLIU/Actions.java</url>
+          <line>574</line>
+          <properties />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="11" />
+      <option name="time" value="12" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -963,14 +975,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/library/Shelf.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/geometry/Cuboid.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -998,42 +1002,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/library/Library.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/library/Location.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/StorageBox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/items/LibraryItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/tidying/AbstractTidyingStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -1070,26 +1042,69 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/CLIU/UserInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="95" column="40" selection-start-line="95" selection-start-column="40" selection-end-line="95" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/StorageBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/tidying/AbstractTidyingStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/tidying/AnyFitStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
+          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/library/Shelf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="66" column="23" selection-start-line="66" selection-start-column="23" selection-end-line="66" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/library/Library.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.448276">
+          <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
+          <folding>
+            <element signature="e#8852#8853#0" expanded="true" />
+            <element signature="e#8898#8899#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/CLIU/Actions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.1034484">
-          <caret line="569" column="46" selection-start-line="569" selection-start-column="46" selection-end-line="569" selection-end-column="46" />
+        <state vertical-scroll-proportion="-6.448276">
+          <caret line="107" column="44" selection-start-line="107" selection-start-column="44" selection-end-line="107" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/CLIU/UserInterface.java">
+    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/items/LibraryItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25855514">
-          <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.41962776">
+          <caret line="126" column="54" selection-start-line="126" selection-start-column="54" selection-end-line="126" selection-end-column="54" />
           <folding />
         </state>
       </provider>

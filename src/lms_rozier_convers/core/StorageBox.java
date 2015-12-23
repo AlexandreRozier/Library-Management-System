@@ -26,5 +26,6 @@ public class StorageBox {
     public void addItem(LibraryItem item){
         this.items.add(item);
         item.setLocation(new Location(this));
+
     }
 }

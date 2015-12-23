@@ -269,6 +269,7 @@ public class Library {
 
     public void setTidyingStrategy(AbstractTidyingStrategy tidyingStrategy) {
         this.tidyingStrategy = tidyingStrategy;
+        tidyingStrategy.setLibrary(this);
     }
 
     public List<Member> getMembers() {
