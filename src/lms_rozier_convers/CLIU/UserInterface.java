@@ -87,17 +87,37 @@ public abstract class UserInterface {
                         System.out.println(Actions.list_items(libraryName));
                     } else System.out.println("Invalid input. Ex : list_item Miterrand");
                     break;
-                case("list_room"):
 
+
+                case("list_room"):
+                    if(commandAndParameters.length>=2){
+                        String[] words = Arrays.copyOfRange(commandAndParameters,1,commandAndParameters.length);
+                        String room_name = String.join(" ", words);
+                        Actions.list_room(room_name);
+                    }
+                    else{
+                        System.out.println("Invalid input.");
+                    }
                     break;
+
+
                 case("list_bookcase"):
+                    if(commandAndParameters.length>=3){
+                        String[] words = Arrays.copyOfRange(commandAndParameters,2,commandAndParameters.length);
+                        String room_name = commandAndParameters[1];
+                        String bookcase_name = String.join(" ", words);
+                        Actions.list_bookcase(room_name,bookcase_name);
+                    }
+                    else{
+                        System.out.println("Invalid input");
+                    }
 
                     break;
                 case("find_items"):
                     if (commandAndParameters.length >= 2){
                         String[] words = Arrays.copyOfRange(commandAndParameters, 1, commandAndParameters.length); // Creates a subarray with only the words of the research title
                         String author = String.join(" ",words);
-                        System.out.println(Actions.find_items(author));
+                        Actions.find_items(author);
                     }
                     else{
                         System.out.println("You must type only one parameter when using this command : the name of author(s) of items searched.");
