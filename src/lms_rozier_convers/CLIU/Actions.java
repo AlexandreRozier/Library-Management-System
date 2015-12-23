@@ -250,6 +250,40 @@ public abstract class Actions {
         System.out.println(descr);
     }
 
+    public static void list_bookcase(String room_name, String bookcase_name){
+        Library currentLibrary = UserInterface.getCurrentLibrary();
+        Room room = null;
+        for (Room r : currentLibrary.getRooms()){
+            if(r.getName().equalsIgnoreCase(room_name)){
+                room = r;
+            }
+        }
+        if(room!=null){
+            Bookcase bookcase = null;
+            for (Bookcase bk : room.getBookcases()){
+                if (bk.getName().equalsIgnoreCase(bookcase_name)){
+                    bookcase = bk;
+                }
+            }
+            if(bookcase!=null){
+                String descr = "In the room "+room_name+" and in the bookcase " +bookcase_name+", there are the following shelves : \n";
+                for (Shelf shelf : bookcase.getShelves()){
+                    descr += "The self " + shelf.getName() + "contains : \n";
+                    for (LibraryItem item : shelf.getItemsContained()){
+                        descr += item.getTitle() + "(" + item.getType() + ")";
+                    }
+                }
+                System.out.println(descr);
+            }
+            else{
+                System.out.println("This bookcase does not exist in this room. Please try again");
+            }
+        }
+        else{
+            System.out.println("This room does not exist in the library. Please try again.");
+        }
+    }
+
     /**
      * Selects the library on which should be applied the next commands
      * @param libraryName the desired library
