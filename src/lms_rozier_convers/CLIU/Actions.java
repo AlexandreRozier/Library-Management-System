@@ -237,6 +237,9 @@ public abstract class Actions {
         for (LibraryItem item : items_to_print) {
             descr += "Author(s) : " + item.getAuthors() + ", Year : " + item.getYear() + ", Type : " + item.getType() + ". " + itemborrowable(item) + "\n";
         }
+        if(descr.isEmpty()){
+            descr = "No item with the title "+title_name+" were found.";
+        }
         System.out.println(descr);
     }
 
@@ -264,6 +267,9 @@ public abstract class Actions {
         for (LibraryItem item : items_to_print) {
             descr += "Item n°" + i + " Title : " + item.getTitle() + ", Year : " + item.getYear() + ", Type : " + item.getType() + ". " + itemborrowable(item) + "\n";
             i++;
+        }
+        if(descr.isEmpty()){
+            descr = "No item with the author "+author_name+" were found.";
         }
         System.out.println(descr);
     }
