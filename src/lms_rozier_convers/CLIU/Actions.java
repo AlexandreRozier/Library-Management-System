@@ -150,12 +150,12 @@ public abstract class Actions {
                 reservationList.add(item);
             }
         }
-        descr += member_name + " has in his reservation list :";
+        descr += member_name + " has in his reservation list : \n";
         for (LibraryItem item : reservationList) {
             descr += item.getTitle() + "(" + item.getType() + ")" + "\n";
         }
 
-        descr += "The current statis of the member is " + member.getStatus();
+        descr += "The current status of the member is " + member.getStatus();
 
         System.out.println(descr);
     }
@@ -215,6 +215,10 @@ public abstract class Actions {
 
     }
 
+    /**
+     * List all items whose title is title_name
+     * @param title_name
+     */
     public static void search_title(String title_name) {
         Library library = UserInterface.getCurrentLibrary();
         ArrayList<LibraryItem> items_to_print = new ArrayList<>();
@@ -237,6 +241,10 @@ public abstract class Actions {
     }
 
 
+    /**
+     * List all items whose author is author_name
+     * @param author_name
+     */
     public static void find_items(String author_name) {
         Library library = UserInterface.getCurrentLibrary();
         ArrayList<LibraryItem> items_to_print = new ArrayList<>();
@@ -298,6 +306,10 @@ public abstract class Actions {
         }
     }
 
+    /**
+     * List all bookcases with their content in room room_name.
+     * @param room_name
+     */
     public static void list_room(String room_name) {
         Library currentLibrary = UserInterface.getCurrentLibrary();
         Room room = null;
@@ -328,7 +340,6 @@ public abstract class Actions {
 
     /**
      * Selects the library on which should be applied the next commands
-     *
      * @param libraryName the desired library
      */
     public static void use_library(String libraryName) {
