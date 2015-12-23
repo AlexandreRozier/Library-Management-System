@@ -16,6 +16,8 @@ import lms_rozier_convers.core.tidying.AnyFitStrategy;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 import java.util.*;
 
 import static org.junit.Assert.*;
@@ -27,12 +29,13 @@ public class ActionsTest {
 
     private Library library;
     /**
-     * Creates a library that will be used for the test
+     * Creates a library that will be used by the following tests
      * @throws Exception
      */
     @Before public void setUp()
      {
          library = new Library(new AnyFitStrategy(),1,3,5,5,"Miterrand");
+         UserInterface.addLibrary(library);
          UserInterface.setCurrentLibrary(library);
          //+++++++++++++++++++++++++++
          //Creates the Library
@@ -147,4 +150,6 @@ public class ActionsTest {
         Actions.use_library("Miterrand");
         assertTrue(!Actions.find_items("Albert Camus").equals(""));
     }
+
+
 }

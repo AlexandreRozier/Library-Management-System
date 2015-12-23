@@ -9,8 +9,11 @@ import lms_rozier_convers.core.library.Library;
 import lms_rozier_convers.core.library.Room;
 import lms_rozier_convers.core.library.Shelf;
 import lms_rozier_convers.core.member.Member;
+import lms_rozier_convers.core.tidying.*;
 
 import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.StringJoiner;
 
 /**
  * Created by hx on 20/12/2015.
@@ -237,5 +240,96 @@ public abstract class Actions {
     }
 //TODO à implémenter
     public static void check_borrowed(String commandAndParameter) {
+    }
+
+    //TODO dire si la library existe déjà
+    //TODO vérifier que la library current est toujours dans libraries
+    /**
+     * This method creates a new library, but doesn't select it :
+     * it is necessary to call "use_library" to use the new library (just like in SQL)
+     * @param libraryName the name of the new library
+     */
+    public static void create_library(String libraryName) {
+        Scanner sc = new Scanner(System.in);
+        //+++++++++++++++++++++++++++
+        //Checks whether the library already exists
+        boolean alreadyExists = true;
+        while (alreadyExists) {
+            alreadyExists = false;
+            for (Library library : UserInterface.getLibraries()) {
+                if (library.getName().equals(libraryName)) {
+                    alreadyExists = true;
+                }
+            }
+            if (UserInterface.getCurrentLibrary().getName().equals(libraryName)) {
+                alreadyExists = true;
+            }
+            if (alreadyExists) {
+                System.out.println("The given name already exists ! Please choose another one.");
+                libraryName = sc.nextLine();
+            }
+        }
+
+        //+++++++++++++++++++++++++++
+        //Creation of the arguments
+        AbstractTidyingStrategy strategy = null;
+        int numberToBeFrequent;
+        int numberOfMonthsToBeFrequent;
+        int numberOfMonthsToBeStandard;
+        int numberOfMaximumBorrows;
+
+        //+++++++++++++++++++++++++++
+        //The users enters the desired values
+        String cmd;
+        System.out.println("Please select a sorting strategy : \n\tAnyFitStrategy\n\tBestBookcaseFitStrategy\n\tBestRoomFitStrategy\n\tBestShelfFitStrategy\n");
+        boolean exit = false;
+        while (!exit) {
+            cmd = sc.nextLine();
+            switch (cmd) {
+                case "AnyFitStrategy":
+                    strategy = new AnyFitStrategy();
+                    exit = true;
+                    break;
+                case "BestBookcaseFitStrategy":
+                    strategy = new BestBookcaseFitStrategy();
+                    exit = true;
+                    break;
+                case "BestRoomFitStrategy":
+                    strategy = new BestRoomFitStrategy();
+                    exit = true;
+                    break;
+                case "BestShelfFitStrategy":
+                    strategy = new BestShelfFitStrategy();
+                    exit = true;
+                    break;
+                default:
+                    System.out.println("Strategy not found. Please try again");
+            }
+        }
+        System.out.println("Please enter the number of items one shall borrow on average to be granted Frequent :");
+        numberToBeFrequent = sc.nextInt();
+        System.out.println("Please enter the number of months on which is based the average borrow number :");
+        numberOfMonthsToBeFrequent = sc.nextInt();
+        System.out.println("Please enter the number of items one shall borrow on average to be deprived to Standard :");
+        numberOfMonthsToBeStandard = sc.nextInt();
+        System.out.println("Please enter the number of maximum borrows for a member :");
+        numberOfMaximumBorrows = sc.nextInt();
+
+        Library library = new Library(strategy, numberToBeFrequent, numberOfMonthsToBeFrequent, numberOfMonthsToBeStandard, numberOfMaximumBorrows,libraryName);
+        UserInterface.addLibrary(library);
+        System.out.println("Library "+libraryName+" successfully added.");
+
+    }
+
+    public static String list_libraries() {
+        String list;
+        if (!UserInterface.getLibraries().isEmpty()) {
+            list = "The interface is linked to the following libraries : ";
+            for (Library library : UserInterface.getLibraries()) {
+                list += "\n\t" + library.getName();
+            }
+        } else list = "No library was found.";
+
+        return list;
     }
 }

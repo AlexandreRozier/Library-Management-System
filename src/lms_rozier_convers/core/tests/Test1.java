@@ -30,6 +30,7 @@ public class Test1 {
 
 
         Library library = new Library(new AnyFitStrategy(),1,3,5,5,"Miterrand");
+        UserInterface.addLibrary(library);
         UserInterface.setCurrentLibrary(library);
         //+++++++++++++++++++++++++++
         //Creates the Library

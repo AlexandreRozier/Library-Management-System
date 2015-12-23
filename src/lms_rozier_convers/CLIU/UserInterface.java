@@ -17,27 +17,6 @@ public abstract class UserInterface {
     private static Library currentLibrary; // The library on which will be done the actions
 
 
-    /**
-     * CONSTRUCTOR
-     * A constructor used to create an interface not linked to a library, for instance when
-     * one wants to create a library via the CLUI.
-     */
-    public UserInterface() {
-        launch();
-    }
-
-    /**
-     * CONSTRUCTOR
-     * A constructor used to launch an interface using an existing library
-     * @param selectedLibrary The library that will be used
-     */
-    public UserInterface(Library selectedLibrary) {
-        currentLibrary = selectedLibrary;
-        libraries.add(selectedLibrary);
-        launch();
-    }
-
-
     public static void launch() {
         boolean open = true;
         if (currentLibrary != null) {
@@ -56,6 +35,9 @@ public abstract class UserInterface {
             //TODO : faire des exceptions quand il n'y a pas le bon nombre d'arguments
 
             switch (commandAndParameters[0]){
+                case ("list_libraries"):
+                    System.out.println(Actions.list_libraries());
+                    break;
                 case("use_library"):
                     if (commandAndParameters.length >= 2) {
                         String[] words = Arrays.copyOfRange(commandAndParameters, 1, commandAndParameters.length); // Creates a subarray with only the words of the research title
@@ -64,6 +46,11 @@ public abstract class UserInterface {
                     } else System.out.println("Invalid input. Ex : use_library Miterrand");
                     break;
                 case("create_library"):
+                    if (commandAndParameters.length >= 2) {
+                        String[] words = Arrays.copyOfRange(commandAndParameters, 1, commandAndParameters.length); // Creates a subarray with only the words of the research title
+                        String libraryName = String.join(" ",words);
+                        Actions.create_library(libraryName);
+                    } else System.out.println("Invalid input. Ex : create_library Miterrand");
 
                     break;
                 case("add_room"):
@@ -127,7 +114,7 @@ public abstract class UserInterface {
 
                 case("borrow_item"):
                     if (commandAndParameters.length >= 3){
-                        String[] words = Arrays.copyOfRange(commandAndParameters, 2, commandAndParameters.length); // Creates a subarray with only the words of the research title
+                        String[] words = Arrays.copyOfRange(commandAndParameters, 2, commandAndParameters.length); // Creates a sub-array with only the words of the research title
                         String itemName = String.join(" ",words);
                         Actions.borrow_item(commandAndParameters[1],itemName);
                     }
@@ -150,6 +137,7 @@ public abstract class UserInterface {
 
                 case("exit")://stop the running of the console.
                     open = false;
+                    sc.close();
                     break;
 
                 default:
@@ -196,5 +184,10 @@ public abstract class UserInterface {
 
     public static void setCurrentLibrary(Library currentLibrary) {
         UserInterface.currentLibrary = currentLibrary;
+    }
+
+    public static void addLibrary(Library currentLibrary) {
+        UserInterface.getLibraries().add(currentLibrary);
+
     }
 }
