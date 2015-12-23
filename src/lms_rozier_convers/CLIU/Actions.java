@@ -345,29 +345,29 @@ public abstract class Actions {
              //Checks whether the library already exists
              boolean alreadyExists = true;
              while (alreadyExists) {
-            +            alreadyExists = false;
-            +            for (Library library : UserInterface.getLibraries()) {
-                +                if (library.getName().equals(libraryName)) {
-                    +                    alreadyExists = true;
-                    +                }
-                +            }
-            +            if (UserInterface.getCurrentLibrary().getName().equals(libraryName)) {
-                +                alreadyExists = true;
-                +            }
-            +            if (alreadyExists) {
-                +                System.out.println("The given name already exists ! Please choose another one.");
-                +                libraryName = sc.nextLine();
-                +            }
-            +        }
-        +
-                +        //+++++++++++++++++++++++++++
-                        +        //Creation of the arguments
-                                +        AbstractTidyingStrategy strategy = null;
-        +        int numberToBeFrequent;
-        +        int numberOfMonthsToBeFrequent;
-        +        int numberOfMonthsToBeStandard;
-        +        int numberOfMaximumBorrows;
-        +
+                        alreadyExists = false;
+                        for (Library library : UserInterface.getLibraries()) {
+                            if (library.getName().equals(libraryName)) {
+                                alreadyExists = true;
+                            }
+                        }
+                        if (UserInterface.getCurrentLibrary().getName().equals(libraryName)) {
+                            alreadyExists = true;
+                        }
+                        if (alreadyExists) {
+                            System.out.println("The given name already exists ! Please choose another one.");
+                            libraryName = sc.nextLine();
+                        }
+                    }
+
+                //+++++++++++++++++++++++++++
+                //Creation of the arguments
+                AbstractTidyingStrategy strategy = null;
+                int numberToBeFrequent;
+                int numberOfMonthsToBeFrequent;
+                int numberOfMonthsToBeStandard;
+                int numberOfMaximumBorrows;
+
                 +        //+++++++++++++++++++++++++++
                         +        //The users enters the desired values
                                 +        String cmd;
