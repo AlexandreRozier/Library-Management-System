@@ -20,13 +20,13 @@ public abstract class UserInterface {
     public static void launch() {
         boolean open = true;
         if (currentLibrary != null) {
-            System.out.println("Welcome to the User Interface of the  " + currentLibrary.getName()+" library.");
+            System.out.println("Welcome to the User Interface of the  " + currentLibrary.getName()+" library. \n" +
+                    "Remember to use the command help if you have any doubts about the commands.");
         }
         String command;
         String[] inputSplitted ;
         String str;
         while(open){
-            //TODO implementer une fonction help qui liste les commandes
             System.out.println("Please enter a command :");
             Scanner sc = new Scanner(System.in);
 
@@ -40,7 +40,7 @@ public abstract class UserInterface {
             // The last split allows to keep only the parameters, even if they contain spaces
             String[] parameters = parametersInString.split(",");
 
-            //TODO : faire des exceptions quand il n'y a pas le bon nombre d'arguments
+            //TODO : faire des exceptions quand il n'y a pas le bon nombre d'arguments!
 
             switch (command){
                 case ("list_libraries"):
@@ -195,6 +195,31 @@ public abstract class UserInterface {
                 case("exit")://stop the running of the console.
                     open = false;
                     sc.close();
+                    break;
+
+                case("help"):
+                    String descr = "\nUse this console to control your libraries. Please note that you are controlling only one library when using the commands." +
+                            "Here are the commands you can use : \n\n" +
+                            "exit will close the console.\n" +
+                            "list_libraries will give you the lists of libraries you can use.\n" +
+                            "use_library <library_name> will attribute the given library to the current library.\n" +
+                            "create_library <library_name> will create a library with the given name.\n" +
+                            "add_room <library_name> will add a room to the specified library.\n" +
+                            "add_bookcase <library_name, num_shelves, room name> will add a bookcase to the specified library, with the specified number of shelves. \n" +
+                            "add_item <author_name,title,item_type,year,publisher,library_name> will add an item to the current library, with the specified description. \n" +
+                            "store_item <library_name,storing_strategy> will change the sorting strategy of the given library and store the items according to the new strategy.\n" +
+                            "unstore_iem <library_name> will remove all items stored in the specified library and place them into the storage box.\n" +
+                            "list_items <library_name> will list all the items of the specified library.\n" +
+                            "list_room <room_name> will list all bookcases and their contents of the specified room.\n"+
+                            "list_bookcase <room_name,bookcase_name> will list all shelves of bookcase specified in the room specified.\n" +
+                            "find items <author_name> will find all items whose author is the specified author.\n" +
+                            "search_title <title_name> will find all items whose title is the specified title.\n" +
+                            "add_member<member_name,ccard_num,email,membership_type> will create and add a member to the current library with the given data.\n" +
+                            "borrow_item <member_name,item_title> will let the member specified borrow the item if this is possible, and will do the appropriate actions otherwise.\n" +
+                            "check_borrowed <member_name> will give you information about the situation of the member. \n\n" +
+                            "Please be careful to separate the command from your arguments with a space and each " +
+                            "command from the other with a virgule (,).\n";
+                    System.out.println(descr);
                     break;
 
                 default:
