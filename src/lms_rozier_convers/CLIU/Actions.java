@@ -250,6 +250,11 @@ public abstract class Actions {
         System.out.println(descr);
     }
 
+    /**
+     * list all shelves with their content of of bookshelf bookcase_name in the room room_name.
+     * @param room_name
+     * @param bookcase_name
+     */
     public static void list_bookcase(String room_name, String bookcase_name){
         Library currentLibrary = UserInterface.getCurrentLibrary();
         Room room = null;
@@ -278,6 +283,35 @@ public abstract class Actions {
             else{
                 System.out.println("This bookcase does not exist in this room. Please try again");
             }
+        }
+        else{
+            System.out.println("This room does not exist in the library. Please try again.");
+        }
+    }
+
+    public static void list_room(String room_name){
+        Library currentLibrary = UserInterface.getCurrentLibrary();
+        Room room = null;
+        for (Room r : currentLibrary.getRooms()){
+            if (r.getName().equalsIgnoreCase(room_name)){
+                room = r;
+            }
+        }
+        if (room!=null){
+            String descr = "The room contains the following bookcases : ";
+            for (Bookcase bk : room.getBookcases()){
+                descr += bk.getName() + "\n";
+            }
+            descr += "\n Each bookcase contains the following items : ";
+            for (Bookcase bk : room.getBookcases()){
+                descr += "For " + bk.getName() + " : ";
+                for (Shelf s : bk.getShelves()){
+                    for (LibraryItem item : s.getItemsContained()){
+                        descr += item.getTitle() + "(" + item.getType() +", in the shelf"+ item.getLocation().getShelf().getName() + ") \n";
+                    }
+                }
+            }
+            System.out.println(descr);
         }
         else{
             System.out.println("This room does not exist in the library. Please try again.");

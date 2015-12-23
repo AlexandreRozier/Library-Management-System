@@ -63,8 +63,8 @@
       <file leaf-file-name="Actions.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/CLIU/Actions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.13036303">
-              <caret line="275" column="42" selection-start-line="275" selection-start-column="42" selection-end-line="275" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.4669967">
+              <caret line="309" column="24" selection-start-line="309" selection-start-column="24" selection-end-line="309" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#4263#4276#0" expanded="true" />
@@ -987,7 +987,7 @@
       <workItem from="1450703887520" duration="12142000" />
       <workItem from="1450774714964" duration="21078000" />
       <workItem from="1450816364923" duration="957000" />
-      <workItem from="1450866305884" duration="4150000" />
+      <workItem from="1450866305884" duration="4942000" />
     </task>
     <task id="LOCAL-00001" summary="uml">
       <created>1449850821951</created>
@@ -1067,7 +1067,13 @@
       <option name="project" value="LOCAL" />
       <updated>1450869025147</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="methode list_bookcase">
+      <created>1450870487933</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1450870487933</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1103,7 +1109,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50192000" />
+    <option name="totallyTimeSpent" value="50984000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1166,7 +1172,8 @@
     <MESSAGE value="Ajout list_item&#10;Amélioration du switvh dans UserInterface&#10;Ajout de méthodes à deux sens addRoom, addShelf... pour que shelf sache qu'elle appartient à Room" />
     <MESSAGE value="Création Test1, debug de ActionTest&#10;" />
     <MESSAGE value="méthode check_borrowed PLZ DONT ERASE IT" />
-    <option name="LAST_COMMIT_MESSAGE" value="méthode check_borrowed PLZ DONT ERASE IT" />
+    <MESSAGE value="methode list_bookcase" />
+    <option name="LAST_COMMIT_MESSAGE" value="methode list_bookcase" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1699,8 +1706,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/CLIU/Actions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13036303">
-          <caret line="275" column="42" selection-start-line="275" selection-start-column="42" selection-end-line="275" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.4669967">
+          <caret line="309" column="24" selection-start-line="309" selection-start-column="24" selection-end-line="309" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#4263#4276#0" expanded="true" />
