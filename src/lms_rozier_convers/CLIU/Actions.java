@@ -20,7 +20,6 @@ public abstract class Actions {
     //TODO : display of the given library
 
 
-
     /**
      * Lists the items of the given library, and return a String containing the description
      *
@@ -86,6 +85,7 @@ public abstract class Actions {
     /**
      * Method which returns a LibraryItem object from a given name
      * If the item does not exist, returns a null object.
+     *
      * @param item_title
      * @return
      */
@@ -106,21 +106,49 @@ public abstract class Actions {
 
     /**
      * Method which return a string saying if the item is borrowable or not. Will be useful in next descriptions methods.
+     *
      * @param item
      * @return
      */
-    public static String itemborrowable(LibraryItem item){
+    public static String itemborrowable(LibraryItem item) {
         String state;
-        if(item.isBorrowable()){
+        if (item.isBorrowable()) {
             state = "This item is borrowable.";
-        }
-        else{
+        } else {
             state = "This item is not borrowable.";
         }
         return state;
     }
 
 
+    /**
+     * Check the borrowing situation of the member. (The member is automatically penalized if needed)
+     *
+     * @param member_name
+     */
+    public static void check_borrowed(String member_name) {
+        Member member = Actions.findMember(member_name);
+        Library currentLibrary = UserInterface.getCurrentLibrary();
+        String descr = member_name + " is currently borrowing the items : ";
+        for (LibraryItem item : member.getBorrowedItems().keySet()) {
+            descr += item.getTitle() + "(" + item.getType() + ")" + "\n";
+        }
+
+        ArrayList<LibraryItem> reservationList = new ArrayList<LibraryItem>();
+        for (LibraryItem item : currentLibrary.getItemsLinkedToTheLibrary()) {
+            if (item.getReservationList().contains(member)) {
+                reservationList.add(item);
+            }
+        }
+        descr += member_name + " has in his reservation list :";
+        for (LibraryItem item : reservationList) {
+            descr += item.getTitle() + "(" + item.getType() + ")" + "\n";
+        }
+
+        descr += "The current statis of the member is " + member.getStatus();
+
+        System.out.println(descr);
+    }
 
     /**
      * If it is possible, let the member borrow the specified item. Display a message describing the result.
@@ -129,83 +157,62 @@ public abstract class Actions {
      * @param item_title
      * @return
      */
-    public static String borrow_item(String member_name, String item_title) {
+    public static void borrow_item(String member_name, String item_title) {
         LibraryItem item = Actions.findLibraryItem(item_title);
         Member member = Actions.findMember(member_name);
         if (member == null || item == null) {
-            return "The member or the item does not exist in this library, please retype your command properly";
+            System.out.println("The member or the item does not exist in this library, please retype your command properly");
         } else {
             member.getMemberCard().borrow(item);
             if (member.getBorrowedItems().containsKey(item)) {
-                return item.getTitle() + " has been borrowed by " + member.getName();
+                System.out.println(item.getTitle() + " has been borrowed by " + member.getName());
             } else if (item.getReservationList().contains(member)) {
-                return item.getTitle() + " was not available, it has been added to the reservation list.";
+                System.out.println(item.getTitle() + " was not available, it has been added to the reservation list.");
             } else {
-                return member.getName() + "cannot borrow the item " + item.getTitle();
+                System.out.println(member.getName() + "cannot borrow the item " + item.getTitle());
             }
         }
     }
 
     /**
      * Add a member to the current library
+     *
      * @param member_name
      * @param numCreditCard
      * @param email
      * @param memberType
      * @return
      */
-    public static String add_member(String member_name, String numCreditCard, String email, String memberType) {
-        if(email.contains("@")) {
+    public static void add_member(String member_name, String numCreditCard, String email, String memberType) {
+        if (email.contains("@")) {
             Library currentLibrary = UserInterface.getCurrentLibrary();
             if (currentLibrary == null) {
-                return null;
+                System.out.println("Please define a current library before adding a member.");
+            } else {
+                Member member1 = new Member();
+                member1.setName(member_name);
+                member1.setCurrentLibrary(currentLibrary);
+                member1.setCreditCardNumber(numCreditCard);
+                member1.setEmail(email);
+                CardFactory cardFactory = (CardFactory) FactoryMaker.createFactory("cardFactory");
+                Card card = cardFactory.create(memberType);
+                member1.setMemberCard(card);
+                System.out.println("The member " + member_name + "has been added to the library");
             }
-            Member member1 = new Member();
-            member1.setName(member_name);
-            member1.setCurrentLibrary(currentLibrary);
-            member1.setCreditCardNumber(numCreditCard);
-            member1.setEmail(email);
-            CardFactory cardFactory = (CardFactory) FactoryMaker.createFactory("cardFactory");
-            Card card = cardFactory.create(memberType);
-            member1.setMemberCard(card);
-            return "The member " + member_name + "has been added to the library";
+        } else {
+            System.out.println("Please type a correct email. Please renew the command");
         }
-        else{
-            return "Please type a correct email";
-        }
+
     }
 
-    public static String search_title(String title_name){
+    public static void search_title(String title_name) {
         Library library = UserInterface.getCurrentLibrary();
         ArrayList<LibraryItem> items_to_print = new ArrayList<>();
-        for (Room room : library.getRooms()){
-            for (Bookcase bookcase : room.getBookcases()){
-                for (Shelf shelf : bookcase.getShelves()){
-                    for (LibraryItem item : shelf.getItemsContained()){
-                        if (item.getTitle().equalsIgnoreCase(title_name)){
-                            items_to_print.add(item);
-                        }
-                    }
-                }
-            }
-        }
-        String descr="";
-        for (LibraryItem item : items_to_print){
-            descr += "Author(s) : "+item.getAuthors() +", Year : "+item.getYear() + ", Type : "+item.getType() + ". "+ itemborrowable(item) + "\n";
-        }
-        return descr;
-    }
-
-
-
-    public static String find_items(String author_name){
-        Library library = UserInterface.getCurrentLibrary();
-        ArrayList<LibraryItem> items_to_print = new ArrayList<>();
-        for (Room room : library.getRooms()){
-            for (Bookcase bookcase : room.getBookcases()){
-                for (Shelf shelf : bookcase.getShelves()){
-                    for (LibraryItem item : shelf.getItemsContained()){
-                        if (item.getAuthors().contains(author_name)){
+        for (Room room : library.getRooms()) {
+            for (Bookcase bookcase : room.getBookcases()) {
+                for (Shelf shelf : bookcase.getShelves()) {
+                    for (LibraryItem item : shelf.getItemsContained()) {
+                        if (item.getTitle().equalsIgnoreCase(title_name)) {
                             items_to_print.add(item);
                         }
                     }
@@ -213,16 +220,105 @@ public abstract class Actions {
             }
         }
         String descr = "";
-        int i = 0;
-        for (LibraryItem item : items_to_print){
-            descr +="Item n°"+i+ " Title : "+item.getTitle() +", Year : "+item.getYear() + ", Type : "+item.getType() + ". "+ itemborrowable(item) + "\n";
+        for (LibraryItem item : items_to_print) {
+            descr += "Author(s) : " + item.getAuthors() + ", Year : " + item.getYear() + ", Type : " + item.getType() + ". " + itemborrowable(item) + "\n";
+        }
+        System.out.println(descr);
+    }
+
+
+    public static void find_items(String author_name) {
+        Library library = UserInterface.getCurrentLibrary();
+        ArrayList<LibraryItem> items_to_print = new ArrayList<>();
+        for (Room room : library.getRooms()) {
+            for (Bookcase bookcase : room.getBookcases()) {
+                for (Shelf shelf : bookcase.getShelves()) {
+                    for (LibraryItem item : shelf.getItemsContained()) {
+                        if (item.getAuthors().contains(author_name)) {
+                            items_to_print.add(item);
+                        }
+                    }
+                }
+            }
+        }
+        String descr = "";
+        int i = 1;
+        for (LibraryItem item : items_to_print) {
+            descr += "Item n°" + i + " Title : " + item.getTitle() + ", Year : " + item.getYear() + ", Type : " + item.getType() + ". " + itemborrowable(item) + "\n";
             i++;
         }
-        return descr;
+        System.out.println(descr);
+    }
+
+    /**
+     * list all shelves with their content of of bookshelf bookcase_name in the room room_name.
+     *
+     * @param room_name
+     * @param bookcase_name
+     */
+    public static void list_bookcase(String room_name, String bookcase_name) {
+        Library currentLibrary = UserInterface.getCurrentLibrary();
+        Room room = null;
+        for (Room r : currentLibrary.getRooms()) {
+            if (r.getName().equalsIgnoreCase(room_name)) {
+                room = r;
+            }
+        }
+        if (room != null) {
+            Bookcase bookcase = null;
+            for (Bookcase bk : room.getBookcases()) {
+                if (bk.getName().equalsIgnoreCase(bookcase_name)) {
+                    bookcase = bk;
+                }
+            }
+            if (bookcase != null) {
+                String descr = "In the room " + room_name + " and in the bookcase " + bookcase_name + ", there are the following shelves : \n";
+                for (Shelf shelf : bookcase.getShelves()) {
+                    descr += "The self " + shelf.getName() + "contains : \n";
+                    for (LibraryItem item : shelf.getItemsContained()) {
+                        descr += item.getTitle() + "(" + item.getType() + ")";
+                    }
+                }
+                System.out.println(descr);
+            } else {
+                System.out.println("This bookcase does not exist in this room. Please try again");
+            }
+        } else {
+            System.out.println("This room does not exist in the library. Please try again.");
+        }
+    }
+
+    public static void list_room(String room_name) {
+        Library currentLibrary = UserInterface.getCurrentLibrary();
+        Room room = null;
+        for (Room r : currentLibrary.getRooms()) {
+            if (r.getName().equalsIgnoreCase(room_name)) {
+                room = r;
+            }
+        }
+        if (room != null) {
+            String descr = "The room contains the following bookcases : ";
+            for (Bookcase bk : room.getBookcases()) {
+                descr += bk.getName() + "\n";
+            }
+            descr += "\n Each bookcase contains the following items : ";
+            for (Bookcase bk : room.getBookcases()) {
+                descr += "For " + bk.getName() + " : ";
+                for (Shelf s : bk.getShelves()) {
+                    for (LibraryItem item : s.getItemsContained()) {
+                        descr += item.getTitle() + "(" + item.getType() + ", in the shelf" + item.getLocation().getShelf().getName() + ") \n";
+                    }
+                }
+            }
+            System.out.println(descr);
+        } else {
+            System.out.println("This room does not exist in the library. Please try again.");
+        }
     }
 
     /**
      * Selects the library on which should be applied the next commands
+     *
      * @param libraryName the desired library
      */
     public static void use_library(String libraryName) {
@@ -232,10 +328,7 @@ public abstract class Actions {
             }
         }
         if (UserInterface.getCurrentLibrary().getName().equals(libraryName)) {
-            System.out.println("This library ("+libraryName+")is already selected !");
+            System.out.println("This library (" + libraryName + ")is already selected !");
         } else System.out.println("Library not found");
-    }
-//TODO à implémenter
-    public static void check_borrowed(String commandAndParameter) {
     }
 }
