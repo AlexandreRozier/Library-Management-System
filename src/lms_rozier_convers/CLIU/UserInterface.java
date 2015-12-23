@@ -54,12 +54,30 @@ public abstract class UserInterface {
 
                     break;
                 case("add_room"):
+                    if (commandAndParameters.length >= 2) {
+                        String[] words = Arrays.copyOfRange(commandAndParameters, 1, commandAndParameters.length); // Creates a subarray with only the words of the library name
+                        String libraryName = String.join(" ",words);
+                        Actions.add_room(libraryName);
+                    } else System.out.println("Invalid input. Ex : add_room Miterrand");
 
                     break;
                 case("add_bookcase"):
+                    if (commandAndParameters.length >= 4) {
+                        String[] words = Arrays.copyOfRange(commandAndParameters, 1, commandAndParameters.length-2); // Creates a subarray with only the words of the library name
+                        int num_shelves = Integer.valueOf(commandAndParameters[commandAndParameters.length - 2]);
+                        String room_name = commandAndParameters[commandAndParameters.length-1];
+                        String libraryName = String.join(" ",words);
+                        Actions.add_bookcase(libraryName,num_shelves,room_name);
+                    } else System.out.println("Invalid input. Ex : add_bookcase Miterrand 8 bookcase_name");
 
                     break;
                 case("add_item"):
+                    if (commandAndParameters.length >= 7) {
+                        String[] words = Arrays.copyOfRange(commandAndParameters, 5, commandAndParameters.length); // Creates a subarray with only the words of the library name
+                        String libraryName = String.join(" ",words);
+                        //TODO finir ça
+
+                    } else System.out.println("Invalid input. Ex : add_item Albert Camus ");
                     break;
                 case("store_items"):
 
@@ -69,7 +87,7 @@ public abstract class UserInterface {
                     break;
                 case("list_items"):
                     if (commandAndParameters.length >= 2) {
-                        String[] words = Arrays.copyOfRange(commandAndParameters, 1, commandAndParameters.length); // Creates a subarray with only the words of the research title
+                        String[] words = Arrays.copyOfRange(commandAndParameters, 1, commandAndParameters.length); // Creates a subarray with only the words of the library name
                         String libraryName = String.join(" ",words);
                         System.out.println(Actions.list_items(libraryName));
                     } else System.out.println("Invalid input. Ex : list_item Miterrand");

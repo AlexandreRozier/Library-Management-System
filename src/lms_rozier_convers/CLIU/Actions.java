@@ -3,6 +3,7 @@ package lms_rozier_convers.CLIU;
 import lms_rozier_convers.core.FactoryMaker;
 import lms_rozier_convers.core.card.Card;
 import lms_rozier_convers.core.card.CardFactory;
+import lms_rozier_convers.core.geometry.Cuboid;
 import lms_rozier_convers.core.items.LibraryItem;
 import lms_rozier_convers.core.library.Bookcase;
 import lms_rozier_convers.core.library.Library;
@@ -413,6 +414,10 @@ public abstract class Actions {
 
     }
 
+    /**
+     * Lists the items contained in the given library
+     * @return the list of items
+     */
     public static String list_libraries() {
         String list;
         if (!UserInterface.getLibraries().isEmpty()) {
@@ -423,6 +428,80 @@ public abstract class Actions {
         } else list = "No library was found.";
 
         return list;
+    }
+
+    /**
+     * Adds a room with a given name (provided by user input) to the selected library
+     * @param libraryName the name of the library
+     */
+    public static void add_room(String libraryName) {
+        Library library = null;
+        for (Library lib : UserInterface.getLibraries()) {
+            if (lib.getName().equals(libraryName)) {
+                library = lib;
+            }
+        }
+        if (library != null) {
+            System.out.println("Please enter a name for the room :");
+            Scanner sc = new Scanner(System.in);
+            String roomName = sc.nextLine();
+            boolean alreadyExists = true;
+            while (alreadyExists) {
+                alreadyExists = false;
+                for (Room room : library.getRooms()) {
+                    if (room.getName().equals(roomName)) {
+                        alreadyExists = true;
+                    }
+                }
+
+                if (alreadyExists) {
+                    System.out.println("The given name already exists ! Please choose another one.");
+                    roomName = sc.nextLine();
+                }
+            }
+            library.addRoom(new Room(roomName));
+            System.out.println("The room "+roomName+" was added successfully to the library "+libraryName);
+        }else System.out.println("Library not found, please try again.");
+    }
+
+    /**
+     * Adds a bookcase to the given room in the given library
+     * @param libraryName the library's name
+     * @param num_shelves the number of shelves in the bookcase
+     * @param room_name the name of the room containing the bookcase
+     */
+    public static void add_bookcase(String libraryName, int num_shelves, String room_name) {
+        Library library = null;
+        for (Library lib : UserInterface.getLibraries()) {
+            if (lib.getName().equals(libraryName)) {
+                library = lib;
+            }
+        }
+        if (library != null) {
+            Room selectedRoom = null;
+            for (Room room : library.getRooms()) {
+                if (room.getName().equals(room_name)) {
+                    selectedRoom = room;
+                }
+            }
+            if (selectedRoom != null) {
+                Scanner sc = new Scanner(System.in);
+                System.out.println("Please enter the name of the bookcase");
+                String bookcaseName = sc.nextLine();
+                System.out.println("Please enter the length of the bookcase");
+                double length = sc.nextInt();
+                System.out.println("Please enter the width of the bookcase");
+                double width = sc.nextInt();
+                System.out.println("Please enter the heigh of the bookcase");
+                double heigh = sc.nextInt();
+                Bookcase bookcase = new Bookcase(bookcaseName);
+                for(int i =0;i<num_shelves;i++) {
+                    bookcase.addShelf(new Shelf(new Cuboid(length, heigh / num_shelves, width / num_shelves), bookcaseName + "_" + i)); // Creation of the desired number of shelves
+                }
+                selectedRoom.addBookcase(bookcase);
+                System.out.println("Bookcase " + bookcaseName + " successfully added in the room " + room_name + ".");
+            } else System.out.println("Room not found in the library " + libraryName + " , please try again.");
+        }else System.out.println("Library not found, please try again.");
     }
 }
 
