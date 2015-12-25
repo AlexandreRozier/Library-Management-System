@@ -152,7 +152,8 @@ public class ActionsTest {
         CardFactory cardFactory = new CardFactory();
         Card card = cardFactory.create("Standard");
         member1.setMemberCard(card);
-        assertTrue(Actions.findMember("Alexandre Rozier").equals(member1));
+        Member member2 = Actions.findMember("Alexandre Rozier");
+        assertTrue(member2.equals(member1));
     }
 
 

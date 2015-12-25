@@ -169,6 +169,7 @@ public class Member extends Observable{
 
     public void setCurrentLibrary(Library currentLibrary) {
         setChanged();
+        currentLibrary.getMembers().add(this);
         this.currentLibrary = currentLibrary;
     }
 
