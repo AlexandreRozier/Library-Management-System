@@ -164,6 +164,12 @@ public class ActionsTest {
         assertTrue(item!=null);
     }
 
+    @Test
+    public void testSearchTitle() throws  Exception{
+        Actions.search_title("Title1");
+        Actions.search_title("LivreInexistant");
+    }
+
 
 
 
