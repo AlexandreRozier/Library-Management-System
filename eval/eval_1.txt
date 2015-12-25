@@ -17,7 +17,7 @@ add_member Johnny Golden,475728329,johny.test@mail.com,Golden
 borrow_item Johnny Normal,The Stranger
 borrow_item Johnny Normal,The Stranger
 borrow_item Johnny Normal,Homework
-borrow_item Johnny Golden,The Stranger
+borrow_item Johnny Golden,Homework
 
 check_borrowed Johnny Normal
 check_borrowed BadMember

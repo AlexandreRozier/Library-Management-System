@@ -92,14 +92,31 @@ public class Test1 {
 
         //+++++++++++++++++++++++++++
         // Creates the members
+
+        // This member trespassed the deadline of less than a week
         ArrayList<String> author1 = new ArrayList<>();
-        Calendar calendar = new GregorianCalendar(2015, 11, 23);
+        Calendar calendar = new GregorianCalendar(2015, 11, 17);
         LibraryItem item = factory.createItem("DVD", "Title", author1, "Publisher", 1900, 10, true, new Cuboid(10, 10, 10));
         HashMap<LibraryItem,Calendar> hash = new HashMap<>();
         hash.put(item,calendar);
-        Member member = new Member("BadMember", hash);
-        Member member2 = new Member();
-        Member member3 = new Member();
+        Member member = new Member("WarnedMember", hash);
+
+        // This member trespassed the deadline of more than a week, less than 3 weeks
+        ArrayList<String> author2 = new ArrayList<>();
+        Calendar calendar2 = new GregorianCalendar(2015, 11, 10);
+        LibraryItem item2 = factory.createItem("DVD", "Title", author2, "Publisher", 1900, 10, true, new Cuboid(10, 10, 10));
+        HashMap<LibraryItem,Calendar> hash2 = new HashMap<>();
+        hash2.put(item2,calendar2);
+        Member member2 = new Member("SuspendedMember",hash2);
+
+
+        // This member trespassed the deadline of more than 3 weeks, less than 6 weeks
+        ArrayList<String> author3 = new ArrayList<>();
+        Calendar calendar3 = new GregorianCalendar(2015, 10, 23);
+        LibraryItem item3 = factory.createItem("DVD", "Title", author3, "Publisher", 1900, 10, true, new Cuboid(10, 10, 10));
+        HashMap<LibraryItem,Calendar> hash3 = new HashMap<>();
+        hash3.put(item3,calendar3);
+        Member member3 = new Member("FinedMember",hash3);
 
         library.addMember(member);
         library.addMember(member2);
@@ -108,8 +125,8 @@ public class Test1 {
         // Set the member's cards
         CardFactory factoryCard = new CardFactory();
         Card standardCard = factoryCard.create("Standard");
-        Card frequentCard = factoryCard.create("Frequent");
-        Card goldenCard = factoryCard.create("Golden");
+        Card frequentCard = factoryCard.create("Standard");
+        Card goldenCard = factoryCard.create("Standard");
         member.setMemberCard(standardCard);
         member2.setMemberCard(goldenCard);
         member3.setMemberCard(frequentCard);
