@@ -13,6 +13,7 @@ import lms_rozier_convers.core.tidying.AnyFitStrategy;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.awt.*;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.util.*;
@@ -176,6 +177,11 @@ public class ActionsTest {
         Actions.find_items("NoAuthor");
     }
 
+    @Test
+    public void testListBookcase() throws Exception{
+        Actions.list_bookcase("room1","bookcase1");
+        Actions.list_bookcase("Nothing1","Nothing2");
+    }
 
 
 
