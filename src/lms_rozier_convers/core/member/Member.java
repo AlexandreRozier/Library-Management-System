@@ -58,6 +58,18 @@ public class Member extends Observable{
         notifyObservers();
     }
 
+    /**
+     * CONSTRUCTOR
+     * @param name
+     * @param borrowedItems
+     */
+    public Member(String name, HashMap<LibraryItem, Calendar> borrowedItems) {
+        super();
+        this.name = name;
+        this.borrowedItems = borrowedItems;
+        this.addObserver(new MemberObserver());
+        notifyObservers();
+    }
 
     public HashMap<LibraryItem, Calendar> getBorrowedItems() {
         return borrowedItems;

@@ -30,69 +30,69 @@ public class ActionsTest {
      * @throws Exception
      */
     @Before public void setUp()
-     {
-         library = new Library(new AnyFitStrategy(),1,3,5,5,"Miterrand");
-         UserInterface.addLibrary(library);
-         UserInterface.setCurrentLibrary(library);
-         //+++++++++++++++++++++++++++
-         //Creates the Library
-         int roomNumber = 3;
-         int bookcaseNumber = 4;
-         int shelfNumber = 8;
+    {
+        library = new Library(new AnyFitStrategy(),1,3,5,5,"Miterrand");
+        UserInterface.addLibrary(library);
+        UserInterface.setCurrentLibrary(library);
+        //+++++++++++++++++++++++++++
+        //Creates the Library
+        int roomNumber = 3;
+        int bookcaseNumber = 4;
+        int shelfNumber = 8;
 
-         for (int i = 0; i < roomNumber; i++) {
-             library.addRoom(new Room("room"+i));
-         }
+        for (int i = 0; i < roomNumber; i++) {
+            library.addRoom(new Room("room"+i));
+        }
 
-         for (int i = 0; i < roomNumber*bookcaseNumber; i++) {
-             Room room = UserInterface.getCurrentLibrary().findRoomByName("room" + i % roomNumber); // An easy way to set up the correct number of bookcases per room
-             room.addBookcase(new Bookcase("bookcase"+i));
+        for (int i = 0; i < roomNumber*bookcaseNumber; i++) {
+            Room room = UserInterface.getCurrentLibrary().findRoomByName("room" + i % roomNumber); // An easy way to set up the correct number of bookcases per room
+            room.addBookcase(new Bookcase("bookcase"+i));
 
-         }
+        }
 
-         for (int i = 0; i < roomNumber*bookcaseNumber*shelfNumber; i++) {
-             Bookcase bookcase = UserInterface.getCurrentLibrary().findBookcaseByName("bookcase" + i % (bookcaseNumber*roomNumber));
-             Shelf shelf = new Shelf(new Cuboid(200, 200, 200),"shelf"+i);
-             bookcase.addShelf(shelf);
+        for (int i = 0; i < roomNumber*bookcaseNumber*shelfNumber; i++) {
+            Bookcase bookcase = UserInterface.getCurrentLibrary().findBookcaseByName("bookcase" + i % (bookcaseNumber*roomNumber));
+            Shelf shelf = new Shelf(new Cuboid(200, 200, 200),"shelf"+i);
+            bookcase.addShelf(shelf);
 
-             // Item creation
+            // Item creation
 
-             ItemFactory factory = (ItemFactory) FactoryMaker.createFactory("itemFactory");
+            ItemFactory factory = (ItemFactory) FactoryMaker.createFactory("itemFactory");
 
-             // 3 books written by Albert Camus
-             if (i<=2) {
-                 ArrayList<String> author1 = new ArrayList<>();
-                 author1.add("Albert Camus");
-                 shelf.addItem(factory.createItem("Book", "Title" + i, author1, "Publisher" + i, 1900 + i, i, true, new Cuboid(i, i, i), String.valueOf(i)));
-             }
-             // 7 other books
-             else if (i<=10){
-                 ArrayList<String> author1 = new ArrayList<>();
-                 author1.add("Author "+i);
-                 shelf.addItem(factory.createItem("Book", "Title" + i, author1, "Publisher" + i, 1900 + i, i, true, new Cuboid(i, i, i), String.valueOf(i)));
-             }
-             // 2 CDs from the daft punk, not borrowable (i.e. consultation-only)
-             else if (i<=12){
-                 ArrayList<String> author1 = new ArrayList<>();
-                 author1.add("Daft Punk");
-                 shelf.addItem(factory.createItem("CD", "Discovery", author1, "Publisher" + i, 1900 + i, i, false, new Cuboid(i, i, i)));
-             }
-             // 3 other CDs, not borrowable
-             else if (i<=15){
-                 ArrayList<String> author1 = new ArrayList<>();
-                 author1.add("Composer "+i);
-                 shelf.addItem(factory.createItem("CD", "Title" + i, author1, "Publisher" + i, 1900 + i, i, false, new Cuboid(i, i, i)));
-             }
-             // 5 DVDs, borrowable
-             else if (i <= 20) {
-                 ArrayList<String> author1 = new ArrayList<>();
-                 author1.add("Composer "+i);
-                 shelf.addItem(factory.createItem("DVD", "Title" + i, author1, "Publisher" + i, 1900 + i, i, true, new Cuboid(i, i, i)));
-             }
-         }
+            // 3 books written by Albert Camus
+            if (i<=2) {
+                ArrayList<String> author1 = new ArrayList<>();
+                author1.add("Albert Camus");
+                shelf.addItem(factory.createItem("Book", "Title" + i, author1, "Publisher" + i, 1900 + i, i, true, new Cuboid(i, i, i), String.valueOf(i)));
+            }
+            // 7 other books
+            else if (i<=10){
+                ArrayList<String> author1 = new ArrayList<>();
+                author1.add("Author "+i);
+                shelf.addItem(factory.createItem("Book", "Title" + i, author1, "Publisher" + i, 1900 + i, i, true, new Cuboid(i, i, i), String.valueOf(i)));
+            }
+            // 2 CDs from the daft punk, not borrowable (i.e. consultation-only)
+            else if (i<=12){
+                ArrayList<String> author1 = new ArrayList<>();
+                author1.add("Daft Punk");
+                shelf.addItem(factory.createItem("CD", "Homework", author1, "Publisher" + i, 1900 + i, i, false, new Cuboid(i, i, i)));
+            }
+            // 3 other CDs, not borrowable
+            else if (i<=15){
+                ArrayList<String> author1 = new ArrayList<>();
+                author1.add("Composer "+i);
+                shelf.addItem(factory.createItem("CD", "Title" + i, author1, "Publisher" + i, 1900 + i, i, false, new Cuboid(i, i, i)));
+            }
+            // 5 DVDs, borrowable
+            else if (i <= 20) {
+                ArrayList<String> author1 = new ArrayList<>();
+                author1.add("Composer "+i);
+                shelf.addItem(factory.createItem("DVD", "Title" + i, author1, "Publisher" + i, 1900 + i, i, true, new Cuboid(i, i, i)));
+            }
+        }
 
 
-         //+++++++++++++++++++++++++++
+        //+++++++++++++++++++++++++++
         // Creates the members
 
         Member member = new Member();
@@ -156,20 +156,30 @@ public class ActionsTest {
     }
 
     /**
-     * Checks whether the item with the title "Discovery" is found in the test Library.
+     * Checks whether the item with the title "Homework" is found in the test Library.
      */
     @Test
     public  void testFindLibraryItem() throws Exception {
-        LibraryItem item = Actions.findLibraryItem("Discovery");
+        LibraryItem item = Actions.findLibraryItem("Homework");
         assertTrue(item!=null);
     }
 
+    /**
+     * Tests whether an exception is thrown during the search of an item
+     * thanks to its titles
+     * @throws Exception
+     */
     @Test
     public void testSearchTitle() throws  Exception{
         Actions.search_title("Title1");
         Actions.search_title("NoItem");
     }
 
+    /**
+     * Tests whether an exception is thrown during the search of items made by a
+     * specific author
+     * @throws Exception
+     */
     @Test
     public void testFindItems() throws Exception{
         Actions.find_items("Albert Camus");
