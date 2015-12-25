@@ -103,9 +103,10 @@ public abstract class UserInterface {
                         Actions.unstore_items(libraryName);
                     }
                     break;
+
                 //TODO compatibiliser ce qui est en dessous avec les nouveaux arguments
                 case("list_items"):
-                    if (inputSplitted.length >= 2) {
+                    if (parameters.length == 1) {
                         String[] words = Arrays.copyOfRange(inputSplitted, 1, inputSplitted.length); // Creates a subarray with only the words of the library name
                         String libraryName = String.join(" ",words);
                         System.out.println(Actions.list_items(libraryName));
@@ -114,49 +115,49 @@ public abstract class UserInterface {
 
 
                 case("list_room"):
-                    if(inputSplitted.length>=2){
+                    if(parameters.length == 1){
                         String[] words = Arrays.copyOfRange(inputSplitted,1,inputSplitted.length);
                         String room_name = String.join(" ", words);
                         Actions.list_room(room_name);
                     }
                     else{
-                        System.out.println("Invalid input.");
+                        System.out.println("Invalid input. Ex : list_room room1");
                     }
                     break;
 
 
                 case("list_bookcase"):
-                    if(inputSplitted.length>=3){
+                    if(parameters.length ==2){
                         String[] words = Arrays.copyOfRange(inputSplitted,2,inputSplitted.length);
                         String room_name = inputSplitted[1];
                         String bookcase_name = String.join(" ", words);
                         Actions.list_bookcase(room_name,bookcase_name);
                     }
                     else{
-                        System.out.println("Invalid input");
+                        System.out.println("Invalid input. Ex : list_bookcase room1,bookcase1");
                     }
 
                     break;
                 case("find_items"):
-                    if (inputSplitted.length >= 2){
+                    if (parameters.length ==1){
                         String[] words = Arrays.copyOfRange(inputSplitted, 1, inputSplitted.length); // Creates a subarray with only the words of the research title
                         String author = String.join(" ",words);
                         Actions.find_items(author);
                     }
                     else{
-                        System.out.println("You must type only one parameter when using this command : the name of author(s) of items searched.");
+                        System.out.println("Invalid input. Ex : find_items Tolkien");
                     }
 
                     break;
 
                 case("search_title"):
-                    if (inputSplitted.length >= 2){
+                    if (parameters.length ==1){
                         String[] words = Arrays.copyOfRange(inputSplitted, 1, inputSplitted.length); // Creates a subarray with only the words of the research title
                         String title = String.join(" ",words);
                         Actions.search_title(title);
                     }
                     else{
-                        System.out.println("You must type only one parameter when using this command : the title of items searched.");
+                        System.out.println("Invalid input. Ex : search_title The Stranger");
                     }
 
                     break;
@@ -165,28 +166,27 @@ public abstract class UserInterface {
                     if (parameters.length == 4) {
                         Actions.add_member(parameters[0],parameters[1],parameters[2],parameters[3]);
                     } else {
-                        System.out.println("You must type 4 parameters when using this command : the name of the member, his credit card number, his email and his type of membership.");
+                        System.out.println("Invalid input. Ex : add_member Johnny Test,475728329,johny.test@mail.com,Golden");
                     }
                     break;
 
                 case("borrow_item"):
-                    if (inputSplitted.length >= 3){
+                    if (parameters.length ==2){
                         String[] words = Arrays.copyOfRange(inputSplitted, 2, inputSplitted.length); // Creates a sub-array with only the words of the research title
                         String itemName = String.join(" ",words);
                         Actions.borrow_item(inputSplitted[1],itemName);
                     }
                     else{
-                        System.out.println("You must type 2 parameters when using this command : the name of the member and the name of the item.");
+                        System.out.println("Invalid input. Ex : borrow_item Johnny Test,The Stranger");
                     }
-
                     break;
 
                 case("check_borrowed"):
-                    if (inputSplitted.length>=2){
+                    if (parameters.length ==1){
                         Actions.check_borrowed(inputSplitted[1]);
                     }
                     else{
-                        System.out.println("You must type only one parameter when using this command : the name of the member checked.");
+                        System.out.println("Invalid input. Ex : check_borrowed Johny Test");
                     }
 
 

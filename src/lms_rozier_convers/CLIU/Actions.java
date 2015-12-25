@@ -189,24 +189,24 @@ public abstract class Actions {
      */
     public static void add_member(String member_name, String numCreditCard, String email, String memberType) {
         if (memberType.equals("Standard")||memberType.equals("Frequent")||memberType.equals("Golden")){
-        if (email.contains("@")) {
-            Library currentLibrary = UserInterface.getCurrentLibrary();
-            if (currentLibrary == null) {
-                System.out.println("Please define a current library before adding a member.");
+            if (email.contains("@")) {
+                Library currentLibrary = UserInterface.getCurrentLibrary();
+                if (currentLibrary == null) {
+                    System.out.println("Please define a current library before adding a member.");
+                } else {
+                    Member member1 = new Member();
+                    member1.setName(member_name);
+                    member1.setCurrentLibrary(currentLibrary);
+                    member1.setCreditCardNumber(numCreditCard);
+                    member1.setEmail(email);
+                    CardFactory cardFactory = (CardFactory) FactoryMaker.createFactory("cardFactory");
+                    Card card = cardFactory.create(memberType);
+                    member1.setMemberCard(card);
+                    System.out.println("The member " + member_name + " has been added to the library");
+                }
             } else {
-                Member member1 = new Member();
-                member1.setName(member_name);
-                member1.setCurrentLibrary(currentLibrary);
-                member1.setCreditCardNumber(numCreditCard);
-                member1.setEmail(email);
-                CardFactory cardFactory = (CardFactory) FactoryMaker.createFactory("cardFactory");
-                Card card = cardFactory.create(memberType);
-                member1.setMemberCard(card);
-                System.out.println("The member " + member_name + " has been added to the library");
+                System.out.println("Please type a correct email. Please renew the command");
             }
-        } else {
-            System.out.println("Please type a correct email. Please renew the command");
-        }
         }
         else{
             System.out.println("Please type a correct type of card (Standard, Golden)");
