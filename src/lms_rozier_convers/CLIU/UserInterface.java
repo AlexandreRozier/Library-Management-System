@@ -167,15 +167,13 @@ public abstract class UserInterface {
                     if (parameters.length == 4) {
                         Actions.add_member(parameters[0],parameters[1],parameters[2],parameters[3]);
                     } else {
-                        System.out.println("Invalid input. Ex : add_member Johnny Test,475728329,johny.test@mail.com,Golden");
+                        System.out.println("Invalid input. Ex : add_member Johnny Doe,475728329,johny.test@mail.com,Golden");
                     }
                     break;
 
                 case("borrow_item"):
                     if (parameters.length ==2){
-                        String[] words = Arrays.copyOfRange(inputSplitted, 2, inputSplitted.length); // Creates a sub-array with only the words of the research title
-                        String itemName = String.join(" ",words);
-                        Actions.borrow_item(inputSplitted[1],itemName);
+                        Actions.borrow_item(parameters[0],parameters[1]);
                     }
                     else{
                         System.out.println("Invalid input. Ex : borrow_item Johnny Test,The Stranger");
@@ -184,7 +182,7 @@ public abstract class UserInterface {
 
                 case("check_borrowed"):
                     if (parameters.length ==1){
-                        Actions.check_borrowed(inputSplitted[1]);
+                        Actions.check_borrowed(parameters[0]);
                     }
                     else{
                         System.out.println("Invalid input. Ex : check_borrowed Johny Test");

@@ -79,8 +79,10 @@ public abstract class Actions {
             return null;
         }
         for (Member m : currentLibrary.getMembers()) {
-            if (m.getName().equals(member_name)) {
-                member = m;
+            if (m.getName()!=null) {
+                if (m.getName().equals(member_name)) {
+                    member = m;
+                }
             }
         }
         return member;
@@ -132,6 +134,9 @@ public abstract class Actions {
      */
     public static void check_borrowed(String member_name) {
         Member member = Actions.findMember(member_name);
+        if (member == null) {
+            return;
+        }
         Library currentLibrary = UserInterface.getCurrentLibrary();
         String descr = member_name + " is currently borrowing the items : ";
         for (LibraryItem item : member.getBorrowedItems().keySet()) {
@@ -193,7 +198,8 @@ public abstract class Actions {
                 Library currentLibrary = UserInterface.getCurrentLibrary();
                 if (currentLibrary == null) {
                     System.out.println("Please define a current library before adding a member.");
-                } else {
+                    return;
+                }
                     Member member1 = new Member();
                     member1.setName(member_name);
                     member1.setCurrentLibrary(currentLibrary);
@@ -203,7 +209,7 @@ public abstract class Actions {
                     Card card = cardFactory.create(memberType);
                     member1.setMemberCard(card);
                     System.out.println("The member " + member_name + " has been added to the library");
-                }
+
             } else {
                 System.out.println("Please type a correct email. Please renew the command");
             }
