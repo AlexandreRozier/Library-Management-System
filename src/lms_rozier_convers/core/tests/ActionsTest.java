@@ -183,6 +183,12 @@ public class ActionsTest {
         Actions.list_bookcase("Nothing1","Nothing2");
     }
 
+    @Test
+    public void testListRoom() throws Exception{
+        Actions.list_room("room1");
+        Actions.list_room("Noroom");
+    }
+
 
 
 

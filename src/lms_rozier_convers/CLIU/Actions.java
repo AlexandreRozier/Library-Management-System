@@ -338,16 +338,16 @@ public abstract class Actions {
             }
         }
         if (room != null) {
-            String descr = "The room contains the following bookcases : ";
+            String descr = "The room contains the following bookcases : \n";
             for (Bookcase bk : room.getBookcases()) {
                 descr += bk.getName() + "\n";
             }
-            descr += "\n Each bookcase contains the following items : ";
+            descr += "\n Each bookcase contains the following items : \n ";
             for (Bookcase bk : room.getBookcases()) {
-                descr += "For " + bk.getName() + " : ";
+                descr += "For " + bk.getName() + " : \n";
                 for (Shelf s : bk.getShelves()) {
                     for (LibraryItem item : s.getItemsContained()) {
-                        descr += item.getTitle() + "(" + item.getType() + ", in the shelf" + item.getLocation().getShelf().getName() + ") \n";
+                        descr += item.getTitle() + "(" + item.getType() + ", located in the shelf " + item.getLocation().getShelf().getName() + ") \n";
                     }
                 }
             }
