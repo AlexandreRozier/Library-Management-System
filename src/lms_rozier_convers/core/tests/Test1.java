@@ -75,7 +75,7 @@ public class Test1 {
             else if (i<=12){
                 ArrayList<String> author1 = new ArrayList<>();
                 author1.add("Daft Punk");
-                shelf.addItem(factory.createItem("CD", "Title" + i, author1, "Publisher" + i, 1900 + i, i, false, new Cuboid(i, i, i)));
+                shelf.addItem(factory.createItem("CD", "Discovery", author1, "Publisher" + i, 1900 + i, i, false, new Cuboid(i, i, i)));
             }
             // 3 other CDs, not borrowable
             else if (i<=15){

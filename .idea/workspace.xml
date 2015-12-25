@@ -5,7 +5,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lms_rozier_convers/CLIU/Actions.java" afterPath="$PROJECT_DIR$/src/lms_rozier_convers/CLIU/Actions.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lms_rozier_convers/CLIU/UserInterface.java" afterPath="$PROJECT_DIR$/src/lms_rozier_convers/CLIU/UserInterface.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lms_rozier_convers/core/tests/ActionsTest.java" afterPath="$PROJECT_DIR$/src/lms_rozier_convers/core/tests/ActionsTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lms_rozier_convers/core/items/LibraryItem.java" afterPath="$PROJECT_DIR$/src/lms_rozier_convers/core/items/LibraryItem.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lms_rozier_convers/core/tests/Test1.java" afterPath="$PROJECT_DIR$/src/lms_rozier_convers/core/tests/Test1.java" />
     </list>
     <ignored path="SEPart2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,13 +29,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Actions.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Actions.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/CLIU/Actions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.9655173">
-              <caret line="137" column="0" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.33333334">
+              <caret line="176" column="0" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
               <folding>
-                <element signature="e#4589#4602#0" expanded="true" />
+                <element signature="e#4707#4720#0" expanded="true" />
                 <element signature="method#use_library#0;class#Actions#0" expanded="false" />
                 <element signature="docComment;method#create_library#0;class#Actions#0" expanded="false" />
                 <element signature="docComment;method#list_libraries#0;class#Actions#0" expanded="false" />
@@ -55,16 +56,16 @@
         <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/items/LibraryItem.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="224" column="48" selection-start-line="224" selection-start-column="48" selection-end-line="224" selection-end-column="48" />
+              <caret line="133" column="9" selection-start-line="133" selection-start-column="9" selection-end-line="133" selection-end-column="9" />
               <folding>
                 <element signature="e#3327#3328#0" expanded="true" />
                 <element signature="e#3358#3359#0" expanded="true" />
-                <element signature="e#3554#3555#0" expanded="true" />
-                <element signature="e#3579#3580#0" expanded="true" />
-                <element signature="e#3827#3828#0" expanded="true" />
-                <element signature="e#3854#3855#0" expanded="true" />
-                <element signature="e#3890#3891#0" expanded="true" />
-                <element signature="e#3925#3926#0" expanded="true" />
+                <element signature="e#3715#3716#0" expanded="true" />
+                <element signature="e#3740#3741#0" expanded="true" />
+                <element signature="e#3988#3989#0" expanded="true" />
+                <element signature="e#4015#4016#0" expanded="true" />
+                <element signature="e#4051#4052#0" expanded="true" />
+                <element signature="e#4086#4087#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -96,8 +97,8 @@
       <file leaf-file-name="Test1.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/tests/Test1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="96" column="37" selection-start-line="96" selection-start-column="37" selection-end-line="96" selection-end-column="37" />
+            <state vertical-scroll-proportion="-3.9655173">
+              <caret line="77" column="65" selection-start-line="77" selection-start-column="65" selection-end-line="77" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -126,16 +127,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserInterface.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserInterface.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/CLIU/UserInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8795181">
-              <caret line="184" column="60" selection-start-line="184" selection-start-column="60" selection-end-line="184" selection-end-column="60" />
+            <state vertical-scroll-proportion="0.7241379">
+              <caret line="175" column="36" selection-start-line="175" selection-start-column="36" selection-end-line="175" selection-end-column="36" />
               <folding>
-                <element signature="e#12271#12272#0" expanded="true" />
-                <element signature="e#12296#12297#0" expanded="true" />
-                <element signature="e#12340#12341#0" expanded="true" />
-                <element signature="e#12377#12378#0" expanded="true" />
+                <element signature="e#12268#12269#0" expanded="true" />
+                <element signature="e#12293#12294#0" expanded="true" />
+                <element signature="e#12337#12338#0" expanded="true" />
+                <element signature="e#12374#12375#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -190,10 +191,11 @@
         <option value="$PROJECT_DIR$/src/lms_rozier_convers/core/StorageBox.java" />
         <option value="$PROJECT_DIR$/src/lms_rozier_convers/core/tests/LibraryUpdaterTest.java" />
         <option value="$PROJECT_DIR$/src/lms_rozier_convers/core/tests/PenaltyCalculatorTest.java" />
-        <option value="$PROJECT_DIR$/src/lms_rozier_convers/core/items/LibraryItem.java" />
         <option value="$PROJECT_DIR$/src/lms_rozier_convers/core/tests/ActionsTest.java" />
-        <option value="$PROJECT_DIR$/src/lms_rozier_convers/CLIU/Actions.java" />
         <option value="$PROJECT_DIR$/src/lms_rozier_convers/CLIU/UserInterface.java" />
+        <option value="$PROJECT_DIR$/src/lms_rozier_convers/core/tests/Test1.java" />
+        <option value="$PROJECT_DIR$/src/lms_rozier_convers/CLIU/Actions.java" />
+        <option value="$PROJECT_DIR$/src/lms_rozier_convers/core/items/LibraryItem.java" />
       </list>
     </option>
   </component>
@@ -1233,7 +1235,13 @@
       <option name="project" value="LOCAL" />
       <updated>1451075889751</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Réparation des tests&#10;">
+      <created>1451076876777</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1451076876777</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1269,7 +1277,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22614000" />
+    <option name="totallyTimeSpent" value="23784000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1326,7 +1334,33 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="18" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/lms_rozier_convers/CLIU/Actions.java</url>
+          <line>176</line>
+          <properties />
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/lms_rozier_convers/CLIU/Actions.java</url>
+          <line>100</line>
+          <properties />
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/lms_rozier_convers/CLIU/Actions.java</url>
+          <line>105</line>
+          <properties />
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/lms_rozier_convers/CLIU/Actions.java</url>
+          <line>108</line>
+          <properties />
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="28" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1348,10 +1382,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="164" column="43" selection-start-line="164" selection-start-column="43" selection-end-line="164" selection-end-column="43" />
           <folding>
-            <element signature="e#12271#12272#0" expanded="true" />
-            <element signature="e#12296#12297#0" expanded="true" />
-            <element signature="e#12340#12341#0" expanded="true" />
-            <element signature="e#12377#12378#0" expanded="true" />
+            <element signature="e#12268#12269#0" expanded="true" />
+            <element signature="e#12293#12294#0" expanded="true" />
+            <element signature="e#12337#12338#0" expanded="true" />
+            <element signature="e#12374#12375#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1393,7 +1427,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#4589#4602#0" expanded="true" />
+            <element signature="e#4707#4720#0" expanded="true" />
             <element signature="method#use_library#0;class#Actions#0" expanded="false" />
             <element signature="docComment;method#create_library#0;class#Actions#0" expanded="false" />
             <element signature="docComment;method#list_libraries#0;class#Actions#0" expanded="false" />
@@ -1414,10 +1448,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
           <folding>
-            <element signature="e#12271#12272#0" expanded="true" />
-            <element signature="e#12296#12297#0" expanded="true" />
-            <element signature="e#12340#12341#0" expanded="true" />
-            <element signature="e#12377#12378#0" expanded="true" />
+            <element signature="e#12268#12269#0" expanded="true" />
+            <element signature="e#12293#12294#0" expanded="true" />
+            <element signature="e#12337#12338#0" expanded="true" />
+            <element signature="e#12374#12375#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1435,7 +1469,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="80" column="32" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
           <folding>
-            <element signature="e#4589#4602#0" expanded="true" />
+            <element signature="e#4707#4720#0" expanded="true" />
             <element signature="method#use_library#0;class#Actions#0" expanded="false" />
             <element signature="docComment;method#create_library#0;class#Actions#0" expanded="false" />
             <element signature="docComment;method#list_libraries#0;class#Actions#0" expanded="false" />
@@ -1456,10 +1490,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
           <folding>
-            <element signature="e#12271#12272#0" expanded="true" />
-            <element signature="e#12296#12297#0" expanded="true" />
-            <element signature="e#12340#12341#0" expanded="true" />
-            <element signature="e#12377#12378#0" expanded="true" />
+            <element signature="e#12268#12269#0" expanded="true" />
+            <element signature="e#12293#12294#0" expanded="true" />
+            <element signature="e#12337#12338#0" expanded="true" />
+            <element signature="e#12374#12375#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1493,7 +1527,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="313" column="0" selection-start-line="313" selection-start-column="0" selection-end-line="313" selection-end-column="0" />
           <folding>
-            <element signature="e#4589#4602#0" expanded="true" />
+            <element signature="e#4707#4720#0" expanded="true" />
             <element signature="method#use_library#0;class#Actions#0" expanded="false" />
             <element signature="docComment;method#create_library#0;class#Actions#0" expanded="false" />
             <element signature="docComment;method#list_libraries#0;class#Actions#0" expanded="false" />
@@ -1514,10 +1548,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#12271#12272#0" expanded="true" />
-            <element signature="e#12296#12297#0" expanded="true" />
-            <element signature="e#12340#12341#0" expanded="true" />
-            <element signature="e#12377#12378#0" expanded="true" />
+            <element signature="e#12268#12269#0" expanded="true" />
+            <element signature="e#12293#12294#0" expanded="true" />
+            <element signature="e#12337#12338#0" expanded="true" />
+            <element signature="e#12374#12375#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1543,7 +1577,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="271" column="58" selection-start-line="271" selection-start-column="58" selection-end-line="271" selection-end-column="58" />
           <folding>
-            <element signature="e#4589#4602#0" expanded="true" />
+            <element signature="e#4707#4720#0" expanded="true" />
             <element signature="method#use_library#0;class#Actions#0" expanded="false" />
             <element signature="docComment;method#create_library#0;class#Actions#0" expanded="false" />
             <element signature="docComment;method#list_libraries#0;class#Actions#0" expanded="false" />
@@ -1564,10 +1598,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#12271#12272#0" expanded="true" />
-            <element signature="e#12296#12297#0" expanded="true" />
-            <element signature="e#12340#12341#0" expanded="true" />
-            <element signature="e#12377#12378#0" expanded="true" />
+            <element signature="e#12268#12269#0" expanded="true" />
+            <element signature="e#12293#12294#0" expanded="true" />
+            <element signature="e#12337#12338#0" expanded="true" />
+            <element signature="e#12374#12375#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1593,7 +1627,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#4589#4602#0" expanded="true" />
+            <element signature="e#4707#4720#0" expanded="true" />
             <element signature="method#use_library#0;class#Actions#0" expanded="false" />
             <element signature="docComment;method#create_library#0;class#Actions#0" expanded="false" />
             <element signature="docComment;method#list_libraries#0;class#Actions#0" expanded="false" />
@@ -1614,7 +1648,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#4589#4602#0" expanded="true" />
+            <element signature="e#4707#4720#0" expanded="true" />
             <element signature="method#use_library#0;class#Actions#0" expanded="false" />
             <element signature="docComment;method#create_library#0;class#Actions#0" expanded="false" />
             <element signature="docComment;method#list_libraries#0;class#Actions#0" expanded="false" />
@@ -1786,57 +1820,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/items/LibraryItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="224" column="48" selection-start-line="224" selection-start-column="48" selection-end-line="224" selection-end-column="48" />
-          <folding>
-            <element signature="e#3327#3328#0" expanded="true" />
-            <element signature="e#3358#3359#0" expanded="true" />
-            <element signature="e#3554#3555#0" expanded="true" />
-            <element signature="e#3579#3580#0" expanded="true" />
-            <element signature="e#3827#3828#0" expanded="true" />
-            <element signature="e#3854#3855#0" expanded="true" />
-            <element signature="e#3890#3891#0" expanded="true" />
-            <element signature="e#3925#3926#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/tests/Test1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="96" column="37" selection-start-line="96" selection-start-column="37" selection-end-line="96" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/tests/ActionsTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="163" column="31" selection-start-line="163" selection-start-column="31" selection-end-line="163" selection-end-column="31" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/CLIU/Actions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9655173">
-          <caret line="137" column="0" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
-          <folding>
-            <element signature="e#4589#4602#0" expanded="true" />
-            <element signature="method#use_library#0;class#Actions#0" expanded="false" />
-            <element signature="docComment;method#create_library#0;class#Actions#0" expanded="false" />
-            <element signature="docComment;method#list_libraries#0;class#Actions#0" expanded="false" />
-            <element signature="method#list_libraries#0;class#Actions#0" expanded="false" />
-            <element signature="docComment;method#add_room#0;class#Actions#0" expanded="false" />
-            <element signature="method#add_room#0;class#Actions#0" expanded="false" />
-            <element signature="docComment;method#add_bookcase#0;class#Actions#0" expanded="false" />
-            <element signature="method#add_bookcase#0;class#Actions#0" expanded="false" />
-            <element signature="method#add_item#0;class#Actions#0" expanded="false" />
-            <element signature="method#store_items#0;class#Actions#0" expanded="false" />
-            <element signature="method#unstore_items#0;class#Actions#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1851,15 +1839,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/tests/Test1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.9655173">
+          <caret line="77" column="65" selection-start-line="77" selection-start-column="65" selection-end-line="77" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/CLIU/UserInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8795181">
-          <caret line="184" column="60" selection-start-line="184" selection-start-column="60" selection-end-line="184" selection-end-column="60" />
+        <state vertical-scroll-proportion="0.7241379">
+          <caret line="175" column="36" selection-start-line="175" selection-start-column="36" selection-end-line="175" selection-end-column="36" />
           <folding>
-            <element signature="e#12271#12272#0" expanded="true" />
-            <element signature="e#12296#12297#0" expanded="true" />
-            <element signature="e#12340#12341#0" expanded="true" />
-            <element signature="e#12377#12378#0" expanded="true" />
+            <element signature="e#12268#12269#0" expanded="true" />
+            <element signature="e#12293#12294#0" expanded="true" />
+            <element signature="e#12337#12338#0" expanded="true" />
+            <element signature="e#12374#12375#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/items/LibraryItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="133" column="9" selection-start-line="133" selection-start-column="9" selection-end-line="133" selection-end-column="9" />
+          <folding>
+            <element signature="e#3327#3328#0" expanded="true" />
+            <element signature="e#3358#3359#0" expanded="true" />
+            <element signature="e#3715#3716#0" expanded="true" />
+            <element signature="e#3740#3741#0" expanded="true" />
+            <element signature="e#3988#3989#0" expanded="true" />
+            <element signature="e#4015#4016#0" expanded="true" />
+            <element signature="e#4051#4052#0" expanded="true" />
+            <element signature="e#4086#4087#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/CLIU/Actions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="176" column="0" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
+          <folding>
+            <element signature="e#4707#4720#0" expanded="true" />
+            <element signature="method#use_library#0;class#Actions#0" expanded="false" />
+            <element signature="docComment;method#create_library#0;class#Actions#0" expanded="false" />
+            <element signature="docComment;method#list_libraries#0;class#Actions#0" expanded="false" />
+            <element signature="method#list_libraries#0;class#Actions#0" expanded="false" />
+            <element signature="docComment;method#add_room#0;class#Actions#0" expanded="false" />
+            <element signature="method#add_room#0;class#Actions#0" expanded="false" />
+            <element signature="docComment;method#add_bookcase#0;class#Actions#0" expanded="false" />
+            <element signature="method#add_bookcase#0;class#Actions#0" expanded="false" />
+            <element signature="method#add_item#0;class#Actions#0" expanded="false" />
+            <element signature="method#store_items#0;class#Actions#0" expanded="false" />
+            <element signature="method#unstore_items#0;class#Actions#0" expanded="false" />
           </folding>
         </state>
       </provider>

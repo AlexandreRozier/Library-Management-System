@@ -135,6 +135,7 @@ public abstract class Actions {
     public static void check_borrowed(String member_name) {
         Member member = Actions.findMember(member_name);
         if (member == null) {
+            System.out.println("The member "+member_name+"  was not found in the library in use, please try again.");
             return;
         }
         Library currentLibrary = UserInterface.getCurrentLibrary();
@@ -149,12 +150,16 @@ public abstract class Actions {
                 reservationList.add(item);
             }
         }
-        descr += member_name + " has in his reservation list : \n";
-        for (LibraryItem item : reservationList) {
-            descr += item.getTitle() + "(" + item.getType() + ")" + "\n";
+        if (reservationList.size()!=0) {
+            descr += member_name + " has in his reservation list : \n";
+            for (LibraryItem item : reservationList) {
+                descr += item.getTitle() + "(" + item.getType() + ")" + "\n";
+            }
+        } else {
+            descr+= "No item !";
         }
 
-        descr += "The current status of the member is " + member.getStatus();
+        descr += "\nThe current status of the member is " + member.getStatus();
 
         System.out.println(descr);
     }
@@ -170,7 +175,7 @@ public abstract class Actions {
         LibraryItem item = Actions.findLibraryItem(item_title);
         Member member = Actions.findMember(member_name);
         if (member == null || item == null) {
-            System.out.println("The member or the item does not exist in this library, please retype your command properly");
+            System.out.println("The member or the given item does not exist in this library.");
         } else {
             member.getMemberCard().borrow(item);
             if (member.getBorrowedItems().containsKey(item)) {
