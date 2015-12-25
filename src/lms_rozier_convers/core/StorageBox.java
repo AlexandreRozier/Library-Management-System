@@ -1,6 +1,7 @@
 package lms_rozier_convers.core;
 
 import lms_rozier_convers.core.items.LibraryItem;
+import lms_rozier_convers.core.library.Library;
 import lms_rozier_convers.core.library.Location;
 
 import java.util.ArrayList;
@@ -13,6 +14,7 @@ import java.util.List;
 public class StorageBox {
 
     List<LibraryItem> items = new ArrayList<>();
+    private Library library;
 
 
     public List<LibraryItem> getItems() {
@@ -26,6 +28,13 @@ public class StorageBox {
     public void addItem(LibraryItem item){
         this.items.add(item);
         item.setLocation(new Location(this));
+    }
 
+    public Library getLibrary() {
+        return library;
+    }
+
+    public void setLibrary(Library library) {
+        this.library = library;
     }
 }
