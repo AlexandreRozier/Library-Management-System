@@ -56,7 +56,6 @@ public class GoldenMCard extends Card {
         {
             //Put the item in the hashmap of borrowedItems of the member and the date associated
             this.member.getBorrowedItems().put(item,new GregorianCalendar());
-
             item.setBorrower(member);
 
             //If the member has the item in his reservation list, we remove it from the list.
@@ -69,7 +68,7 @@ public class GoldenMCard extends Card {
         }
 
         // If the item is already borrowed, adds to the reservation list
-        if (item.getBorrower() != null && member.getStatus().equals(MemberStatus.NORMAL) && member.getBorrowedItems().size()<member.getMemberCard().getNumberOfSimultaneousBorrows()){
+        else if (item.getBorrower() != null && member.getStatus().equals(MemberStatus.NORMAL) && member.getBorrowedItems().size()<member.getMemberCard().getNumberOfSimultaneousBorrows()){
             item.getReservationList().add(this.member);
         }
 

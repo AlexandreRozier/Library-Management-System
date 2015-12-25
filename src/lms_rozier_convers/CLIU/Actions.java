@@ -156,7 +156,7 @@ public abstract class Actions {
                 descr += item.getTitle() + "(" + item.getType() + ")" + "\n";
             }
         } else {
-            descr+= "No item !";
+            descr += member_name + " has no reservations waiting. \n";
         }
 
         descr += "\nThe current status of the member is " + member.getStatus();
@@ -183,7 +183,7 @@ public abstract class Actions {
             } else if (item.getReservationList().contains(member)) {
                 System.out.println(item.getTitle() + " was not available, it has been added to the reservation list.");
             } else {
-                System.out.println(member.getName() + "cannot borrow the item " + item.getTitle());
+                System.out.println(member.getName() + " cannot borrow the item " + item.getTitle());
             }
         }
     }

@@ -127,10 +127,12 @@ public abstract class LibraryItem {
 
     public void setLocation(Location location) {
         this.location = location;
-        if (location.getRoom()!=null) {
-            location.getRoom().getLibrary().getItemsLinkedToTheLibrary().add(this);
-        } else {
-            location.getStorageBox().getLibrary().getItemsLinkedToTheLibrary().add(this);
+        if (location!=null) {
+            if (location.getRoom()!=null) {
+                location.getRoom().getLibrary().getItemsLinkedToTheLibrary().add(this);
+            } else {
+                location.getStorageBox().getLibrary().getItemsLinkedToTheLibrary().add(this);
+            }
         }
     }
 

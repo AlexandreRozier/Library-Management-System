@@ -113,7 +113,6 @@ public abstract class Card {
             item.getLocation().getShelf().removeItem(item);
 
         }
-
         // If the item is already borrowed, adds to the reservation list
         else if (item.getBorrower() != null && item.isBorrowable() && member.getStatus().equals(MemberStatus.NORMAL) && member.getBorrowedItems().size()<member.getMemberCard().getNumberOfSimultaneousBorrows()){
             item.getReservationList().add(this.member);
