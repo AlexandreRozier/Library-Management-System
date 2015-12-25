@@ -140,7 +140,7 @@ public class ActionsTest {
         Actions.use_library(library2.getName());
         assertTrue(UserInterface.getCurrentLibrary().getName().equals(library2.getName()));
     }
-
+    //test
     @Test
     public void testFindMember() throws Exception {
         Library library3 = new Library(new AnyFitStrategy(), 1,3,5,3,"Library3");
