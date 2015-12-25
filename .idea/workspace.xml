@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1f1e4884-136e-467b-8d2c-794e7f1962e7" name="Default" comment="" />
+    <list default="true" id="1f1e4884-136e-467b-8d2c-794e7f1962e7" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lms_rozier_convers/CLIU/Actions.java" afterPath="$PROJECT_DIR$/src/lms_rozier_convers/CLIU/Actions.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lms_rozier_convers/CLIU/UserInterface.java" afterPath="$PROJECT_DIR$/src/lms_rozier_convers/CLIU/UserInterface.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lms_rozier_convers/core/items/LibraryItem.java" afterPath="$PROJECT_DIR$/src/lms_rozier_convers/core/items/LibraryItem.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lms_rozier_convers/core/tests/Test1.java" afterPath="$PROJECT_DIR$/src/lms_rozier_convers/core/tests/Test1.java" />
+    </list>
     <ignored path="SEPart2.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -23,12 +29,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Actions.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Actions.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/CLIU/Actions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="86" column="9" selection-start-line="86" selection-start-column="9" selection-end-line="86" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.33333334">
+              <caret line="176" column="0" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
               <folding>
+                <element signature="e#4707#4720#0" expanded="true" />
                 <element signature="method#use_library#0;class#Actions#0" expanded="false" />
                 <element signature="docComment;method#create_library#0;class#Actions#0" expanded="false" />
                 <element signature="docComment;method#list_libraries#0;class#Actions#0" expanded="false" />
@@ -49,17 +56,40 @@
         <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/items/LibraryItem.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="224" column="48" selection-start-line="224" selection-start-column="48" selection-end-line="224" selection-end-column="48" />
+              <caret line="133" column="9" selection-start-line="133" selection-start-column="9" selection-end-line="133" selection-end-column="9" />
               <folding>
                 <element signature="e#3327#3328#0" expanded="true" />
                 <element signature="e#3358#3359#0" expanded="true" />
-                <element signature="e#3554#3555#0" expanded="true" />
-                <element signature="e#3579#3580#0" expanded="true" />
-                <element signature="e#3827#3828#0" expanded="true" />
-                <element signature="e#3854#3855#0" expanded="true" />
-                <element signature="e#3890#3891#0" expanded="true" />
-                <element signature="e#3925#3926#0" expanded="true" />
+                <element signature="e#3715#3716#0" expanded="true" />
+                <element signature="e#3740#3741#0" expanded="true" />
+                <element signature="e#3988#3989#0" expanded="true" />
+                <element signature="e#4015#4016#0" expanded="true" />
+                <element signature="e#4051#4052#0" expanded="true" />
+                <element signature="e#4086#4087#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JAVA/lms_rozier_convers" pinned="false" current-in-tab="false">
+        <entry file="uml://JAVA/lms_rozier_convers">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement>lms_rozier_convers</OriginalElement>
+              <nodes>
+                <node x="0.0" y="0.0">lms_rozier_convers.core</node>
+                <node x="0.0" y="74.0">lms_rozier_convers.CLIU</node>
+              </nodes>
+              <notes />
+              <edges />
+              <settings layout="Hierarchic Group" zoom="1.0" x="-412.0" y="9.5" />
+              <SelectedNodes>
+                <node>lms_rozier_convers.core</node>
+              </SelectedNodes>
+              <Categories />
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
             </state>
           </provider>
         </entry>
@@ -67,8 +97,8 @@
       <file leaf-file-name="Test1.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/tests/Test1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="96" column="37" selection-start-line="96" selection-start-column="37" selection-end-line="96" selection-end-column="37" />
+            <state vertical-scroll-proportion="-3.9655173">
+              <caret line="77" column="65" selection-start-line="77" selection-start-column="65" selection-end-line="77" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -97,12 +127,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserInterface.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserInterface.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/CLIU/UserInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.77557755">
-              <caret line="239" column="9" selection-start-line="239" selection-start-column="9" selection-end-line="239" selection-end-column="9" />
-              <folding />
+            <state vertical-scroll-proportion="0.7241379">
+              <caret line="175" column="36" selection-start-line="175" selection-start-column="36" selection-end-line="175" selection-end-column="36" />
+              <folding>
+                <element signature="e#12268#12269#0" expanded="true" />
+                <element signature="e#12293#12294#0" expanded="true" />
+                <element signature="e#12337#12338#0" expanded="true" />
+                <element signature="e#12374#12375#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -112,6 +147,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="163" column="31" selection-start-line="163" selection-start-column="31" selection-end-line="163" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="System.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/src.zip!/java/lang/System.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="140" column="14" selection-start-line="140" selection-start-column="14" selection-end-line="140" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -146,10 +191,11 @@
         <option value="$PROJECT_DIR$/src/lms_rozier_convers/core/StorageBox.java" />
         <option value="$PROJECT_DIR$/src/lms_rozier_convers/core/tests/LibraryUpdaterTest.java" />
         <option value="$PROJECT_DIR$/src/lms_rozier_convers/core/tests/PenaltyCalculatorTest.java" />
-        <option value="$PROJECT_DIR$/src/lms_rozier_convers/core/items/LibraryItem.java" />
         <option value="$PROJECT_DIR$/src/lms_rozier_convers/core/tests/ActionsTest.java" />
-        <option value="$PROJECT_DIR$/src/lms_rozier_convers/CLIU/Actions.java" />
         <option value="$PROJECT_DIR$/src/lms_rozier_convers/CLIU/UserInterface.java" />
+        <option value="$PROJECT_DIR$/src/lms_rozier_convers/core/tests/Test1.java" />
+        <option value="$PROJECT_DIR$/src/lms_rozier_convers/CLIU/Actions.java" />
+        <option value="$PROJECT_DIR$/src/lms_rozier_convers/core/items/LibraryItem.java" />
       </list>
     </option>
   </component>
@@ -168,8 +214,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -196,8 +242,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -301,6 +347,226 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="SearchEverywhereHistoryKey" value="Library&#9;PSI&#9;JAVA://lms_rozier_convers.core.library.Library&#10;StorageB&#9;PSI&#9;JAVA://lms_rozier_convers.core.StorageBox" />
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/misc.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/allclasses-frame.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/allclasses-noframe.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/constant-values.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/deprecated-list.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/help-doc.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/index-files/index-1.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/index-files/index-10.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/index-files/index-11.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/index-files/index-12.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/index-files/index-13.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/index-files/index-14.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/index-files/index-15.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/index-files/index-16.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/index-files/index-2.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/index-files/index-3.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/index-files/index-4.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/index-files/index-5.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/index-files/index-6.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/index-files/index-7.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/index-files/index-8.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/index-files/index-9.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/index.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/AbstractFactory.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/Duration.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/FactoryMaker.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/Messagerie/Messagerie.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/Messagerie/package-frame.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/Messagerie/package-summary.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/Messagerie/package-tree.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/StorageBox.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/card/Card.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/card/CardFactory.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/card/FrequentMCard.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/card/GoldenMCard.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/card/StandardMCard.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/card/package-frame.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/card/package-summary.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/card/package-tree.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/exceptions/ObjectNotFoundException.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/exceptions/package-frame.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/exceptions/package-summary.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/exceptions/package-tree.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/geometry/Cuboid.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/geometry/package-frame.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/geometry/package-summary.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/geometry/package-tree.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/items/Book.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/items/CD.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/items/DVD.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/items/ItemFactory.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/items/LibraryItem.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/items/package-frame.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/items/package-summary.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/items/package-tree.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/library/Bookcase.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/library/Library.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/library/LibraryUpdater.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/library/Location.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/library/Room.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/library/Shelf.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/library/package-frame.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/library/package-summary.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/library/package-tree.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/member/Member.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/member/MemberObserver.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/member/MemberStatus.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/member/package-frame.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/member/package-summary.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/member/package-tree.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/package-frame.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/package-summary.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/package-tree.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/penalty/Penalty.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/penalty/PenaltyCalculator.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/penalty/package-frame.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/penalty/package-summary.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/penalty/package-tree.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/tests/AnyFitStrategyTest.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/tests/BestBookcaseFitStrategyTest.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/tests/BestRoomFitStrategyTest.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/tests/BestShelfFitStrategyTest.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/tests/CardFactoryTest.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/tests/CardTest.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/tests/CuboidTest.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/tests/LibraryTest.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/tests/LibraryUpdaterTest.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/tests/MemberObserverTest.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/tests/PenaltyCalculatorTest.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/tests/package-frame.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/tests/package-summary.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/tests/package-tree.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/tidying/AbstractTidyingStrategy.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/tidying/AnyFitStrategy.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/tidying/BestBookcaseFitStrategy.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/tidying/BestRoomFitStrategy.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/tidying/BestShelfFitStrategy.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/tidying/TidyingStrategyInterface.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/tidying/package-frame.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/tidying/package-summary.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/core/tidying/package-tree.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/overview-frame.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/overview-summary.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/overview-tree.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/package-list</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/serialized-form.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/lms_rozier_convers/core/items/LibraryItem.java</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/main/main.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/main/package-frame.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/main/package-summary.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/lms_rozier_convers/main/package-tree.html</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunManager" selected="Application.Test1">
     <configuration default="false" name="ActionsTest.testFindMember" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -688,12 +954,45 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -772,10 +1071,37 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-options />
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
     <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
       <method />
     </configuration>
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
+    </configuration>
+    <configuration default="true" type="uTestRunConfiguration" factoryName="utest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
       <method />
     </configuration>
     <list size="5">
@@ -818,7 +1144,6 @@
       <workItem from="1451006500242" duration="692000" />
       <workItem from="1451038926122" duration="4187000" />
       <workItem from="1451056971648" duration="3906000" />
-      <workItem from="1451077219027" duration="853000" />
     </task>
     <task id="LOCAL-00001" summary="Classe Actions coté Arnaud">
       <created>1450875456280</created>
@@ -910,7 +1235,13 @@
       <option name="project" value="LOCAL" />
       <updated>1451075889751</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Réparation des tests&#10;">
+      <created>1451076876777</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1451076876777</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -946,36 +1277,36 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23467000" />
+    <option name="totallyTimeSpent" value="23784000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="simpleUML" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.283857" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2489019" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24946696" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39869988" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="simpleUML" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.283857" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39869988" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1003,7 +1334,33 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="18" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/lms_rozier_convers/CLIU/Actions.java</url>
+          <line>176</line>
+          <properties />
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/lms_rozier_convers/CLIU/Actions.java</url>
+          <line>100</line>
+          <properties />
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/lms_rozier_convers/CLIU/Actions.java</url>
+          <line>105</line>
+          <properties />
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/lms_rozier_convers/CLIU/Actions.java</url>
+          <line>108</line>
+          <properties />
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="28" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1012,59 +1369,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/CLIU/Actions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#use_library#0;class#Actions#0" expanded="false" />
-            <element signature="docComment;method#create_library#0;class#Actions#0" expanded="false" />
-            <element signature="docComment;method#list_libraries#0;class#Actions#0" expanded="false" />
-            <element signature="method#list_libraries#0;class#Actions#0" expanded="false" />
-            <element signature="docComment;method#add_room#0;class#Actions#0" expanded="false" />
-            <element signature="method#add_room#0;class#Actions#0" expanded="false" />
-            <element signature="docComment;method#add_bookcase#0;class#Actions#0" expanded="false" />
-            <element signature="method#add_bookcase#0;class#Actions#0" expanded="false" />
-            <element signature="method#add_item#0;class#Actions#0" expanded="false" />
-            <element signature="method#store_items#0;class#Actions#0" expanded="false" />
-            <element signature="method#unstore_items#0;class#Actions#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/items/LibraryItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="224" column="48" selection-start-line="224" selection-start-column="48" selection-end-line="224" selection-end-column="48" />
-          <folding>
-            <element signature="e#3327#3328#0" expanded="true" />
-            <element signature="e#3358#3359#0" expanded="true" />
-            <element signature="e#3554#3555#0" expanded="true" />
-            <element signature="e#3579#3580#0" expanded="true" />
-            <element signature="e#3827#3828#0" expanded="true" />
-            <element signature="e#3854#3855#0" expanded="true" />
-            <element signature="e#3890#3891#0" expanded="true" />
-            <element signature="e#3925#3926#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/tests/Test1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="96" column="37" selection-start-line="96" selection-start-column="37" selection-end-line="96" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/tests/PenaltyCalculatorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/tests/Test1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1077,7 +1381,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="164" column="43" selection-start-line="164" selection-start-column="43" selection-end-line="164" selection-end-column="43" />
-          <folding />
+          <folding>
+            <element signature="e#12268#12269#0" expanded="true" />
+            <element signature="e#12293#12294#0" expanded="true" />
+            <element signature="e#12337#12338#0" expanded="true" />
+            <element signature="e#12374#12375#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1085,10 +1394,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding>
-            <element signature="e#2170#2171#0" expanded="true" />
-            <element signature="e#2206#2207#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1096,6 +1402,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1103,6 +1410,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="67" column="24" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1110,6 +1418,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1118,6 +1427,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="e#4707#4720#0" expanded="true" />
             <element signature="method#use_library#0;class#Actions#0" expanded="false" />
             <element signature="docComment;method#create_library#0;class#Actions#0" expanded="false" />
             <element signature="docComment;method#list_libraries#0;class#Actions#0" expanded="false" />
@@ -1137,7 +1447,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-          <folding />
+          <folding>
+            <element signature="e#12268#12269#0" expanded="true" />
+            <element signature="e#12293#12294#0" expanded="true" />
+            <element signature="e#12337#12338#0" expanded="true" />
+            <element signature="e#12374#12375#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1154,6 +1469,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="80" column="32" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
           <folding>
+            <element signature="e#4707#4720#0" expanded="true" />
             <element signature="method#use_library#0;class#Actions#0" expanded="false" />
             <element signature="docComment;method#create_library#0;class#Actions#0" expanded="false" />
             <element signature="docComment;method#list_libraries#0;class#Actions#0" expanded="false" />
@@ -1173,7 +1489,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-          <folding />
+          <folding>
+            <element signature="e#12268#12269#0" expanded="true" />
+            <element signature="e#12293#12294#0" expanded="true" />
+            <element signature="e#12337#12338#0" expanded="true" />
+            <element signature="e#12374#12375#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1197,6 +1518,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1205,6 +1527,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="313" column="0" selection-start-line="313" selection-start-column="0" selection-end-line="313" selection-end-column="0" />
           <folding>
+            <element signature="e#4707#4720#0" expanded="true" />
             <element signature="method#use_library#0;class#Actions#0" expanded="false" />
             <element signature="docComment;method#create_library#0;class#Actions#0" expanded="false" />
             <element signature="docComment;method#list_libraries#0;class#Actions#0" expanded="false" />
@@ -1224,7 +1547,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#12268#12269#0" expanded="true" />
+            <element signature="e#12293#12294#0" expanded="true" />
+            <element signature="e#12337#12338#0" expanded="true" />
+            <element signature="e#12374#12375#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1249,6 +1577,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="271" column="58" selection-start-line="271" selection-start-column="58" selection-end-line="271" selection-end-column="58" />
           <folding>
+            <element signature="e#4707#4720#0" expanded="true" />
             <element signature="method#use_library#0;class#Actions#0" expanded="false" />
             <element signature="docComment;method#create_library#0;class#Actions#0" expanded="false" />
             <element signature="docComment;method#list_libraries#0;class#Actions#0" expanded="false" />
@@ -1268,7 +1597,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#12268#12269#0" expanded="true" />
+            <element signature="e#12293#12294#0" expanded="true" />
+            <element signature="e#12337#12338#0" expanded="true" />
+            <element signature="e#12374#12375#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1293,6 +1627,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="e#4707#4720#0" expanded="true" />
             <element signature="method#use_library#0;class#Actions#0" expanded="false" />
             <element signature="docComment;method#create_library#0;class#Actions#0" expanded="false" />
             <element signature="docComment;method#list_libraries#0;class#Actions#0" expanded="false" />
@@ -1313,6 +1648,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="e#4707#4720#0" expanded="true" />
             <element signature="method#use_library#0;class#Actions#0" expanded="false" />
             <element signature="docComment;method#create_library#0;class#Actions#0" expanded="false" />
             <element signature="docComment;method#list_libraries#0;class#Actions#0" expanded="false" />
@@ -1353,6 +1689,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1360,6 +1697,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1367,6 +1705,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1374,6 +1713,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1381,6 +1721,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="67" column="24" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/src.zip!/java/lang/ClassLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.521327">
+          <caret line="727" column="18" selection-start-line="727" selection-start-column="18" selection-end-line="727" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1418,6 +1767,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/tests/LibraryUpdaterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="39" selection-start-line="58" selection-start-column="39" selection-end-line="58" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/tests/PenaltyCalculatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1430,6 +1787,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1444,7 +1802,7 @@
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="-412.0" y="10.0" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-412.0" y="9.5" />
           <SelectedNodes>
             <node>lms_rozier_convers.core</node>
           </SelectedNodes>
@@ -1454,27 +1812,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/items/LibraryItem.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/src.zip!/java/lang/System.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="224" column="48" selection-start-line="224" selection-start-column="48" selection-end-line="224" selection-end-column="48" />
-          <folding>
-            <element signature="e#3327#3328#0" expanded="true" />
-            <element signature="e#3358#3359#0" expanded="true" />
-            <element signature="e#3554#3555#0" expanded="true" />
-            <element signature="e#3579#3580#0" expanded="true" />
-            <element signature="e#3827#3828#0" expanded="true" />
-            <element signature="e#3854#3855#0" expanded="true" />
-            <element signature="e#3890#3891#0" expanded="true" />
-            <element signature="e#3925#3926#0" expanded="true" />
-          </folding>
+          <caret line="140" column="14" selection-start-line="140" selection-start-column="14" selection-end-line="140" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/tests/Test1.java">
+    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/tests/ActionsTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="96" column="37" selection-start-line="96" selection-start-column="37" selection-end-line="96" selection-end-column="37" />
+          <caret line="163" column="31" selection-start-line="163" selection-start-column="31" selection-end-line="163" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -1490,27 +1839,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/tests/ActionsTest.java">
+    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/tests/Test1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="163" column="31" selection-start-line="163" selection-start-column="31" selection-end-line="163" selection-end-column="31" />
+        <state vertical-scroll-proportion="-3.9655173">
+          <caret line="77" column="65" selection-start-line="77" selection-start-column="65" selection-end-line="77" selection-end-column="65" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/tests/LibraryUpdaterTest.java">
+    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/CLIU/UserInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7241379">
+          <caret line="175" column="36" selection-start-line="175" selection-start-column="36" selection-end-line="175" selection-end-column="36" />
+          <folding>
+            <element signature="e#12268#12269#0" expanded="true" />
+            <element signature="e#12293#12294#0" expanded="true" />
+            <element signature="e#12337#12338#0" expanded="true" />
+            <element signature="e#12374#12375#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/items/LibraryItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="39" selection-start-line="58" selection-start-column="39" selection-end-line="58" selection-end-column="39" />
-          <folding />
+          <caret line="133" column="9" selection-start-line="133" selection-start-column="9" selection-end-line="133" selection-end-column="9" />
+          <folding>
+            <element signature="e#3327#3328#0" expanded="true" />
+            <element signature="e#3358#3359#0" expanded="true" />
+            <element signature="e#3715#3716#0" expanded="true" />
+            <element signature="e#3740#3741#0" expanded="true" />
+            <element signature="e#3988#3989#0" expanded="true" />
+            <element signature="e#4015#4016#0" expanded="true" />
+            <element signature="e#4051#4052#0" expanded="true" />
+            <element signature="e#4086#4087#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/CLIU/Actions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="86" column="9" selection-start-line="86" selection-start-column="9" selection-end-line="86" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="176" column="0" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
           <folding>
+            <element signature="e#4707#4720#0" expanded="true" />
             <element signature="method#use_library#0;class#Actions#0" expanded="false" />
             <element signature="docComment;method#create_library#0;class#Actions#0" expanded="false" />
             <element signature="docComment;method#list_libraries#0;class#Actions#0" expanded="false" />
@@ -1523,14 +1895,6 @@
             <element signature="method#store_items#0;class#Actions#0" expanded="false" />
             <element signature="method#unstore_items#0;class#Actions#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/CLIU/UserInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.77557755">
-          <caret line="239" column="9" selection-start-line="239" selection-start-column="9" selection-end-line="239" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
