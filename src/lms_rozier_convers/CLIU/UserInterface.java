@@ -176,7 +176,7 @@ public abstract class UserInterface {
                         Actions.borrow_item(parameters[0],parameters[1]);
                     }
                     else{
-                        System.out.println("Invalid input. Ex : borrow_item Johnny Test,Discovery");
+                        System.out.println("Invalid input. Ex : borrow_item Johnny Doe,Discovery");
                     }
                     break;
 
@@ -185,7 +185,7 @@ public abstract class UserInterface {
                         Actions.check_borrowed(parameters[0]);
                     }
                     else{
-                        System.out.println("Invalid input. Ex : check_borrowed Johny Test");
+                        System.out.println("Invalid input. Ex : check_borrowed Johny Doe");
                     }
 
 
