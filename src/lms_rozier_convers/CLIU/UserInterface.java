@@ -185,7 +185,7 @@ public abstract class UserInterface {
                         Actions.check_borrowed(parameters[0]);
                     }
                     else{
-                        System.out.println("Invalid input. Ex : check_borrowed Johnny Doe");
+                        System.out.println("Invalid input. Ex : check_borrowed Johny Doe");
                     }
 
 
