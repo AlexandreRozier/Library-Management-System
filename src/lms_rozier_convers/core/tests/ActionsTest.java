@@ -141,6 +141,20 @@ public class ActionsTest {
         assertTrue(UserInterface.getCurrentLibrary().getName().equals(library2.getName()));
     }
 
+    @Test
+    public void testFindMember() throws Exception {
+        Library library3 = new Library(new AnyFitStrategy(), 1,3,5,3,"Library3");
+        UserInterface.getLibraries().add(library3);
+        UserInterface.setCurrentLibrary(library3);
+        Member member1 = new Member();
+        member1.setName("Alexandre Rozier");
+        member1.setCurrentLibrary(library3);
+        CardFactory cardFactory = new CardFactory();
+        Card card = cardFactory.create("Standard");
+        member1.setMemberCard(card);
+        assertTrue(Actions.findMember("Alexandre Rozier").equals(member1));
+    }
+
 
 
 }
