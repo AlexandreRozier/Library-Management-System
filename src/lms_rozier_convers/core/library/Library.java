@@ -20,14 +20,14 @@ public class Library {
     private AbstractTidyingStrategy tidyingStrategy;
     private List<Member> members =new ArrayList<>();
     private List<Room> rooms = new ArrayList<>();
-    private StorageBox storageBox = new StorageBox();
+    private StorageBox storageBox = new StorageBox(this);
     private int numberToBeFrequent = 3; // The number N
     private int numberOfMonthsToBeFrequent = 3; // The number M
     private int numberOfMonthsToBeStandard = 4; // The number M'
     private int numberOfMaxSimultaneousBorrows = 5;
     private List<LibraryItem> itemsLinkedToTheLibrary = new ArrayList<>(); // Items linked, borrowed or not, lost or not
     //TODO : vérifier qu'un item est toujours rajouté à cette liste quand on en ajoute un
-    //TODO vérifier si c'est utile (je pense que oui)
+
     /**
      * CONSTRUCTOR
      * @param tidyingStrategy
@@ -46,6 +46,7 @@ public class Library {
      * @param numberOfMaximumBorrows
      */
     public Library(AbstractTidyingStrategy tidyingStrategy, int numberToBeFrequent, int numberOfMonthsToBeFrequent, int numberOfMonthsToBeStandard, int numberOfMaximumBorrows) {
+
 
         this.tidyingStrategy = tidyingStrategy;
         this.numberToBeFrequent = numberToBeFrequent;

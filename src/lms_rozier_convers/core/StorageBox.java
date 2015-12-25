@@ -16,6 +16,10 @@ public class StorageBox {
     List<LibraryItem> items = new ArrayList<>();
     private Library library;
 
+    public StorageBox(Library library) {
+        this.library = library;
+    }
+
 
     public List<LibraryItem> getItems() {
         return items;

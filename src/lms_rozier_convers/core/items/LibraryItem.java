@@ -86,10 +86,10 @@ public abstract class LibraryItem {
         this.borrowable = borrowable;
         this.location = location;
         this.shape = shape;
-        if (location.getRoom()==null) {
+        if (location.getRoom()!=null) {
             location.getRoom().getLibrary().getItemsLinkedToTheLibrary().add(this);
         } else {
-            location.getStorageBox().
+            location.getStorageBox().getLibrary().getItemsLinkedToTheLibrary().add(this);
         }
     }
 

@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1f1e4884-136e-467b-8d2c-794e7f1962e7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SoftwareEngineering.iml" afterPath="$PROJECT_DIR$/SoftwareEngineering.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lms_rozier_convers/core/StorageBox.java" afterPath="$PROJECT_DIR$/src/lms_rozier_convers/core/StorageBox.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lms_rozier_convers/core/items/LibraryItem.java" afterPath="$PROJECT_DIR$/src/lms_rozier_convers/core/items/LibraryItem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lms_rozier_convers/core/tests/LibraryUpdaterTest.java" afterPath="$PROJECT_DIR$/src/lms_rozier_convers/core/tests/LibraryUpdaterTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lms_rozier_convers/core/library/Library.java" afterPath="$PROJECT_DIR$/src/lms_rozier_convers/core/library/Library.java" />
     </list>
     <ignored path="SEPart2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,21 +55,34 @@
         <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/items/LibraryItem.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="91" column="23" selection-start-line="91" selection-start-column="23" selection-end-line="91" selection-end-column="23" />
+              <caret line="90" column="16" selection-start-line="90" selection-start-column="16" selection-end-line="90" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StorageBox.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Library.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/library/Library.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.2580645">
+              <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StorageBox.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/StorageBox.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7096774">
-              <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
               <folding>
-                <element signature="e#768#769#0" expanded="true" />
-                <element signature="e#815#816#0" expanded="true" />
-                <element signature="e#853#854#0" expanded="true" />
+                <element signature="e#460#461#0" expanded="true" />
+                <element signature="e#498#499#0" expanded="true" />
+                <element signature="e#818#819#0" expanded="true" />
+                <element signature="e#848#849#0" expanded="true" />
+                <element signature="e#895#896#0" expanded="true" />
+                <element signature="e#933#934#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -85,16 +97,6 @@
                 <element signature="e#1701#1702#0" expanded="true" />
                 <element signature="e#1734#1735#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Card.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/card/Card.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -169,6 +171,7 @@
         <option value="$PROJECT_DIR$/src/lms_rozier_convers/core/tests/ActionsTest.java" />
         <option value="$PROJECT_DIR$/src/lms_rozier_convers/core/tests/LibraryUpdaterTest.java" />
         <option value="$PROJECT_DIR$/src/lms_rozier_convers/core/items/LibraryItem.java" />
+        <option value="$PROJECT_DIR$/src/lms_rozier_convers/core/library/Library.java" />
         <option value="$PROJECT_DIR$/src/lms_rozier_convers/core/StorageBox.java" />
       </list>
     </option>
@@ -342,7 +345,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="StorageB&#9;PSI&#9;JAVA://lms_rozier_convers.core.StorageBox" />
+    <property name="SearchEverywhereHistoryKey" value="Library&#9;PSI&#9;JAVA://lms_rozier_convers.core.library.Library&#10;StorageB&#9;PSI&#9;JAVA://lms_rozier_convers.core.StorageBox" />
   </component>
   <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
     <UpdatedFiles>
@@ -1109,7 +1112,13 @@
       <option name="project" value="LOCAL" />
       <updated>1451070651623</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="uml">
+      <created>1451071521198</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1451071521199</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1145,7 +1154,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17771000" />
+    <option name="totallyTimeSpent" value="17916000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1200,14 +1209,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/lms_rozier_convers/core/items/LibraryItem.java</url>
-          <line>88</line>
-          <properties />
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="16" />
     </breakpoint-manager>
     <watches-manager />
@@ -1217,14 +1218,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/card/Card.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/tests/Test1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1715,20 +1708,31 @@
     <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/items/LibraryItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="91" column="23" selection-start-line="91" selection-start-column="23" selection-end-line="91" selection-end-column="23" />
+          <caret line="90" column="16" selection-start-line="90" selection-start-column="16" selection-end-line="90" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/StorageBox.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7096774">
-          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
           <folding>
-            <element signature="e#768#769#0" expanded="true" />
-            <element signature="e#815#816#0" expanded="true" />
-            <element signature="e#853#854#0" expanded="true" />
+            <element signature="e#460#461#0" expanded="true" />
+            <element signature="e#498#499#0" expanded="true" />
+            <element signature="e#818#819#0" expanded="true" />
+            <element signature="e#848#849#0" expanded="true" />
+            <element signature="e#895#896#0" expanded="true" />
+            <element signature="e#933#934#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/library/Library.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2580645">
+          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+          <folding />
         </state>
       </provider>
     </entry>
