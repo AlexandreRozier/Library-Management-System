@@ -21,3 +21,5 @@ borrow_item Johnny Golden,Homework
 
 check_borrowed Johnny Normal
 check_borrowed BadMember
+check_borrowed SuspendedMember
+check_borrowed FinedMember
