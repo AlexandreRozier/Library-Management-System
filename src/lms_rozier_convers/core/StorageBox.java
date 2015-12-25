@@ -20,6 +20,10 @@ public class StorageBox {
         this.library = library;
     }
 
+    public StorageBox() {
+
+    }
+
 
     public List<LibraryItem> getItems() {
         return items;
