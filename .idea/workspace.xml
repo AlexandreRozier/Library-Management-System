@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f1e4884-136e-467b-8d2c-794e7f1962e7" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/lms_rozier_convers/main/main.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SoftwareEngineering.iml" afterPath="$PROJECT_DIR$/SoftwareEngineering.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lms_rozier_convers/core/StorageBox.java" afterPath="$PROJECT_DIR$/src/lms_rozier_convers/core/StorageBox.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lms_rozier_convers/core/items/LibraryItem.java" afterPath="$PROJECT_DIR$/src/lms_rozier_convers/core/items/LibraryItem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lms_rozier_convers/core/tests/LibraryUpdaterTest.java" afterPath="$PROJECT_DIR$/src/lms_rozier_convers/core/tests/LibraryUpdaterTest.java" />
     </list>
     <ignored path="SEPart2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,21 +54,34 @@
         <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/items/LibraryItem.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="91" column="23" selection-start-line="91" selection-start-column="23" selection-end-line="91" selection-end-column="23" />
+              <caret line="90" column="16" selection-start-line="90" selection-start-column="16" selection-end-line="90" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StorageBox.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Library.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/library/Library.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StorageBox.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/StorageBox.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7096774">
-              <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding>
-                <element signature="e#768#769#0" expanded="true" />
-                <element signature="e#815#816#0" expanded="true" />
-                <element signature="e#853#854#0" expanded="true" />
+                <element signature="e#460#461#0" expanded="true" />
+                <element signature="e#498#499#0" expanded="true" />
+                <element signature="e#852#853#0" expanded="true" />
+                <element signature="e#882#883#0" expanded="true" />
+                <element signature="e#929#930#0" expanded="true" />
+                <element signature="e#967#968#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -89,20 +100,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Card.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/card/Card.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ActionsTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ActionsTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/tests/ActionsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="3.5370018">
               <caret line="142" column="10" selection-start-line="142" selection-start-column="10" selection-end-line="142" selection-end-column="10" />
               <folding />
             </state>
@@ -133,17 +134,7 @@
         <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/tests/LibraryUpdaterTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CardFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/card/CardFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="67" column="24" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="24" />
+              <caret line="46" column="89" selection-start-line="46" selection-start-column="89" selection-end-line="46" selection-end-column="89" />
               <folding />
             </state>
           </provider>
@@ -167,8 +158,9 @@
         <option value="$PROJECT_DIR$/src/lms_rozier_convers/CLIU/Actions.java" />
         <option value="$PROJECT_DIR$/src/lms_rozier_convers/core/member/Member.java" />
         <option value="$PROJECT_DIR$/src/lms_rozier_convers/core/tests/ActionsTest.java" />
-        <option value="$PROJECT_DIR$/src/lms_rozier_convers/core/tests/LibraryUpdaterTest.java" />
         <option value="$PROJECT_DIR$/src/lms_rozier_convers/core/items/LibraryItem.java" />
+        <option value="$PROJECT_DIR$/src/lms_rozier_convers/core/library/Library.java" />
+        <option value="$PROJECT_DIR$/src/lms_rozier_convers/core/tests/LibraryUpdaterTest.java" />
         <option value="$PROJECT_DIR$/src/lms_rozier_convers/core/StorageBox.java" />
       </list>
     </option>
@@ -253,24 +245,6 @@
               <option name="myItemId" value="lms_rozier_convers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SEPart2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SEPart2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lms_rozier_convers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="core" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -328,6 +302,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEPart2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SEPart2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms_rozier_convers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -342,7 +334,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="StorageB&#9;PSI&#9;JAVA://lms_rozier_convers.core.StorageBox" />
+    <property name="SearchEverywhereHistoryKey" value="Library&#9;PSI&#9;JAVA://lms_rozier_convers.core.library.Library&#10;StorageB&#9;PSI&#9;JAVA://lms_rozier_convers.core.StorageBox" />
   </component>
   <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
     <UpdatedFiles>
@@ -1109,7 +1101,19 @@
       <option name="project" value="LOCAL" />
       <updated>1451070651623</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="uml">
+      <created>1451071521198</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1451071521199</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Ajout storage box librairie + débug de LibUpdaterTest&#10;">
+      <created>1451071686373</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1451071686373</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1145,11 +1149,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17771000" />
+    <option name="totallyTimeSpent" value="18021000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1162,7 +1166,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.283857" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24946696" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24946696" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1196,18 +1200,11 @@
     <MESSAGE value="test1" />
     <MESSAGE value="tests" />
     <MESSAGE value="uml" />
-    <option name="LAST_COMMIT_MESSAGE" value="uml" />
+    <MESSAGE value="Ajout storage box librairie + débug de LibUpdaterTest&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout storage box librairie + débug de LibUpdaterTest&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/lms_rozier_convers/core/items/LibraryItem.java</url>
-          <line>88</line>
-          <properties />
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="16" />
     </breakpoint-manager>
     <watches-manager />
@@ -1217,14 +1214,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/card/Card.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/tests/Test1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1245,14 +1234,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/main/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1310,14 +1291,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/main/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/tests/Test1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1351,14 +1324,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/main/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1416,14 +1381,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/main/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/tests/Test1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1465,14 +1422,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/main/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1588,14 +1537,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/main/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/tests/Test1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1671,7 +1612,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/tests/ActionsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="3.5370018">
           <caret line="142" column="10" selection-start-line="142" selection-start-column="10" selection-end-line="142" selection-end-column="10" />
           <folding />
         </state>
@@ -1693,14 +1634,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/tests/LibraryUpdaterTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/library/Location.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1715,19 +1648,38 @@
     <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/items/LibraryItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="91" column="23" selection-start-line="91" selection-start-column="23" selection-end-line="91" selection-end-column="23" />
+          <caret line="90" column="16" selection-start-line="90" selection-start-column="16" selection-end-line="90" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/library/Library.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/tests/LibraryUpdaterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="89" selection-start-line="46" selection-start-column="89" selection-end-line="46" selection-end-column="89" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lms_rozier_convers/core/StorageBox.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7096774">
-          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
-            <element signature="e#768#769#0" expanded="true" />
-            <element signature="e#815#816#0" expanded="true" />
-            <element signature="e#853#854#0" expanded="true" />
+            <element signature="e#460#461#0" expanded="true" />
+            <element signature="e#498#499#0" expanded="true" />
+            <element signature="e#852#853#0" expanded="true" />
+            <element signature="e#882#883#0" expanded="true" />
+            <element signature="e#929#930#0" expanded="true" />
+            <element signature="e#967#968#0" expanded="true" />
           </folding>
         </state>
       </provider>
