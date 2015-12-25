@@ -222,7 +222,7 @@ public abstract class LibraryItem {
     public String toString() {
         String descr = "Titre : " + title + "\n";
         if (authors.size()==1){
-            descr += "Auteur : " + authors + "\n";
+            descr += "Auteur : " + authors.get(0) + "\n";
         }
         if (authors.size() > 1) {
             descr += "Auteur : ";

@@ -6,10 +6,7 @@ import lms_rozier_convers.core.FactoryMaker;
 import lms_rozier_convers.core.card.Card;
 import lms_rozier_convers.core.card.CardFactory;
 import lms_rozier_convers.core.geometry.Cuboid;
-import lms_rozier_convers.core.items.Book;
-import lms_rozier_convers.core.items.CD;
-import lms_rozier_convers.core.items.DVD;
-import lms_rozier_convers.core.items.ItemFactory;
+import lms_rozier_convers.core.items.*;
 import lms_rozier_convers.core.library.*;
 import lms_rozier_convers.core.member.Member;
 import lms_rozier_convers.core.tidying.AnyFitStrategy;
@@ -78,7 +75,7 @@ public class ActionsTest {
              else if (i<=12){
                  ArrayList<String> author1 = new ArrayList<>();
                  author1.add("Daft Punk");
-                 shelf.addItem(factory.createItem("CD", "Title" + i, author1, "Publisher" + i, 1900 + i, i, false, new Cuboid(i, i, i)));
+                 shelf.addItem(factory.createItem("CD", "Discovery", author1, "Publisher" + i, 1900 + i, i, false, new Cuboid(i, i, i)));
              }
              // 3 other CDs, not borrowable
              else if (i<=15){
@@ -140,20 +137,31 @@ public class ActionsTest {
         Actions.use_library(library2.getName());
         assertTrue(UserInterface.getCurrentLibrary().getName().equals(library2.getName()));
     }
-    //test
+
+    /**
+     * Tests if a member is successfully found, and if the two instances found match.
+     * @throws Exception
+     */
     @Test
     public void testFindMember() throws Exception {
-        Library library3 = new Library(new AnyFitStrategy(), 1,3,5,3,"Library3");
-        UserInterface.getLibraries().add(library3);
-        UserInterface.setCurrentLibrary(library3);
+
         Member member1 = new Member();
         member1.setName("Alexandre Rozier");
-        member1.setCurrentLibrary(library3);
+        member1.setCurrentLibrary(UserInterface.getCurrentLibrary());
         CardFactory cardFactory = new CardFactory();
         Card card = cardFactory.create("Standard");
         member1.setMemberCard(card);
         Member member2 = Actions.findMember("Alexandre Rozier");
         assertTrue(member2.equals(member1));
+    }
+
+    /**
+     * Checks whether the item with the title "Discovery" is found in the test Library.
+     */
+    @Test
+    public  void findLibraryItem() throws Exception {
+        LibraryItem item = Actions.findLibraryItem("Discovery");
+        assertTrue(item!=null);
     }
 
 

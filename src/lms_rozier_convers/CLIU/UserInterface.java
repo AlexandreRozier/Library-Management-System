@@ -15,6 +15,7 @@ public abstract class UserInterface {
 
     private static List<Library> libraries = new ArrayList<>(); // The managed libraries
     private static Library currentLibrary; // The library on which will be done the actions
+    private static Scanner sc;
 
 
     public static void launch() {
@@ -28,7 +29,7 @@ public abstract class UserInterface {
         String str;
         while(open){
             System.out.println("Please enter a command :");
-            Scanner sc = new Scanner(System.in);
+            sc = new Scanner(System.in);
 
             str = sc.nextLine();
             //Parsing : we assume that the user will separate command and variables with a space (like in a Linux Console)
@@ -40,7 +41,7 @@ public abstract class UserInterface {
             // The last split allows to keep only the parameters, even if they contain spaces
             String[] parameters = parametersInString.split(",");
 
-            //TODO : faire des exceptions quand il n'y a pas le bon nombre d'arguments!
+
 
             switch (command){
                 case ("list_libraries"):
@@ -250,8 +251,13 @@ public abstract class UserInterface {
     }
 
 
+    public static Scanner getSc() {
+        return sc;
+    }
 
-
+    public static void setSc(Scanner sc) {
+        UserInterface.sc = sc;
+    }
 
     public static List<Library> getLibraries() {
         return libraries;
