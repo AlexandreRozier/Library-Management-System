@@ -9,6 +9,7 @@ import lms_rozier_convers.core.tidying.AbstractTidyingStrategy;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Observable;
+import java.util.Timer;
 
 /**
  * 24/11/2015.
@@ -34,6 +35,8 @@ public class Library {
      */
     public Library(AbstractTidyingStrategy tidyingStrategy) {
         this.tidyingStrategy = tidyingStrategy;
+        Timer timer = new Timer();
+        timer.schedule(new LibraryUpdater(this), 24 * 3600 * 1000);
         tidyingStrategy.setLibrary(this);
     }
 
@@ -47,6 +50,8 @@ public class Library {
      */
     public Library(AbstractTidyingStrategy tidyingStrategy, int numberToBeFrequent, int numberOfMonthsToBeFrequent, int numberOfMonthsToBeStandard, int numberOfMaximumBorrows) {
 
+        Timer timer = new Timer();
+        timer.schedule(new LibraryUpdater(this), 24 * 3600 * 1000);
         this.tidyingStrategy = tidyingStrategy;
         this.numberToBeFrequent = numberToBeFrequent;
         this.numberOfMonthsToBeFrequent = numberOfMonthsToBeFrequent;
@@ -65,6 +70,8 @@ public class Library {
      */
     public Library(AbstractTidyingStrategy tidyingStrategy, int numberToBeFrequent, int numberOfMonthsToBeFrequent, int numberOfMonthsToBeStandard, int numberOfMaximumBorrows, String name) {
 
+        Timer timer = new Timer();
+        timer.schedule(new LibraryUpdater(this), 24 * 3600 * 1000);
         this.tidyingStrategy = tidyingStrategy;
         this.numberToBeFrequent = numberToBeFrequent;
         this.numberOfMonthsToBeFrequent = numberOfMonthsToBeFrequent;

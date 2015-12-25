@@ -21,11 +21,7 @@ public class main {
      */
     public static void main(String[] args) {
         Library library = new Library(new AnyFitStrategy(),1,3,5,5,"Miterrand");
-        //+++++++++++++++++++++++++++
-        //Schedules an update of all the members of the library each day
-        Timer timer = new Timer();
-        timer.schedule(new LibraryUpdater(library), 24 * 3600 * 1000);
-        //+++++++++++++++++++++++++++
+
         //Set up the rooms
         List<Room> rooms = new ArrayList<>();
 
