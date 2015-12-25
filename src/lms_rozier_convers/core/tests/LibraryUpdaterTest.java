@@ -44,7 +44,7 @@ public class LibraryUpdaterTest {
 
         //Change these dates to adapt the test to the moment you run it (the result depends of the computer date)
         Book book = new Book("Rimbaud","Dupuis", 1750,1,true,new Location(library.getStorageBox()),new Cuboid(1,1,1));
-        CD cd = new CD("Rolling Stones","Whammy Records", 1995,1,true,new Location(new StorageBox()),new Cuboid(1,1,1));
+        CD cd = new CD("Rolling Stones","Whammy Records", 1995,1,true,new Location(library.getStorageBox()),new Cuboid(1,1,1));
         member.getBorrowedItems().put(book, new GregorianCalendar(2015,9,15)); // Suspended
         member.getBorrowedItems().put(cd, new GregorianCalendar(2015,11,8)); // Normal
 
@@ -56,7 +56,7 @@ public class LibraryUpdaterTest {
         member.getMemberCard().giveBack(cd);
 
         member.notifyObservers();
-        assertEquals(MemberStatus.SUSPENDED, member.getStatus());
+        assertEquals(MemberStatus.FINED, member.getStatus());
 
         // Makes the days pass until the member's penalty is reset to zero
         LibraryUpdater dailyUpdater = new LibraryUpdater(library);
