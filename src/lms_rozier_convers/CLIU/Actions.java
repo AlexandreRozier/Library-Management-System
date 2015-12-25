@@ -7,17 +7,11 @@ import lms_rozier_convers.core.exceptions.ObjectNotFoundException;
 import lms_rozier_convers.core.geometry.Cuboid;
 import lms_rozier_convers.core.items.ItemFactory;
 import lms_rozier_convers.core.items.LibraryItem;
-import lms_rozier_convers.core.library.Bookcase;
-import lms_rozier_convers.core.library.Library;
-import lms_rozier_convers.core.library.Room;
-import lms_rozier_convers.core.library.Shelf;
+import lms_rozier_convers.core.library.*;
 import lms_rozier_convers.core.member.Member;
 import lms_rozier_convers.core.tidying.*;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-import java.util.StringJoiner;
+import java.util.*;
 
 /**
  * Created by hx on 20/12/2015.
@@ -436,6 +430,9 @@ public abstract class Actions {
 
         Library library = new Library(strategy, numberToBeFrequent, numberOfMonthsToBeFrequent, numberOfMonthsToBeStandard, numberOfMaximumBorrows, libraryName);
         UserInterface.addLibrary(library);
+        //Adds an updater to the library
+        Timer timer = new Timer();
+        timer.schedule(new LibraryUpdater(library), 24 * 3600 * 1000);
         System.out.println("Library " + libraryName + " successfully added.");
 
     }

@@ -32,6 +32,8 @@ public class Test1 {
         Library library = new Library(new AnyFitStrategy(),1,3,5,5,"Miterrand");
         UserInterface.addLibrary(library);
         UserInterface.setCurrentLibrary(library);
+        Timer timer = new Timer();
+        timer.schedule(new LibraryUpdater(library), 24 * 3600 * 1000);
         //+++++++++++++++++++++++++++
         //Creates the Library
         int roomNumber = 3;
