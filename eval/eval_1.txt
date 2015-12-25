@@ -1,0 +1,23 @@
+
+Step 1 : run the Test1 class in the Tests package
+-> A library containing the asked items will be automatically created
+
+list_items Miterrand
+
+find_items Albert Camus
+find_items Daft Punk
+
+search_title The Stranger
+search_title Homework
+search_title inexisting libraryitem
+
+add_member Johnny Normal,475728329,johny.test@mail.com,Standard
+add_member Johnny Golden,475728329,johny.test@mail.com,Golden
+
+borrow_item Johnny Normal,The Stranger
+borrow_item Johnny Normal,The Stranger
+borrow_item Johnny Normal,Homework
+borrow_item Johnny Golden,The Stranger
+
+check_borrowed Johnny Normal
+check_borrowed BadMember

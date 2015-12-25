@@ -6,10 +6,7 @@ import lms_rozier_convers.core.FactoryMaker;
 import lms_rozier_convers.core.card.Card;
 import lms_rozier_convers.core.card.CardFactory;
 import lms_rozier_convers.core.geometry.Cuboid;
-import lms_rozier_convers.core.items.Book;
-import lms_rozier_convers.core.items.CD;
-import lms_rozier_convers.core.items.DVD;
-import lms_rozier_convers.core.items.ItemFactory;
+import lms_rozier_convers.core.items.*;
 import lms_rozier_convers.core.library.*;
 import lms_rozier_convers.core.member.Member;
 import lms_rozier_convers.core.tidying.AnyFitStrategy;
@@ -40,6 +37,9 @@ public class Test1 {
         int bookcaseNumber = 4;
         int shelfNumber = 8;
 
+
+        ItemFactory factory = (ItemFactory) FactoryMaker.createFactory("itemFactory");
+
         for (int i = 0; i < roomNumber; i++) {
             library.addRoom(new Room("room"+i));
         }
@@ -57,7 +57,6 @@ public class Test1 {
 
             // Item creation
 
-            ItemFactory factory = (ItemFactory) FactoryMaker.createFactory("itemFactory");
 
             // 3 books written by Albert Camus
             if (i<=2) {
@@ -93,8 +92,12 @@ public class Test1 {
 
         //+++++++++++++++++++++++++++
         // Creates the members
-
-        Member member = new Member();
+        ArrayList<String> author1 = new ArrayList<>();
+        Calendar calendar = new GregorianCalendar(2015, 11, 23);
+        LibraryItem item = factory.createItem("DVD", "Title", author1, "Publisher", 1900, 10, true, new Cuboid(10, 10, 10));
+        HashMap<LibraryItem,Calendar> hash = new HashMap<>();
+        hash.put(item,calendar);
+        Member member = new Member("BadMember", hash);
         Member member2 = new Member();
         Member member3 = new Member();
 
