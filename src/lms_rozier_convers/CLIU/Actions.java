@@ -305,11 +305,15 @@ public abstract class Actions {
                 }
             }
             if (bookcase != null) {
-                String descr = "In the room " + room_name + " and in the bookcase " + bookcase_name + ", there are the following shelves : \n";
+                String descr = "The bookcase "+bookcase_name+" in the room " +room_name+" contains :\n";
                 for (Shelf shelf : bookcase.getShelves()) {
-                    descr += "The self " + shelf.getName() + "contains : \n";
-                    for (LibraryItem item : shelf.getItemsContained()) {
-                        descr += item.getTitle() + "(" + item.getType() + ")";
+                    descr += "Shelf " + shelf.getName() + " : ";
+                    if (shelf.getItemsContained().size()==0){
+                        descr +="Nothing. \n";
+                    }else {
+                        for (LibraryItem item : shelf.getItemsContained()) {
+                            descr += item.getTitle() + " (" + item.getType() + ")\n";
+                        }
                     }
                 }
                 System.out.println(descr);
@@ -334,16 +338,16 @@ public abstract class Actions {
             }
         }
         if (room != null) {
-            String descr = "The room contains the following bookcases : ";
+            String descr = "The room contains the following bookcases : \n";
             for (Bookcase bk : room.getBookcases()) {
                 descr += bk.getName() + "\n";
             }
-            descr += "\n Each bookcase contains the following items : ";
+            descr += "\n Each bookcase contains the following items : \n ";
             for (Bookcase bk : room.getBookcases()) {
-                descr += "For " + bk.getName() + " : ";
+                descr += "For " + bk.getName() + " : \n";
                 for (Shelf s : bk.getShelves()) {
                     for (LibraryItem item : s.getItemsContained()) {
-                        descr += item.getTitle() + "(" + item.getType() + ", in the shelf" + item.getLocation().getShelf().getName() + ") \n";
+                        descr += item.getTitle() + "(" + item.getType() + ", located in the shelf " + item.getLocation().getShelf().getName() + ") \n";
                     }
                 }
             }
