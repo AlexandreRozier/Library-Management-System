@@ -182,7 +182,7 @@ public abstract class UserInterface {
                     break;
 
                 case("check_borrowed"):
-                    if (!inputSplitted[1].isEmpty() && inputSplitted[2].isEmpty()){
+                    if (inputSplitted.length>=2){
                         Actions.check_borrowed(inputSplitted[1]);
                     }
                     else{
