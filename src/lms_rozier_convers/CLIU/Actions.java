@@ -194,6 +194,7 @@ public abstract class Actions {
      * @return
      */
     public static void add_member(String member_name, String numCreditCard, String email, String memberType) {
+        if (memberType.equals("Standard")||memberType.equals("Frequent")||memberType.equals("Golden")){
         if (email.contains("@")) {
             Library currentLibrary = UserInterface.getCurrentLibrary();
             if (currentLibrary == null) {
@@ -207,12 +208,15 @@ public abstract class Actions {
                 CardFactory cardFactory = (CardFactory) FactoryMaker.createFactory("cardFactory");
                 Card card = cardFactory.create(memberType);
                 member1.setMemberCard(card);
-                System.out.println("The member " + member_name + "has been added to the library");
+                System.out.println("The member " + member_name + " has been added to the library");
             }
         } else {
             System.out.println("Please type a correct email. Please renew the command");
         }
-
+        }
+        else{
+            System.out.println("Please type a correct type of card (Standard, Golden)");
+        }
     }
 
     /**

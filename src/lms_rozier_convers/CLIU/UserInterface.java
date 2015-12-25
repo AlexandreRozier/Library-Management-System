@@ -162,8 +162,8 @@ public abstract class UserInterface {
                     break;
 
                 case("add_member"):
-                    if (inputSplitted.length >= 5) {
-                        Actions.add_member(inputSplitted[1], inputSplitted[2], inputSplitted[3], inputSplitted[4]);
+                    if (parameters.length == 4) {
+                        Actions.add_member(parameters[0],parameters[1],parameters[2],parameters[3]);
                     } else {
                         System.out.println("You must type 4 parameters when using this command : the name of the member, his credit card number, his email and his type of membership.");
                     }
