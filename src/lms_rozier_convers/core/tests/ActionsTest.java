@@ -159,10 +159,11 @@ public class ActionsTest {
      * Checks whether the item with the title "Discovery" is found in the test Library.
      */
     @Test
-    public  void findLibraryItem() throws Exception {
+    public  void testFindLibraryItem() throws Exception {
         LibraryItem item = Actions.findLibraryItem("Discovery");
         assertTrue(item!=null);
     }
+
 
 
 
