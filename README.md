@@ -1,8 +1,8 @@
-# Library-Managment-System
+# Library-Management-System
 
 <img src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/book-bookmark-icon.png"/>
 
-This project consists in a **complete library managment system**. It handles via its command-line interface various types of customers, library items, penalties for giving
+This project consists in a **complete library management system**. It handles via its command-line interface various types of customers, library items, penalties for giving
 back late the books, and many other points.
 
 One builds a library by providing the number of rooms, shelves, bookcases and the miscellaneous items populating it. Then, a timer runs in background
